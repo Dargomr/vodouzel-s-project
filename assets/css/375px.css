@@ -1,0 +1,541 @@
+@media screen and (max-width: 375px) {
+    section, header, footer {
+        padding: 0 16px;
+    }
+
+
+    .logo__768px {
+        height: 18px;
+        display: flex;
+    }
+
+    .header__phone {
+        display: none;
+    }
+
+    .catalog-375px {
+        width: 103px;
+        height: 30px;
+        margin-left: 20px;
+        padding: 0 20px;
+        background-color: #002D82;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /*padding-left: 44px;*/
+    }
+
+    .menu-375px {
+        margin-left: 4px;
+        width: 65px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #E1E4EF;
+        color: black;
+        border-radius: 4px;
+    }
+
+    .header-under {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 9px;
+    }
+
+    .catalog {
+        display: none;
+    }
+
+    .menu-768px {
+       display: none;
+    }
+
+    .managers {
+        display: none;
+    }
+
+    .search-input {
+        margin-left: 0;
+        height: 36px;
+    }
+
+    .button-search {
+        font-size: 0;
+        width: 36px;
+        height: 36px;
+        padding: 0;
+    }
+
+    .button-search:before {
+        left: 0;
+    }
+
+                                                            /*.first-section*/
+
+    .first-section {
+        margin-top: 14px;
+        background: url("../img/first-section-back-375px.png") no-repeat center;
+    }
+
+    .first-section__description {
+        font-family: "Manrope", sans-serif;
+        color: white;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .first-section__under {
+        display: block;
+        margin: 24px 0 16px 0;
+    }
+
+
+    .first-section__logo {
+        margin-bottom: 19px;
+        width: 100%;
+        padding-bottom: 24px;
+        border-bottom: 1px solid #D9D9D9;
+    }
+
+    .button-left, .button-right {
+        width: 30px;
+        height: 30px;
+    }
+
+                                                        /*about-company-section*/
+
+    .about-company__h3 {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .about-company__main-text {
+        font-size: 26px;
+        font-weight: 700;
+    }
+
+    .about-company__also-text {
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+                                                                /*reasons-section*/
+
+    .reasons-section__h2 {
+        font-size: 22px;
+        font-weight: 700;
+    }
+
+    .reasons-section__text {
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .reasons-section__cards {
+        margin-top: 32px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+
+                                                /*water-measuring-units-section*/
+
+    .water-measuring-units-section {
+        margin-top: 90px;
+    }
+
+    .water-measuring-units-section__type {
+        font-size: 14px;
+    }
+
+    .water-measuring-units-section__name {
+        font-size: 26px;
+    }
+
+    .pipes-description__text {
+        font-size: 18px;
+    }
+
+    .pipes-description__text2 {
+        margin-top: 16px;
+        font-size: 14px;
+    }
+
+    .pipes--description__examples {
+        margin-top: 60px;
+        padding: 30px;
+        /*width: 1024px;*/
+        width: 100%;
+        height: 700px;
+        background:  url("../img/pipes--description__examples-back-375px.png") no-repeat ;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+    }
+
+    .button-catalog {
+        height: 39px;
+    }
+
+    .button-catalog p {
+        font-size: 14px;
+    }
+
+                                                            /*fittings-section*/
+
+    .fittings-section {
+        margin-top: 90px;
+        padding-bottom: 90px;
+    }
+
+    .fittings-section__type {
+        font-size: 14px;
+    }
+
+    .fittings-section__name1, .fittings-section__name2 {
+        font-size: 26px;
+    }
+
+    .fittings-section__big-text {
+        font-size: 18px;
+    }
+
+    .fittings-section__items {
+        margin-top: 58px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        column-gap: 16px;
+    }
+
+    .fittings-section__text {
+        font-size: 14px;
+        width: 100%;
+    }
+
+                                                        /*water-meters-section*/
+
+    .water-meters-section {
+        margin-top: 90px;
+        padding-bottom: 90px;
+    }
+
+    .water-meters-section__type {
+        font-size: 14px;
+    }
+
+    .water-meters-section__name {
+        font-size: 26px;
+    }
+
+    .water-meters-section__items {
+        margin-top: 0;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        column-gap: 16px;
+    }
+
+    .water-meters-section__text {
+        font-size: 14px;
+    }
+
+                                                    /*application-section*/
+
+    .application-section {
+        margin-top: 90px;
+        padding-bottom: 90px;
+    }
+
+    .application-section__h2 {
+        font-size: 26px;
+    }
+
+    .application-section__help {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(7, 74px);
+        grid-gap: 24px;
+    }
+
+    .application-section__helping {
+        font-size: 20px;
+    }
+
+    .application-section__helping, .application-section__01, .application-section__02, .application-section__03 {
+        font-size: 24px;
+    }
+
+    .application-section__01-text, .application-section__02-text, .application-section__03-text {
+        font-size: 14px;
+    }
+
+    .application-section__01 {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    .application-section__01-text {
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+
+    .application-section__02 {
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+
+    .application-section__02-text {
+        grid-column: 1/2;
+        grid-row: 5/6;
+    }
+
+    .application-section__03 {
+        grid-column: 1/2;
+        grid-row: 6/7;
+    }
+
+    .application-section__03-text {
+        grid-column: 1/2;
+        grid-row: 7/8;
+    }
+
+    .application-form__text-input {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .application-form__username-label, .application-form__phone-label {
+        font-size: 14px;
+    }
+
+    .application-form__username-input, .application-form__phone-input {
+        font-size: 18px;
+        width: 100%;
+    }
+
+    .application-form__text-phone-item {
+        margin-left: 0;
+    }
+
+    .application-form__attach-label {
+        width: 100%;
+    }
+
+    .application-form____attach {
+        width: 100%;
+    }
+
+    .application-form__submit-element {
+        width: 100%;
+        margin-top: 30px;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .application-form__submit {
+        width: 100%;
+        height: 44px;
+        font-size: 18px;
+    }
+
+    .application-form__submit-text {
+        margin-top: 20px;
+        margin-left: 0;
+        font-size: 12px;
+    }
+
+                                         /*production-section*/
+
+    .production-section {
+        margin-top: 90px;
+        padding-bottom: 60px;
+    }
+
+    .production-section__type {
+        font-size: 14px;
+    }
+
+    .production-section__name {
+        font-size: 26px;
+    }
+
+    .production-section__content {
+        margin-top: 50px;
+        padding-top: 0;
+    }
+
+    .carousel__item:first-child {
+
+        margin-left: 0;
+    }
+
+    .carousel__item:not(:first-child) {
+
+        margin-left: 20px;
+    }
+
+    .carousel__img {
+        width: 268px;
+        height: 268px;
+    }
+
+    .carousel__img-inner {
+        width: 176px;
+        height: 176px;
+    }
+
+    .carousel__buttons {
+        margin-top: 54px;
+    }
+
+    .carousel-button-left, .carousel-button-right {
+        width: 30px;
+        height: 30px;
+    }
+
+                                                /*clients-section*/
+
+    .clients-section {
+        padding-top: 60px;
+        padding-bottom: 90px;
+    }
+
+    .clients-section__items {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+                                            /*help-section*/
+
+    .help-section {
+        padding-top: 90px;
+        padding-bottom: 66px;
+    }
+
+    .help-form__text-input {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .help-form__username-label, .help-section__phone-label {
+        font-size: 14px;
+    }
+
+    .help-form__username-input, .help-form__phone-input {
+        font-size: 18px;
+        width: 100%;
+    }
+
+    .help-form__text-phone-item {
+        margin-left: 0;
+    }
+
+    .help-form__attach-label {
+        width: 100%;
+    }
+
+    .help-form____attach {
+        width: 100%;
+    }
+
+    .help-form__submit-element {
+        display: block;
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .help-form__submit {
+        width: 100%;
+        height: 44px;
+        font-size: 18px;
+    }
+
+    .help-form__submit-text {
+        margin-top: 20px;
+        margin-left: 0;
+        display: block;
+        font-size: 12px;
+    }
+
+    .footer-upper {
+        grid-template-columns: 1fr;
+        padding-top: 60px;
+        gap: 40px;
+    }
+
+    .footer-main {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .footer-phone {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    .footer-address {
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+
+    .footer-main__logo__p {
+        font-size: 14px;
+    }
+
+    .footer-main__nav__list1__item, .footer-main__nav__list2__item {
+        font-size: 14px;
+    }
+
+    .footer-phone__number {
+        font-size: 18px;
+    }
+
+    .footer-phone__button {
+        font-size: 14px;
+    }
+
+    .footer-phone__social {
+        margin-top: 32px;
+        display: flex;
+        align-items: center;
+    }
+
+    .footer-phone__tg, .footer-phone__wa {
+        font-size: 18px;
+    }
+
+    .footer-phone__wa {
+        margin-left: 20px;
+        margin-top: 0;
+    }
+
+    .footer-address__text {
+        font-size: 14px;
+    }
+
+    .footer-address__schedule {
+        margin-top: 16px;
+        font-size: 14px;
+
+    }
+
+    .footer-lower {
+        margin-top: 40px;
+        padding-bottom: 60px;
+    }
+
+}
+
+
+
+
+
+
+
+

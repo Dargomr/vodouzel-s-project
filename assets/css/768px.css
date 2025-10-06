@@ -1,0 +1,320 @@
+@media screen and (max-width: 769px) {
+
+    section, header, footer {
+        padding: 0 24px;
+    }
+
+    .header-location {
+        display: none;
+    }
+
+    .header__nav {
+        display: none;
+    }
+    .header-upper {
+        height: 30px;
+    }
+
+    .logo__768px {
+        display: block;
+        height: 27px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .header-under {
+        margin-top: 12px;
+        height: 38px;
+    }
+
+    .catalog {
+        margin-left: 10px;
+        height: auto;
+    }
+
+    .search-input {
+        height: auto;
+        margin-left: 10px;
+    }
+
+    .menu-768px {
+        margin-left: 10px;
+        width: 78px;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #E1E4EF;
+        color: black;
+        border-radius: 4px;
+    }
+
+    .menu-768px .menu__p {
+        margin: 0 16px;
+    }
+
+    .button-search {
+        height: auto;
+    }
+
+    .managers {
+        margin-left: 10px;
+    }
+
+    .telegram, .whatsApp {
+        width: 38px;
+        height: 38px;
+    }
+
+
+                                                            /*.first-section*/
+
+    .first-section {
+        margin-top: 12px;
+        height: 486px;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        background: url("../img/first-section-back.png") no-repeat center;
+        background-size: cover;
+    }
+
+    .first-section__under {
+        margin: 24px 0;
+    }
+
+    .first-section__logo {
+        margin-bottom: 0;
+    }
+
+    /*.first-section__logo-768px {*/
+    /*    display: block;*/
+    /*}*/
+
+    .button-left, .button-right {
+        width: 40px;
+        height: 40px;
+    }
+
+                                                    /*about-company-section*/
+
+    .about-company-section {
+        display: block;
+    }
+
+    .about-company__also {
+        margin-top: 40px;
+    }
+
+                                                        /*reasons-section*/
+
+    .reasons-section {
+        display: block;
+    }
+
+    .reasons-section__cards {
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 24px;
+    }
+
+                                                /*water-measuring-units-section*/
+
+
+    .water-measuring-units-section {
+        display: block;
+    }
+
+    .pipes-description {
+        margin-top: 32px;
+    }
+
+    .pipes--description__examples {
+        padding: 20px;
+        height: 560px;
+    }
+
+    /*fittings-section*/
+
+    .fittings-section {
+        display: block;
+    }
+
+    .fittings-section__name1, .fittings-section__name2 {
+        margin-top: 10px;
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    .fittings-section__content {
+        margin-top: 32px;
+    }
+
+    .fittings-section__items {
+        margin-top: 58px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 24px;
+    }
+
+    .item {
+        width: 100%;
+    }
+
+    .fittings-section__text {
+        width: 90%;
+    }
+
+                                            /*water-meters-section*/
+
+    .water-meters-section {
+        display: block;
+    }
+
+    .water-meters-section__content {
+        margin-top: 60px;
+        padding-top: 0;
+    }
+
+    .water-meters-section__items {
+        margin-top: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 24px;
+    }
+
+                                            /*application-section*/
+
+    .application-section {
+        display: block;
+    }
+
+    .application-section__help {
+        font-family: "Manrope", sans-serif;
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 61px);
+        grid-gap: 24px;
+    }
+
+    .application-section__helping {
+        border-bottom: none;
+
+    }
+
+    .application-section__blank {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+
+    .application-section__01-text {
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+
+    .application-section__03 {
+        grid-column: 1/3;
+        grid-row: 4/5;
+    }
+
+    .application-section__03-text {
+        grid-column: 1/3;
+        grid-row: 5/6;
+    }
+
+    .application-form {
+        margin-left: 0;
+        width: 100%;
+        position: static;
+        background: #002D82;
+    }
+
+    .production-section {
+        display: block;
+    }
+
+    .production-section__content {
+        margin-top: 40px;
+    }
+
+    .carousel__buttons {
+        display: none;
+    }
+
+    .carousel__buttons-768px {
+        margin-top: 64px;
+        display: flex;
+    }
+
+                                                /*clients-section*/
+
+    .clients-section {
+        display: block;
+    }
+
+    .clients-section__items {
+        margin-top: 60px;
+    }
+
+                                                /*help-section*/
+
+    .help-section {
+        display: block;
+    }
+
+    .help-form {
+        margin-top: 60px;
+    }
+
+                                                            /*footer*/
+
+    .footer-upper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 33px;
+        row-gap: 60px;
+    }
+
+    .footer-main {
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+
+    .footer-address {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    .footer-phone {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+
+    .footer-lower {
+        row-gap: 42px;
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    .footer-lower__p {
+        grid-column: 1/3;
+        grid-row: 2/3;
+    }
+
+    .footer-lower__polit {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    .footer-lower__develop {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+}
+
+
+
