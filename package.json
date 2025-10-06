@@ -1,6 +1,15 @@
 {
-  "name": "${PROJECT_NAME}",
+  "name": "vodouzel",
   "version": "1.0.0",
+  "configurations": [
+    
+      {
+          "type": "chrome",
+          "request": "launch",
+          "name": "Launch Chrome against localhost",            
+          "file": "${workspaceRoot}/index.html"
+      }
+  ],
   "description": "",
   "main": "index.js",
   "scripts": {

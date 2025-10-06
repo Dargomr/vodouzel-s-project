@@ -1,10 +1,173 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>страница товара</title>
+    <link rel="stylesheet" href="assets/css/1440px.css" >
+    <link rel="stylesheet" href="assets/css/768px.css" >
+    <link rel="stylesheet" href="assets/css/375px.css" >
 </head>
 <body>
-$END$
+<header>
+    <div class="header-upper">
+        <div class="header-location">
+            <div class="location-text">г. Санкт-Петербург, ул. Верхняя, 12А</div>
+        </div>
+        <img class="logo__768px" src="assets/img/logo__768px.png" alt="logo">
+        <div class="header__menu">
+            <ul class="header__nav">
+                <li class="header__nav-item header__nav-item1">О компании</li>
+                <li class="header__nav-item">Статьи</li>
+                <li class="header__nav-item">Контакты</li>
+            </ul>
+            <div class="header__phone">
+                <p class="phone-number">8 987 654-32-10</p>
+                <button class="phone-button">Обратный звонок</button>
+            </div>
+            <div class="catalog-375px">
+                <img class="catalog__burger-icon" src="assets/img/burger-icon.png" alt="burger-icon">
+                <p class="catalog__text">Каталог</p>
+            </div>
+
+            <div class="menu-375px">
+                <p class="menu__p">Меню</p>
+            </div>
+        </div>
+    </div>
+    <div class="header-under">
+        <img class="logo" src="assets/img/logo.png" alt="logo">
+        <!--        <button class="catalog">Каталог</button>-->
+        <div class="catalog">
+            <img class="catalog__burger-icon" src="assets/img/burger-icon.png" alt="burger-icon">
+            <p class="catalog__text">Каталог</p>
+        </div>
+        <input class="search-input" type="text" placeholder="Введите запрос ...">
+        <button class="button-search">Поиск</button>
+        <div class="menu-768px">
+            <p class="menu__p">Меню</p>
+        </div>
+        <div class="managers">
+            <img class="telegram" src="assets/img/tg-icon.png" alt="telegram">
+            <img class="whatsApp" src="assets/img/wa-icon.png" alt="whatsApp">
+        </div>
+    </div>
+</header>
+
+<main class="item-inner-page-main">
+    <section class="item-div-section">
+        <div class="item-div-section__switch">
+            <p class="switch">Главная</p> &nbsp;
+            <p class="proch">/</p> &nbsp;
+            <p class="switch">Каталог</p> &nbsp;
+            <p class="proch">/</p> &nbsp;
+            <p class="switch">Задвижки</p> &nbsp;
+            <p class="proch">/</p> &nbsp;
+            <p class="switch">Задвижки чугунные</p> &nbsp;
+        </div>
+        <button class="product-page__back-button-1440px">Назад</button>
+        <div class="item-div-section__content">
+            <img class="item-div-section__img" src="assets/img/item-page__item-img.png" alt="item-img">
+            <div class="product-page">
+                <button class="product-page__back-button">Назад</button>
+                <div class="product-page__header">
+                    <h3 class="product-page__h3">Задвижка чугунная КНР 30ч39р Ду50 Ру16</h3>
+                    <p class="product-page__article">Артикул: <span class="product-page__article-span">123456</span></p>
+                </div>
+                <p class="product-page__text-1440px-375px">Используется для полного перекрытия или регулирования потока жидкости, газа или других сред в трубопроводах. Отличается высокой прочностью, долговечностью и устойчивостью к коррозии. Подходит для водоснабжения, отопления, канализации и промышленных систем.
+                    <br>
+                    <br>
+                    *цена при заказе от 100 тыс. рублей.</p>
+                <div class="product-page__price">
+                    <p class="product-page__prev-price">от <span class="product-page__prev-price-span">1 000 ₽</span></p>
+                    <p class="product-page__curr-price">от <span class="product-page__cur-price-span">1 000 ₽</span></p>
+                </div>
+            </div>
+
+        </div>
+        <p class="product-page__text">Используется для полного перекрытия или регулирования потока жидкости, газа или других сред в трубопроводах. Отличается высокой прочностью, долговечностью и устойчивостью к коррозии. Подходит для водоснабжения, отопления, канализации и промышленных систем.
+            <br>
+            <br>
+            *цена при заказе от 100 тыс. рублей.</p>
+    </section>
+
+    <section class="specifications-section">
+        <h2 class="specifications-section__h2">Характеристики</h2>
+        <div class="specifications-section__specifications">
+            <p class="specifications-section__specifications__item">Модель: <span class="specifications-section__specifications__item-span">30ч6бр</span></p>
+            <p class="specifications-section__specifications__item specifications-section__specifications__item2">Диаметр: <span class="specifications-section__specifications__item-span">50 мм</span></p>
+            <p class="specifications-section__specifications__item">Давление: <span class="specifications-section__specifications__item-span">10/16 универсал</span></p>
+        </div>
+    </section>
+
+    <section class="help-section">
+        <div class="help-section__texts">
+            <h2 class="help-section__h2">Нужна помощь? Не знаете<br>подойдут ли комплектующие<br>для вашего проекта?</h2>
+            <p class="help-section__text">Оставьте заявку на бесплатную<br>консультацию</p>
+        </div>
+        <form class="help-form">
+            <div class="help-form__text-input">
+                <div class="help-form__text-username-item">
+                    <label class="help-form__username-label" for="help-form__username">Имя:</label>
+                    <input class="help-form__username-input" id="help-form__username" type="text" placeholder="Иванов Иван" />
+                </div>
+
+                <div class="help-form__text-phone-item">
+                    <label class="help-form__phone-label" for="help-form__phone">Телефон:</label>
+                    <input class="help-form__phone-input" id="help-form__phone" type="number" placeholder="+7 ( ___ ) - ___ - __ - __" />
+                </div>
+            </div>
+            <div class="help-form__submit-element">
+                <input class="help-form__submit" type="submit" value="Оставить заявку"/>
+                <label class="help-form__submit-text">Нажимая кнопку, вы соглашаетесь<br>с условиями политики конфиденциальности</label>
+            </div>
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-upper">
+        <div class="footer-main">
+            <div class="footer-main__logo">
+                <h2 class="footer-main__logo__h2">ВОДОУЗЕЛ</h2>
+                <p class="footer-main__logo__p">2002 – 2025 ООО «Водоузел СПБ»<br>Все права защищены.</p>
+            </div>
+            <div class="footer-main__nav">
+                <ul class="footer-main__nav__list1">
+                    <li class="footer-main__nav__list1__item">Каталог</li>
+                    <li class="footer-main__nav__list1__item">О нас</li>
+                    <li class="footer-main__nav__list1__item">Услуги</li>
+                    <li class="footer-main__nav__list1__item">Документы</li>
+                </ul>
+
+                <ul class="footer-main__nav__list2">
+                    <li class="footer-main__nav__list2__item">Статьи</li>
+                    <li class="footer-main__nav__list2__item">Контакты</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-address">
+            <p class="footer-address__text">г. Санкт-Петербург,ул. Верхняя, 12А</p>
+            <p class="footer-address__schedule">ПН-ЧТ с 9:00 до 18:00<br>ПТ с 9:00 до 17:00</p>
+        </div>
+
+        <div class="footer-phone">
+            <p class="footer-phone__number">8 987 654-32-10</p>
+            <button class="footer-phone__button">Обратный звонок</button>
+            <div class="footer-phone__social">
+                <p class="footer-phone__tg">Telegram</p>
+                <p class="footer-phone__wa">WhatsApp</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer-lower">
+        <p class="footer-lower__p">Цены, характеристики и таблицы аналогов продукции на сайте носят исключительно<br>информационный характер и не являются публичной офертой.</p>
+        <p class="footer-lower__polit">Политика конфиденциальности</p>
+        <p class="footer-lower__develop">Разработка сайта: WolkWork</p>
+    </div>
+</footer>
 </body>
 </html>
