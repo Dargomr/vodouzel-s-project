@@ -14,7 +14,6 @@ let slideIndex = 0;
 
 carouselButtonLeft.addEventListener("click", (event) => {
     slideIndex--;
-    console.log(slideIndex);
     let itemWidth = parseInt(window.getComputedStyle(carouselItem).getPropertyValue("width"))
     let itemMargin = parseInt(window.getComputedStyle(carouselItem).getPropertyValue("margin-left"))
     carouselContainerInner.style["transform"] = `translateX(${-(itemWidth + itemMargin)*slideIndex}px)`;
