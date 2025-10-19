@@ -2325,8 +2325,9 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        align-items: start;
+        align-items: end;
         padding: 24px;
+        background-color: #002D82;
         background-position: center;
         background-size: cover;
         background-image: url("/assets/img/dealer-section__content-back.png");
@@ -2347,10 +2348,11 @@
         font-size: 14px;
         font-weight: 400;
         color: white;
+        /*width: 246px;*/
     }
 
-    .dealer-section__img-block {
-        margin: 10px;
+    .dealer-section__img {
+        margin: 0;
         width: 67px;
         height: 60px;
     }
@@ -2364,13 +2366,13 @@
     }
 
     .nodes-carousel-section__h2 {
-        font-size: 36px;
+        font-size: 32px;
         font-weight: 700;
         color: #002D82;
     }
 
     .nodes-carousel {
-        margin-top: 40px;
+        margin-top: 32px;
         overflow: hidden;
     }
 
@@ -2387,6 +2389,9 @@
         justify-content: space-between;
         background-color: white;
         border-radius: 4px;
+    }
+
+    .nodes-carousel-item:not(:first-child) {
         margin-left: 16px;
     }
 
@@ -2460,14 +2465,15 @@
     /*—————————————————————————————————————————————————————————————————item-page-section————————————————————————————————————————————————————————*/
 
 
-    .item-page2-section {
+    .item-page-section {
         padding-top: 32px;
+        background-color: #F3F5F7;
     }
 
     /*—————————————————————————————————————————————————————————————————heatMeters-section————————————————————————————————————————————————————————*/
 
     .heatMeters-section {
-        margin: 120px 32px;
+        padding: 90px 16px 73px 16px;
         display: block;
 
     }
@@ -2487,7 +2493,7 @@
         font-family: "Manrope", sans-serif;
         margin-top: 10px;
         color: #002D82;
-        font-size: 36px;
+        font-size: 26px;
         font-weight: 700;
     }
 
@@ -2497,14 +2503,14 @@
     }
 
     .heatMeters-section__big-text {
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 400;
         color: #18182F;
     }
 
     .heatMeters-section__text {
         margin-top: 32px;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 400;
         color: #18182F;
     }
@@ -2514,7 +2520,7 @@
 
     .thermal-calculators-section {
         background-color: white;
-        margin: 120px 32px;
+        margin: 90px 0;
         display: block;
     }
 
@@ -2535,7 +2541,7 @@
         font-family: "Manrope", sans-serif;
         margin-top: 10px;
         color: #002D82;
-        font-size: 36px;
+        font-size: 26px;
         font-weight: 700;
     }
 

@@ -3006,9 +3006,10 @@
         display: flex;
         justify-content: space-between;
         padding: 30px;
+        background-color: #002D82;
         background-position: center;
         background-size: cover;
-        background-image: url("/assets/img/dealer-section__content-back.png");
+        /*background-image: url("/assets/img/image.png");*/
     }
 
     .dealer-section__text-block {
@@ -3029,7 +3030,7 @@
         color: white;
     }
 
-    .dealer-section__img-block {
+    .dealer-section__img {
         margin: 10px;
         width: 180px;
         height: 160px;
@@ -3058,6 +3059,8 @@
         display: flex;
         position: relative;
         transition: 1s ease-in-out;
+        scroll-snap-type: x mandatory;
+        overflow-x: scroll;
     }
 
     .nodes-carousel-item {
@@ -3067,6 +3070,11 @@
         justify-content: space-between;
         background-color: white;
         border-radius: 4px;
+        scroll-snap-align: center;
+
+    }
+
+    .nodes-carousel-item:not(:first-child) {
         margin-left: 16px;
     }
 
@@ -3140,17 +3148,19 @@
     /*—————————————————————————————————————————————————————————————————item-page-section————————————————————————————————————————————————————————*/
 
 
-    .item-page2-section {
+    .item-page-section {
         padding-top: 60px;
+        background-color: #F3F5F7;
     }
 
     /*—————————————————————————————————————————————————————————————————heatMeters-section————————————————————————————————————————————————————————*/
 
     .heatMeters-section {
-        margin: 120px 32px;
+        padding: 120px 32px;
         display: grid;
         grid-template-columns: 1fr 3fr;
         column-gap: 32px;
+        border-bottom: 1px solid #D9D9D9;
     }
 
     .heatMeters-section__type {
@@ -3197,7 +3207,7 @@
 
     .thermal-calculators-section {
         background-color: white;
-        margin: 120px 32px 208px 32px;
+        margin: 120px 0 208px 0;
         display: grid;
         grid-template-columns: 1fr 3fr;
         column-gap: 32px;
