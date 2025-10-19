@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap');
 
-@media screen and (max-width: 1980px) {
+@media screen and (max-width: 1981px) {
 
     h2, p {
         font-family: "Manrope", sans-serif;
@@ -1876,6 +1876,10 @@
         color: #6D6D6D;
     }
 
+    .item-page-section {
+        background-color: #F3F5F7;
+    }
+
     .item-page__h2 {
         margin-top: 60px;
         font-size: 36px;
@@ -1991,6 +1995,30 @@
         border-radius: 100%;
         background-color: #002D82;
         color: #fff;
+    }
+
+    .item-page__left-key:before {
+        position: relative;
+        left: 25px;
+        display: block;
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-bottom: 3px solid white;
+        border-left: 3px solid white;
+        transform: rotate(45deg);
+    }
+
+    .item-page__right-key:before {
+        position: relative;
+        left: 21px;
+        display: block;
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-bottom: 3px solid white;
+        border-left: 3px solid white;
+        transform: rotate(225deg);
     }
 
     .item-page__pages {
@@ -2961,6 +2989,264 @@
         font-weight: 400;
         line-height: 47px;
     }
+
+    /*—————————————————————————————————————————————————————————————————HEATMETERS.HTML————————————————————————————————————————————————————————*/
+
+    .dealer-section {
+        background-color: #F3F5F7;
+    }
+
+    .dealer-section__switch {
+        display: flex;
+        padding-top: 20px;
+    }
+
+    .dealer-section__content {
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+        padding: 30px;
+        background-color: #002D82;
+        background-position: center;
+        background-size: cover;
+        /*background-image: url("/assets/img/image.png");*/
+    }
+
+    .dealer-section__text-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .dealer-section__h2 {
+        font-size: 36px;
+        font-weight: 700;
+        color: white;
+    }
+
+    .dealer-section__p {
+        font-size: 20px;
+        font-weight: 400;
+        color: white;
+    }
+
+    .dealer-section__img {
+        margin: 10px;
+        width: 180px;
+        height: 160px;
+    }
+
+    /*—————————————————————————————————————————————————————————————————nodes-carousel-section———————————————————————————————————————————————————————*/
+
+
+    .nodes-carousel-section {
+        padding-top: 60px;
+        background-color: #F2F2F8;
+    }
+    
+    .nodes-carousel-section__h2 {
+        font-size: 36px;
+        font-weight: 700;
+        color: #002D82;
+    }
+
+    .nodes-carousel {
+        margin-top: 40px;
+        overflow: hidden;
+    }
+
+    .nodes-carousel__inner {
+        display: flex;
+        position: relative;
+        transition: 1s ease-in-out;
+        scroll-snap-type: x mandatory;
+        overflow-x: scroll;
+    }
+
+    .nodes-carousel-item {
+        display: flex;
+        height: 120px;
+        width: 260px;
+        justify-content: space-between;
+        background-color: white;
+        border-radius: 4px;
+        scroll-snap-align: center;
+
+    }
+
+    .nodes-carousel-item:not(:first-child) {
+        margin-left: 16px;
+    }
+
+    .nodes-carousel-item__content {
+        margin: 20px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .nodes-carousel-item__name {
+        font-size: 16px;
+        font-weight: 500;
+        color: #002D82;
+    }
+
+    .nodes-carousel-item__number {
+        font-size: 16px;
+        font-weight: 400;
+        color: #7990BD;
+    }
+
+    .nodes-carousel-item__img {
+        height: 100%;
+    }
+
+    .nodes-carousel-section__buttons {
+        margin-top: 20px;
+        display: flex;
+    }
+
+    .nodes-carousel_left-button {
+        width: 40px;
+        height: 40px;
+        background-color: #002D82;
+        border-radius: 100%;
+    }
+
+    .nodes-carousel_left-button:before {
+        position: relative;
+        left: 16px;
+        display: block;
+        content: "";
+        width: 9px;
+        height: 9px;
+        border-bottom: 3px solid white;
+        border-left: 3px solid white;
+        transform: rotate(45deg);
+    }
+
+    .nodes-carousel_right-button {
+        width: 40px;
+        height: 40px;
+        background-color: #002D82;
+        border-radius: 100%;
+        margin-left: 10px;
+    }
+
+    .nodes-carousel_right-button:before {
+        position: relative;
+        left: 11px;
+        display: block;
+        content: "";
+        width: 9px;
+        height: 9px;
+        border-bottom: 3px solid white;
+        border-left: 3px solid white;
+        transform: rotate(225deg);
+    }
+
+    /*—————————————————————————————————————————————————————————————————item-page-section————————————————————————————————————————————————————————*/
+
+
+    .item-page-section {
+        padding-top: 60px;
+        background-color: #F3F5F7;
+    }
+
+    /*—————————————————————————————————————————————————————————————————heatMeters-section————————————————————————————————————————————————————————*/
+
+    .heatMeters-section {
+        padding: 120px 32px;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        column-gap: 32px;
+        border-bottom: 1px solid #D9D9D9;
+    }
+
+    .heatMeters-section__type {
+        font-size: 16px;
+        color: #002D82;
+        font-weight: 400;
+    }
+
+    .heatMeters-section__type:before {
+        content: url("../img/orange-circle.png");
+        margin-right: 6px;
+    }
+
+    .heatMeters-section__name {
+        font-family: "Manrope", sans-serif;
+        margin-top: 10px;
+        color: #002D82;
+        font-size: 36px;
+        font-weight: 700;
+    }
+
+    .heatMeters-section__content {
+        display: grid;
+        grid-template-columns: 3fr;
+    }
+    
+    .heatMeters-section__big-text {
+        grid-column: 1/2;
+        font-size: 20px;
+        font-weight: 400;
+        color: #18182F;
+    }
+
+    .heatMeters-section__text {
+        grid-column: 1/2;
+        margin-top: 32px;
+        font-size: 16px;
+        font-weight: 400;
+        color: #18182F;
+    }
+
+    /*—————————————————————————————————————————————————————————————————thermal-calculators-section————————————————————————————————————————————————————————*/
+
+
+    .thermal-calculators-section {
+        background-color: white;
+        margin: 120px 0 208px 0;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        column-gap: 32px;
+    }
+
+
+
+    .thermal-calculators-section__type {
+        font-size: 16px;
+        color: #002D82;
+        font-weight: 400;
+    }
+
+    .thermal-calculators-section__type:before {
+        content: url("../img/orange-circle.png");
+        margin-right: 6px;
+    }
+
+    .thermal-calculators-section__name {
+        font-family: "Manrope", sans-serif;
+        margin-top: 10px;
+        color: #002D82;
+        font-size: 36px;
+        font-weight: 700;
+    }
+
+    .thermal-calculators-section__content {
+        display: grid;
+        grid-template-columns: 3fr;
+    }
+
+    .thermal-calculators-section__text {
+        margin-top: 132px;
+        grid-column: 1/2;
+        font-size: 16px;
+        font-weight: 400;
+        color: #18182F;
+    }
+
 
 }
 
