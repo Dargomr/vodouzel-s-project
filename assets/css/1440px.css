@@ -3507,7 +3507,82 @@
         font-size: 22px;
     }
 
+    /*—————————————————————————————————————————————————————————————————CT-17Y.html——————————————————————————————————————————————————————————————————————————————————————————————————*/
 
+    .german-quality-section2 {
+        padding-top: 0;
+        padding-bottom: 0;
+        background-color: #F3F5F7;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 32px;
+    }
+
+    .ultrasonic-heatmeter-section__list-div {
+        margin-top: 0;
+
+    }
+
+    .ultrasonic-heatmeter-section__list {
+        margin: 20px 0 40px 16px;
+        column-count: 1;
+    }
+
+    .ultrasonic-heatmeter-section__list-item {
+        margin-bottom: 10px;
+        color: #4F4F5F;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .ultrasonic-heatmeter-section__list-item::marker {
+        color: #EA5A00;
+        font-size: 22px;
+    }
+
+    /*—————————————————————————————————————————————————————————————————CHAR-TABLE-SECTION——————————————————————————————————————————————————————————————————————————————————————————————————*/
+
+    .char-table-section {
+        padding: 24px 32px 120px 32px;
+        background-color: #F3F5F7;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .char-table {
+        grid-column: 2/5;
+        margin-top: 24px;
+    }
+
+    .char-table-p {
+        grid-column: 2/5;
+        margin-top: 90px;
+        font-size: 20px;
+    }
+
+    .char-table {
+        grid-column: 2/5;
+        margin-top: 60px;
+        /*border: 1px solid black;*/
+        border-collapse: collapse;
+
+    }
+
+    .char-table td, .char-table  th {
+        border: 1px solid #6D6D6D;
+        height: 30px;
+        padding: 12px;
+        font-size: 18px;
+    }
+
+    .char-table tr:nth-child(odd){
+        background-color: #D9D9D9;
+    }
+
+    .char-table-caption {
+        margin-bottom: 60px;
+        font-size: 20px;
+    }
 
 }
 
