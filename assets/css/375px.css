@@ -172,6 +172,24 @@
         font-size: 14px;
     }
 
+    .pipes-description__button {
+        position: relative;
+        margin-top: 50px;
+        width: 191px;
+        height: 39px;
+        background-color: #002D82;
+        color: white;
+        font-size: 14px;
+    }
+
+    .pipes-description__button::after {
+        position: relative;
+        margin-left: 10px;
+        width: 12px;
+        height: 12px;
+        content: url("../img/button__diag-arrow.png");
+    }
+
     .pipes--description__examples {
         margin-top: 60px;
         padding: 30px;
@@ -186,6 +204,7 @@
     }
 
     .button-catalog {
+        width: 191px;
         height: 39px;
     }
 

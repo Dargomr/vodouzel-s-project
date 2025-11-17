@@ -93,3 +93,21 @@ carouselButtonRight.addEventListener("click", (event) => {
 //     carouselButtonRight375px.disabled = slideIndex === itemsAmount;
 // })
 
+
+    .pipes-description__button {
+    position: relative;
+    margin-top: 40px;
+    width: 244px;
+    height: 46px;
+    background-color: #002D82;
+    color: white;
+    font-size: 20px;
+}
+
+.pipes-description__button::after {
+    position: relative;
+    margin-left: 10px;
+    width: 12px;
+    height: 12px;
+    content: url("../img/button__diag-arrow.png");
+}

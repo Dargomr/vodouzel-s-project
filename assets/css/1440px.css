@@ -222,7 +222,7 @@
         flex-direction: column;
         justify-content: end;
         background-size: cover;
-        background: url("../img/first-section-back.png") no-repeat center;
+        background-image: url("../img/first-section-back.png");
     }
 
     .first-section__description {
@@ -369,6 +369,7 @@
 
     .water-measuring-units-section {
         padding-top: 120px;
+        padding-bottom: 120px;
         background-color: #F2F2F8;
         display: grid;
         grid-template-columns: 1fr 3fr;
@@ -417,18 +418,21 @@
     }
 
     .pipes-description__button {
+        position: relative;
         margin-top: 40px;
         width: 244px;
         height: 46px;
         background-color: #002D82;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .pipes-description__button-text {
         color: white;
         font-size: 20px;
+    }
+
+    .pipes-description__button::after {
+        position: relative;
+        margin-left: 10px;
+        width: 12px;
+        height: 12px;
+        content: url("../img/button__diag-arrow.png");
     }
 
     .pipes--description__examples {
@@ -465,10 +469,18 @@
         width: 140px;
         height: 64px;
         background: #002D82;
+        color: white;
+        font-size: 16px;
+        font-weight: 500;
+        border: none;
+        border-radius: 4px;
     }
 
-    .side-view__text {
-        color: white;
+    .side-view::after {
+        position: relative;
+        width: 16px;
+        height: 16px;
+        content: url("../img/side-view__img.svg");
     }
 
     .top-view {
@@ -480,8 +492,26 @@
         width: 140px;
         height: 64px;
         background: white;
+        color: #002D82;
+        font-size: 16px;
+        font-weight: 500;
+        border: none;
+        border-radius: 4px;
     }
 
+    .top-view::after {
+        position: relative;
+        width: 16px;
+        height: 16px;
+        content: url("../img/top-view__img.svg");
+    }
+
+    .top-view:active::after {
+        position: relative;
+        width: 16px;
+        height: 16px;
+        content: url("../img/top-view__img_active.svg");
+    }
 
     .general-view {
         padding: 0 15px;
@@ -491,11 +521,29 @@
         width: 140px;
         height: 64px;
         background: white;
+        font-size: 16px;
+        font-weight: 500;
+        color: #002D82;
+        border: none;
+        border-radius: 4px;
     }
 
-    .general-view__text {
-        color: #002D82;
+    /*.general-view::after {*/
+    /*    position: relative;*/
+    /*    width: 16px;*/
+    /*    fill: red;*/
+    /*    stroke: red;*/
+    /*    height: 21px;*/
+    /*    content: url("../img/general-view__img.svg");*/
+    /*}*/
+
+    .ae {
+        fill: red;
     }
+
+    /*.general-view:active .general-view::after {*/
+    /*    fill: red;*/
+    /*}*/
 
     /*fittings-section*/
     .fittings-section {
@@ -584,19 +632,24 @@
     }
 
     .fittings-section__button {
-        margin-top: 40px;
-        width: 244px;
-        height: 46px;
-        background-color: #002D82;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    position: relative;
+    margin-top: 40px;
+    width: 244px;
+    height: 46px;
+    background-color: #002D82;
+    color: white;
+    font-size: 20px;
+}
+
+
+    .fittings-section__button::after {
+        position: relative;
+        margin-left: 10px;
+        width: 12px;
+        height: 12px;
+        content: url("../img/button__diag-arrow.png");
     }
 
-    .fittings-section__button-text {
-        color: white;
-        font-size: 20px;
-    }
 
     .button__img {
         margin-left: 10px;
@@ -668,18 +721,21 @@
     }
 
     .water-meters-section__button {
+        position: relative;
         margin-top: 40px;
         width: 244px;
         height: 46px;
         background-color: #002D82;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .water-meters-section__button-text {
         color: white;
         font-size: 20px;
+    }
+
+    .water-meters-section__button::after {
+        position: relative;
+        margin-left: 10px;
+        width: 12px;
+        height: 12px;
+        content: url("../img/button__diag-arrow.png");
     }
 
     /*application-section*/
@@ -3582,6 +3638,20 @@
     .char-table-caption {
         margin-bottom: 60px;
         font-size: 20px;
+    }
+
+    button:active {
+        background-color: #001C50;
+        color: white;
+    }
+
+    .orange-button:active {
+        background-color: #CD3700;
+    }
+
+    button:disabled {
+        background-color: #A9A9A9;
+        color: white;
     }
 
 }
