@@ -1,0 +1,678 @@
+
+
+export const articles = [
+    {
+        id: 1,
+        img: "/src/assets/img/article1.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 2,
+        img: "/src/assets/img/article1.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 3,
+        img: "/src/assets/img/article1.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 4,
+        img: "/src/assets/img/article1.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 5,
+        img: "/src/assets/img/article1.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 6,
+        img: "/src/assets/img/article1.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 7,
+        img: "/src/assets/img/article1.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 8,
+        img: "/src/assets/img/article1.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 9,
+        img: "/src/assets/img/article1.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 10,
+        img: "/src/assets/img/article1.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 11,
+        img: "/src/assets/img/article1.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 12,
+        img: "/src/assets/img/article1.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 13,
+        img: "/src/assets/img/article1.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 14,
+        img: "/src/assets/img/article1.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 15,
+        img: "/src/assets/img/article1.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 16,
+        img: "/src/assets/img/article1.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 17,
+        img: "/src/assets/img/article2.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 18,
+        img: "/src/assets/img/article2.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 19,
+        img: "/src/assets/img/article2.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 20,
+        img: "/src/assets/img/article2.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 21,
+        img: "/src/assets/img/article2.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 22,
+        img: "/src/assets/img/article2.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 23,
+        img: "/src/assets/img/article2.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 24,
+        img: "/src/assets/img/article2.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 25,
+        img: "/src/assets/img/article2.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 26,
+        img: "/src/assets/img/article2.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 27,
+        img: "/src/assets/img/article2.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 28,
+        img: "/src/assets/img/article2.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 29,
+        img: "/src/assets/img/article2.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 30,
+        img: "/src/assets/img/article2.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 31,
+        img: "/src/assets/img/article2.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 32,
+        img: "/src/assets/img/article2.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 33,
+        img: "/src/assets/img/article3.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 34,
+        img: "/src/assets/img/article3.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 35,
+        img: "/src/assets/img/article3.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 36,
+        img: "/src/assets/img/article3.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 37,
+        img: "/src/assets/img/article3.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 38,
+        img: "/src/assets/img/article3.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 39,
+        img: "/src/assets/img/article3.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 40,
+        img: "/src/assets/img/article3.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 41,
+        img: "/src/assets/img/article3.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 42,
+        img: "/src/assets/img/article3.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 43,
+        img: "/src/assets/img/article3.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 44,
+        img: "/src/assets/img/article3.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 45,
+        img: "/src/assets/img/article3.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 46,
+        img: "/src/assets/img/article3.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 47,
+        img: "/src/assets/img/article3.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+    {
+        id: 48,
+        img: "/src/assets/img/article3.png",
+        date: "01.01.2025",
+        text: "Установка водоизмерительного счётчика: кто должен это делать в муниципальной квартире?",
+        read: "Читать"
+    },
+
+];
+
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article1.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article1.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article1.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article1.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article1.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article1.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article1.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article1.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article1.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article1.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article1.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article1.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article1.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article1.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article1.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article1.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article2.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article2.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article2.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article2.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article2.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article2.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article2.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article2.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article2.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article2.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article2.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article2.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article2.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article2.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article2.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article2.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article3.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article3.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article3.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article3.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article3.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article3.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article3.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article3.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article3.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article3.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article3.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article3.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article3.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article3.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article3.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>
+// <div class="article">
+//     <img class="article__img" src="/src/assets/img/article3.png" alt="article">
+//         <p class="article__date">01.01.2025</p>
+//         <p class="article__text">Установка водоизмерительного счётчика: кто должен это делать
+//             в муниципальной квартире?</p>
+//         <p class="article__read">Читать</p>
+// </div>

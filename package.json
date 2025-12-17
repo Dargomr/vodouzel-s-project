@@ -2,18 +2,20 @@
   "name": "vodouzel",
   "version": "1.0.0",
   "configurations": [
-    
-      {
-          "type": "chrome",
-          "request": "launch",
-          "name": "Launch Chrome against localhost",            
-          "file": "${workspaceRoot}/index.html"
-      }
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Launch Chrome against localhost",
+      "file": "${workspaceRoot}/index.html"
+    }
   ],
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "private": true
+  "private": true,
+  "dependencies": {
+    "@vitejs/plugin-vue": "^6.0.3"
+  }
 }
