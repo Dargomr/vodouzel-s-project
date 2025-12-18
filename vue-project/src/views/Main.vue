@@ -232,7 +232,7 @@
             </div>
         </form>
     </section>
-    <Slider/>
+    <Carousel :items="items" :main="main"/>
 <!--    <section class="production-section">-->
 <!--            <div class="production-section__type-and-name">-->
 <!--                <p class="production-section__type">Проекты и клиенты</p>-->
@@ -331,9 +331,22 @@
 </template>
 
 <script>
-import Slider from "@/components/common/Slider.vue";
+import Carousel from "@/components/common/Carousel.vue";
+import HelpForm from "@/components/common/HelpForm.vue";
 export default {
-  components: {Slider}
+  components: {Carousel, HelpForm},
+
+  data() {
+    return {
+      items: [
+        {image: 'src/assets/img/carousel_img2.png', text: 'Жилые комплексы', alt: 'carousel__img1'},
+        {image: 'src/assets/img/carousel_img3.png', text: 'Промышленные объекты', alt: 'carousel__img2'},
+        {image: 'src/assets/img/carousel_img1.png', text: 'Общественные здания', alt: 'carousel__img3'},
+        {image: 'src/assets/img/carousel_img2.png', text: 'Жилые комплексы', alt: 'carousel__img4'},
+      ],
+      main: true,
+    }
+  }
 }
 </script>
 

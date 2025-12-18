@@ -867,7 +867,8 @@
     }
 
     .production-section__type-and-name {
-
+        position: relative;
+        top: -39px;
     }
 
     .production-section__type {
@@ -1430,6 +1431,7 @@
         width: 60px;
         height: 60px;
         border-radius: 100%;
+        border: none;
         background-color: #002D82;
         color: #fff;
     }
@@ -1717,6 +1719,7 @@
         width: 60px;
         height: 60px;
         border-radius: 100%;
+        border: none;
         background-color: #002D82;
         color: #fff;
     }
@@ -2106,8 +2109,9 @@
         width: 60px;
         height: 60px;
         border-radius: 100%;
+        border: none;
         background-color: #002D82;
-        color: #fff;
+        color: #fff
     }
 
     .item-page__left-key:before {
@@ -2493,6 +2497,8 @@
 
     /*—————————————————————————————————————————————————————————————————AREAS-OF-APPLICATION-SECTION————————————————————————————————————————————————————————*/
 
+    /*—————————————————————————————————————————————————————————————————CAROUSEL.VUE————————————————————————————————————————————————————————*/
+
 
     .areas-of-application-section {
         display: grid;
@@ -2504,7 +2510,7 @@
 
     }
 
-    .areas-of-application-section__h3-and-buttons {
+    .areas-of-application-section__header-and-buttons {
 
     }
 
@@ -2514,6 +2520,8 @@
         font-size: 30px;
         font-weight: 700;
     }
+
+
 
     .areas-of-application-section-carousel__buttons {
         margin-top: 354px;

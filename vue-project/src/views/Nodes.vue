@@ -69,91 +69,8 @@
 
     </section>
 
-<!--    <section class="areas-of-application-section">-->
-<!--        <div class="areas-of-application-section__h3-and-buttons">-->
-<!--            <p class="areas-of-application-section__h3">Основные сферы применения</p>-->
-<!--            <div class="areas-of-application-section-carousel__buttons">-->
-<!--                <button class="areas-of-application-section-carousel__button-left" @click="prevSlide" :disabled="slideIndex === 0"></button>-->
-<!--                <button class="areas-of-application-section-carousel__button-right" @click="nextSlide" :disabled="slideIndex === maxSlideIndex"></button>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="areas-of-application-section__content">-->
-<!--            <div class="carousel">-->
-<!--                <div class="carousel__container">-->
-<!--                    <div class="carousel__container-inner" :style="carouselTransform" ref="carouselInner">-->
-<!--                        <div v-for="(item, index) in items" :key="index" class="carousel__item" ref="carouselItems">-->
-<!--                            <div  class="carousel__img">-->
-<!--                                <img class="carousel__img-inner" :src="item.image" :alt="item.alt">-->
-<!--                            </div>-->
-<!--                            <p class="carousel__text">{{ item.text }}</p>-->
-<!--                        </div>-->
-
-<!--&lt;!&ndash;                        <div class="carousel__item">&ndash;&gt;-->
-<!--&lt;!&ndash;                            <div class="carousel__img">&ndash;&gt;-->
-<!--&lt;!&ndash;                                <img class="carousel__img-inner" src="@/assets/img/carousel-img1.png" alt="carousel__img">&ndash;&gt;-->
-<!--&lt;!&ndash;                            </div>&ndash;&gt;-->
-<!--&lt;!&ndash;                            <p class="carousel__text">Жилые комплексы</p>&ndash;&gt;-->
-<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
-
-<!--&lt;!&ndash;                        <div class="carousel__item">&ndash;&gt;-->
-<!--&lt;!&ndash;                            <div class="carousel__img">&ndash;&gt;-->
-<!--&lt;!&ndash;                                <img class="carousel__img-inner" src="@/assets/img/carousel-img2.png" alt="carousel__img">&ndash;&gt;-->
-<!--&lt;!&ndash;                            </div>&ndash;&gt;-->
-<!--&lt;!&ndash;                            <p class="carousel__text">Промышленные объекты</p>&ndash;&gt;-->
-<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
-
-<!--&lt;!&ndash;                        <div class="carousel__item">&ndash;&gt;-->
-<!--&lt;!&ndash;                            <div class="carousel__img">&ndash;&gt;-->
-<!--&lt;!&ndash;                                <img class="carousel__img-inner" src="@/assets/img/carousel-img1.png" alt="carousel__img">&ndash;&gt;-->
-<!--&lt;!&ndash;                            </div>&ndash;&gt;-->
-<!--&lt;!&ndash;                            <p class="carousel__text">Общественные здания</p>&ndash;&gt;-->
-<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
-
-<!--&lt;!&ndash;                        <div class="carousel__item">&ndash;&gt;-->
-<!--&lt;!&ndash;                            <div class="carousel__img">&ndash;&gt;-->
-<!--&lt;!&ndash;                                <img class="carousel__img-inner" src="@/assets/img/carousel-img2.png" alt="carousel__img">&ndash;&gt;-->
-<!--&lt;!&ndash;                            </div>&ndash;&gt;-->
-<!--&lt;!&ndash;                            <p class="carousel__text">Жилые комплексы</p>&ndash;&gt;-->
-<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
-<!--                    </div>-->
-
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="areas-of-application-section-carousel__buttons-768px">-->
-<!--            <button class="areas-of-application-section-carousel__button-left" @click="prevSlide" :disabled="slideIndex === 0"></button>-->
-<!--            <button class="areas-of-application-section-carousel__button-right" @click="nextSlide" :disabled="slideIndex === maxSlideIndex"></button>-->
-<!--        </div>-->
-
-<!--        <p class="areas-of-application-section__post-p">Эти узлы помогают не только в учете потребления,-->
-<!--            но и в управлении ресурсами, оптимизации расходов и контроле за качеством воды.</p>-->
-<!--    </section>-->
-
-    <Slider/>
-
-    <section class="help-section">
-        <div class="help-section__texts">
-            <h2 class="help-section__h2">Нужна помощь? Не знаете<br>подойдут ли комплектующие<br>для вашего проекта?</h2>
-            <p class="help-section__text">Оставьте заявку на бесплатную<br>консультацию</p>
-        </div>
-        <form class="help-form">
-            <div class="help-form__text-input">
-                <div class="help-form__text-username-item">
-                    <label class="help-form__username-label" for="help-form__username">Имя:</label>
-                    <input class="help-form__username-input" id="help-form__username" type="text" placeholder="Иванов Иван" />
-                </div>
-
-                <div class="help-form__text-phone-item">
-                    <label class="help-form__phone-label" for="help-form__phone">Телефон:</label>
-                    <input class="help-form__phone-input" id="help-form__phone" type="number" placeholder="+7 ( ___ ) - ___ - __ - __" />
-                </div>
-            </div>
-            <div class="help-form__submit-element">
-                <input class="help-form__submit orange-button" type="submit" value="Оставить заявку"/>
-                <label class="help-form__submit-text">Нажимая кнопку, вы соглашаетесь<br>с условиями политики конфиденциальности</label>
-            </div>
-        </form>
-    </section>
+    <Carousel :items="items" :nodes="nodes"/>
+    <HelpForm/>
 
     <section class="album-section">
         <div class="album-section-section__type-and-name">
@@ -349,78 +266,27 @@
 
 <script>
 
-import Slider from '@/components/common/Slider.vue'
+import Carousel from '@/components/common/Carousel.vue'
+import HelpForm from "@/components/common/HelpForm.vue";
 
 export default {
   components: {
-    Slider
+    HelpForm,
+    Carousel
+  },
+
+  data() {
+    return {
+      items: [
+        {image: 'src/assets/img/carousel_img1.png', text: 'Коммерческие здания', alt: 'carousel__img1'},
+        {image: 'src/assets/img/carousel_img2.png', text: 'Жилые комплексы', alt: 'carousel__img2'},
+        {image: 'src/assets/img/carousel_img3.png', text: 'Промышленные предприятия', alt: 'carousel__img3'},
+        {image: 'src/assets/img/carousel_img2.png', text: 'Жилые комплексы', alt: 'carousel__img4'},
+      ],
+      nodes: true,
+    }
   }
-
 }
-//   data() {
-//     return {
-//       items: [
-//         {image: 'src/assets/img/carousel_img1.png', text: 'Жилые комплексы', alt: 'carousel__img1'},
-//         {image: 'src/assets/img/carousel_img2.png', text: 'Промышленные объекты', alt: 'carousel__img2'},
-//         {image: 'src/assets/img/carousel_img1.png', text: 'Общественные здания', alt: 'carousel__img3'},
-//         {image: 'src/assets/img/carousel_img2.png', text: 'Жилые комплексы', alt: 'carousel__img4'},
-//       ],
-//       slideIndex: 0,
-//       itemWidth: 0,
-//       itemMargin: 0,
-//     }
-//   },
-//
-//   computed: {
-//     maxSlideIndex() {
-//       return this.items.length - 1
-//     },
-//
-//     carouselTransform() {
-//         const translateX = -(this.itemMargin + this.itemWidth) * this.slideIndex
-//         return {
-//           transform: `translateX(${translateX}px)`,
-//           transition: 'transform 0.3 ease-in-out'
-//         }
-//     },
-//   },
-//
-//     methods: {
-//
-//       prevSlide() {
-//         if(this.slideIndex > 0) {
-//           this.slideIndex--
-//         }
-//       },
-//
-//       nextSlide() {
-//         if(this.slideIndex < this.maxSlideIndex) {
-//           this.slideIndex++
-//         }
-//       },
-//
-//       updateItemDimensions() {
-//         if(this.$refs.carouselItems && this.$refs.carouselItems.length > 0) {
-//           const item = this.$refs.carouselItems[0]
-//           if(item) {
-//             this.itemWidth = parseInt(window.getComputedStyle(item).getPropertyValue('width')) || 0
-//             this.itemMargin = parseInt(window.getComputedStyle(item).getPropertyValue('margin-left')) || 0
-//           }
-//         }
-//       },
-//     },
-//
-//     mounted() {
-//       this.updateItemDimensions()
-//       window.addEventListener('resize', this.updateItemDimensions )
-//     },
-//
-//     beforeUnmount() {
-//       window.removeEventListener('resize', this.updateItemDimensions)
-//     }
-//
-// }
-
 </script>
 
 

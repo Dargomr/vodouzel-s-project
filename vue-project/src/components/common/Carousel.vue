@@ -1,7 +1,11 @@
 <template>
   <section class="areas-of-application-section">
     <div class="areas-of-application-section__h3-and-buttons">
-      <p class="areas-of-application-section__h3">Основные сферы применения</p>
+      <div class="production-section__type-and-name" v-if="main">
+        <p class="production-section__type">Проекты и клиенты</p>
+        <p class="production-section__name">Наша продукция<br>на объектах</p>
+      </div>
+      <p v-else class="areas-of-application-section__h3">Основные сферы применения</p>
       <div class="areas-of-application-section-carousel__buttons">
         <button class="areas-of-application-section-carousel__button-left" @click="prevSlide" :disabled="slideIndex === 0"></button>
         <button class="areas-of-application-section-carousel__button-right" @click="nextSlide" :disabled="slideIndex === maxSlideIndex"></button>
@@ -26,7 +30,7 @@
       <button class="areas-of-application-section-carousel__button-right" @click="nextSlide" :disabled="slideIndex === maxSlideIndex"></button>
     </div>
 
-    <p class="areas-of-application-section__post-p">Эти узлы помогают не только в учете потребления,
+    <p v-if="nodes" class="areas-of-application-section__post-p">Эти узлы помогают не только в учете потребления,
       но и в управлении ресурсами, оптимизации расходов и контроле за качеством воды.</p>
   </section>
 </template>
@@ -34,14 +38,25 @@
 <script>
 export default {
   name: "Slider",
+
+  props: {
+    items: {
+      required: true,
+      type: Array,
+    },
+    main: {
+      required: false,
+      type: Boolean,
+    },
+    nodes: {
+      required: false,
+      type: Boolean
+    }
+  },
+
   data() {
     return {
-      items: [
-        {image: 'src/assets/img/carousel_img1.png', text: 'Жилые комплексы', alt: 'carousel__img1'},
-        {image: 'src/assets/img/carousel_img2.png', text: 'Промышленные объекты', alt: 'carousel__img2'},
-        {image: 'src/assets/img/carousel_img1.png', text: 'Общественные здания', alt: 'carousel__img3'},
-        {image: 'src/assets/img/carousel_img2.png', text: 'Жилые комплексы', alt: 'carousel__img4'},
-      ],
+
       slideIndex: 0,
       itemWidth: 0,
       itemMargin: 0,
