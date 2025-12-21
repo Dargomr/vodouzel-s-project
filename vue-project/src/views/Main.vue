@@ -232,57 +232,7 @@
             </div>
         </form>
     </section>
-    <Carousel :items="items" :main="main"/>
-<!--    <section class="production-section">-->
-<!--            <div class="production-section__type-and-name">-->
-<!--                <p class="production-section__type">Проекты и клиенты</p>-->
-<!--                <p class="production-section__name">Наша продукция<br>на объектах</p>-->
-<!--                <div class="carousel__buttons">-->
-<!--                    <img class="carousel-button-left" src="@/assets/img/carousel-button-left.png" alt="button__img">-->
-<!--                    <img class="carousel-button-right" src="@/assets/img/carousel-button-right.png" alt="button__img">-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        <div class="production-section__content">-->
-<!--            <div class="carousel">-->
-<!--                <div class="carousel__container">-->
-<!--                    <div class="carousel__container-inner">-->
-<!--                        <div class="carousel__item">-->
-<!--                            <div class="carousel__img">-->
-<!--                                <img class="carousel__img-inner" src="@/assets/img/carousel-img1.png" alt="carousel__img">-->
-<!--                            </div>-->
-<!--                            <p class="carousel__text">Жилые комплексы</p>-->
-<!--                        </div>-->
-
-<!--                        <div class="carousel__item">-->
-<!--                            <div class="carousel__img">-->
-<!--                                <img class="carousel__img-inner" src="@/assets/img/carousel-img2.png" alt="carousel__img">-->
-<!--                            </div>-->
-<!--                            <p class="carousel__text">Промышленные объекты</p>-->
-<!--                        </div>-->
-
-<!--                        <div class="carousel__item">-->
-<!--                            <div class="carousel__img">-->
-<!--                                <img class="carousel__img-inner" src="@/assets/img/carousel-img1.png" alt="carousel__img">-->
-<!--                            </div>-->
-<!--                            <p class="carousel__text">Общественные здания</p>-->
-<!--                        </div>-->
-
-<!--                        <div class="carousel__item">-->
-<!--                            <div class="carousel__img">-->
-<!--                                <img class="carousel__img-inner" src="@/assets/img/carousel-img2.png" alt="carousel__img">-->
-<!--                            </div>-->
-<!--                            <p class="carousel__text">Жилые комплексы</p>-->
-<!--                        </div>-->
-<!--                    </div>-->
-
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="carousel__buttons-768px">-->
-<!--            <img class="carousel-button-left" src="@/assets/img/carousel-button-left.png" alt="button__img">-->
-<!--            <img class="carousel-button-right" src="@/assets/img/carousel-button-right.png" alt="button__img">-->
-<!--        </div>-->
-<!--    </section>-->
+    <Carousel :items="items" :main="main" :type="type" :name="name"/>
     <section class="clients-section">
         <h2 class="clients-section__h2">Наши<br>клиенты</h2>
         <div class="clients-section__items">
@@ -345,6 +295,8 @@ export default {
         {image: 'src/assets/img/carousel_img2.png', text: 'Жилые комплексы', alt: 'carousel__img4'},
       ],
       main: true,
+      type: 'Проекты и клиенты',
+      name: 'Наша продукция<br>на объектах',
     }
   }
 }

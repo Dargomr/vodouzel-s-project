@@ -26,7 +26,7 @@
 
 <script>
 export default {
-name: "Help-form"
+name: "HelpForm"
 }
 </script>
 

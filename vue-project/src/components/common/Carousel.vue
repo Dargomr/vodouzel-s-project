@@ -2,10 +2,10 @@
   <section class="areas-of-application-section">
     <div class="areas-of-application-section__h3-and-buttons">
       <div class="production-section__type-and-name" v-if="main">
-        <p class="production-section__type">Проекты и клиенты</p>
-        <p class="production-section__name">Наша продукция<br>на объектах</p>
+        <p class="production-section__type">{{ type }}</p>
+        <p class="production-section__name">{{ name }}</p>
       </div>
-      <p v-else class="areas-of-application-section__h3">Основные сферы применения</p>
+      <p v-else class="areas-of-application-section__h3">{{ h3 }}</p>
       <div class="areas-of-application-section-carousel__buttons">
         <button class="areas-of-application-section-carousel__button-left" @click="prevSlide" :disabled="slideIndex === 0"></button>
         <button class="areas-of-application-section-carousel__button-right" @click="nextSlide" :disabled="slideIndex === maxSlideIndex"></button>
@@ -51,7 +51,19 @@ export default {
     nodes: {
       required: false,
       type: Boolean
-    }
+    },
+    type: {
+      required: false,
+      type:  String,
+    },
+    name: {
+      required: false,
+      type:  String,
+    },
+    h3: {
+      required: false,
+      type: String,
+    },
   },
 
   data() {

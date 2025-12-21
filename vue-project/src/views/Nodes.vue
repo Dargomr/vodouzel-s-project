@@ -69,7 +69,7 @@
 
     </section>
 
-    <Carousel :items="items" :nodes="nodes"/>
+    <Carousel :items="items" :nodes="nodes" :h3="h3"/>
     <HelpForm/>
 
     <section class="album-section">
@@ -284,6 +284,7 @@ export default {
         {image: 'src/assets/img/carousel_img2.png', text: 'Жилые комплексы', alt: 'carousel__img4'},
       ],
       nodes: true,
+      h3: 'Основные сферы применения',
     }
   }
 }

@@ -345,6 +345,12 @@
         align-items: end;
         margin-bottom: 33px;
         flex: 0 0 30%;
+        transition: transform 0.5s ease
+
+    }
+
+    .card:hover{
+       transform: scale(1.2);
     }
 
     .card__upper {
@@ -619,6 +625,13 @@
     .item {
         width: 100%;
         margin-bottom: 32px;
+        transition: transform 0.5s ease;
+    }
+
+    .item:hover {
+        width: 100%;
+        margin-bottom: 32px;
+        transform: scale(1.2);
     }
 
     .item__img {
@@ -987,6 +1000,11 @@
 
     .clients-section__img {
         width: 100%;
+        transition: transform 0.5s ease;
+    }
+
+    .clients-section__img:hover {
+        transform: scale(1.2);
     }
 
     /*help-section*/
@@ -1385,6 +1403,11 @@
     .article {
         /*display: block;*/
         width: 100%;
+        transition: transform 0.5s ease
+    }
+
+    .article:hover {
+       transform: scale(1.2);
     }
 
     .article__img {
@@ -1597,6 +1620,11 @@
         flex-direction: column;
         align-items: start;
         justify-content: space-between;
+        transition: transform 0.5s ease;
+    }
+
+    .service-item:hover {
+       transform: scale(1.2);
     }
 
     .service-item__img {
@@ -1923,7 +1951,12 @@
         justify-content: space-between;
         background-color: white;
         border-radius: 4px;
+        transition: transform 0.5s ease
     }
+    .main-catalog-item:hover {
+        transform: scale(1.2);
+    }
+
 
     .main-catalog-item_green {
         background-color: #009900;
@@ -1994,6 +2027,7 @@
 
     .item-page-section {
         background-color: #F3F5F7;
+        padding-bottom: 120px;
     }
 
     .item-page__h2 {
@@ -2054,7 +2088,12 @@
     .item-page__item {
         background-color: white;
         padding: 20px;
+        transition: transform 0.5s ease
     }
+    .item-page__item:hover {
+        transform: scale(1.2);
+    }
+
 
     .item-page__item-name {
         margin-top: 20px;
@@ -3176,17 +3215,20 @@
         color: #002D82;
     }
 
-    .nodes-carousel {
-        margin-top: 40px;
-        overflow: hidden;
-    }
+    /*.nodes-carousel {*/
+    /*    margin-top: 40px;*/
+    /*    overflow: hidden;*/
+    /*}*/
 
     .nodes-carousel__inner {
+        height: 300px;
+        width: 900px;
         display: flex;
         position: relative;
         transition: 1s ease-in-out;
-        scroll-snap-type: x mandatory;
-        overflow-x: scroll;
+        /*scroll-snap-type: x mandatory;*/
+        overflow: auto;
+        margin-top: 40px;
     }
 
     .nodes-carousel-item {
@@ -3734,6 +3776,10 @@
         background-color: #A9A9A9;
         color: white;
     }
+
+    /*.pagination-template {*/
+    /*    background-color: #F3F5F7;*/
+    /*}*/
 
 }
 

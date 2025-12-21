@@ -25,518 +25,25 @@
     <section class="nodes-carousel-section">
         <h2 class="nodes-carousel-section__h2"></h2>
         <div class="nodes-carousel">
-<!--            nodes-roster-->
-            <div class="nodes-carousel__inner">
-                <div class="nodes-carousel-item">
+            <div class="nodes-carousel__inner" ref="nodesCarouselInner">
+                <div v-for="(item, index) in nodesCarouselItems" :key="index" class="nodes-carousel-item">
                     <div class="nodes-carousel-item__content">
-                        <p class="nodes-carousel-item__name">Одноветочный</p>
-                        <p class="nodes-carousel-item__number">01</p>
+                        <p class="nodes-carousel-item__name">{{ item.name }}</p>
+                        <p class="nodes-carousel-item__number">{{ item.number }}</p>
                     </div>
-                    <img class="nodes-carousel-item__img" src="@/assets/img/nodes-roster-item__img1.png" alt="nodes__roster-item__img">
-                </div>
-
-                <div class="nodes-carousel-item">
-                    <div class="nodes-carousel-item__content">
-                        <p class="nodes-carousel-item__name">Одноветочный</p>
-                        <p class="nodes-carousel-item__number">01</p>
-                    </div>
-                    <img class="nodes-carousel-item__img" src="@/assets/img/nodes-roster-item__img1.png" alt="nodes__roster-item__img">
-                </div>
-
-                <div class="nodes-carousel-item">
-                    <div class="nodes-carousel-item__content">
-                        <p class="nodes-carousel-item__name">Одноветочный</p>
-                        <p class="nodes-carousel-item__number">01</p>
-                    </div>
-                    <img class="nodes-carousel-item__img" src="@/assets/img/nodes-roster-item__img1.png" alt="nodes__roster-item__img">
-                </div>
-
-                <div class="nodes-carousel-item">
-                    <div class="nodes-carousel-item__content">
-                        <p class="nodes-carousel-item__name">Одноветочный</p>
-                        <p class="nodes-carousel-item__number">01</p>
-                    </div>
-                    <img class="nodes-carousel-item__img" src="@/assets/img/nodes-roster-item__img1.png" alt="nodes__roster-item__img">
-                </div>
-
-                <div class="nodes-carousel-item">
-                    <div class="nodes-carousel-item__content">
-                        <p class="nodes-carousel-item__name">Одноветочный</p>
-                        <p class="nodes-carousel-item__number">01</p>
-                    </div>
-                    <img class="nodes-carousel-item__img" src="@/assets/img/nodes-roster-item__img1.png" alt="nodes__roster-item__img">
-                </div>
-
-                <div class="nodes-carousel-item">
-                    <div class="nodes-carousel-item__content">
-                        <p class="nodes-carousel-item__name">Одноветочный</p>
-                        <p class="nodes-carousel-item__number">01</p>
-                    </div>
-                    <img class="nodes-carousel-item__img" src="@/assets/img/nodes-roster-item__img1.png" alt="nodes__roster-item__img">
-                </div>
-
-                <div class="nodes-carousel-item">
-                    <div class="nodes-carousel-item__content">
-                        <p class="nodes-carousel-item__name">Одноветочный</p>
-                        <p class="nodes-carousel-item__number">01</p>
-                    </div>
-                    <img class="nodes-carousel-item__img" src="@/assets/img/nodes-roster-item__img1.png" alt="nodes__roster-item__img">
+                    <img class="nodes-carousel-item__img" :src="item.img" alt="nodes__roster-item__img">
                 </div>
             </div>
         </div>
 
         <div class="nodes-carousel-section__buttons">
-            <button class="nodes-carousel_left-button"></button>
-            <button class="nodes-carousel_right-button"></button>
+            <button class="nodes-carousel_left-button" @click="prevItem" :disabled="itemIndex === 0"></button>
+            <button class="nodes-carousel_right-button" @click="nextItem" :disabled="itemIndex === maxItemIndex"></button>
         </div>
     </section>
 
     <section class="item-page-section">
-        <div class="item-page__buttons">
-            <button class="item-page__back-button">Назад</button>
-            <button class="item-page__all-filters-button">Все фильтры</button>
-            <button class="item-page__filter-button">По возрастанию цены</button>
-        </div>
-
-        <div class="item-page__content">
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-
-            <div class="item-page__item">
-                <img class="item-page__item-img" src="@/assets/img/item-page__item-img.png" alt="item-page__item-img">
-                <p class="item-page__item-name">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-                <p class="item-page__item-article">Артикул: <span>123456</span></p>
-                <p class="item-page__item-prev-price">от <span>1 000</span> ₽</p>
-                <p class="item-page__item-curr-price">от <span>1 000</span> ₽</p>
-                <button class="item-page__item-more-detailed">Подробнее</button>
-            </div>
-        </div>
-
-        <div class="item-page__keys-block">
-            <button class="item-page__left-key"></button>
-            <div class="item-page__pages"></div>
-            <button class="item-page__right-key"></button>
-        </div>
+      <Pagination :productItems="productItems"/>
     </section>
 
     <section class="heatMeters-section">
@@ -582,6 +89,50 @@
 
 <script>
 
+import Pagination from '@/components/common/Pagination-products.vue'
+import {productItems} from '@/assets/scripts/heatMeters-items.js'
+
+export default {
+  components: {Pagination},
+
+  data() {
+    return {
+      productItems,
+      itemIndex: 0,
+      nodesCarouselItems: [
+        {name: 'Одноветочный', number: '01', img: 'src/assets/img/nodes-roster-item__img1.png'},
+        {name: 'Одноветочный', number: '01', img: 'src/assets/img/nodes-roster-item__img1.png'},
+        {name: 'Одноветочный', number: '01', img: 'src/assets/img/nodes-roster-item__img1.png'},
+        {name: 'Одноветочный', number: '01', img: 'src/assets/img/nodes-roster-item__img1.png'},
+        {name: 'Одноветочный', number: '01', img: 'src/assets/img/nodes-roster-item__img1.png'},
+      ],
+    }
+  },
+  computed: {
+    maxItemIndex() {
+      return this.nodesCarouselItems.length - 1
+    }
+  },
+
+  methods: {
+    prevItem() {
+      this.$refs.nodesCarouselInner.scrollBy({
+        left: 10,
+        behavior: 'smooth'
+
+      })
+    },
+
+    nextItem() {
+      this.$refs.nodesCarouselInner.scrollBy({
+        right: 10,
+        behavior: 'smooth'
+      })
+    },
+
+
+  }
+}
 </script>
 
 

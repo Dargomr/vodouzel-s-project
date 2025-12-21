@@ -243,6 +243,10 @@
         display: block;
     }
 
+    .production-section__type-and-name{
+        top: 0;
+    }
+
     .production-section__content {
         margin-top: 40px;
     }
