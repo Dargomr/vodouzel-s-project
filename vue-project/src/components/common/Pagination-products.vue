@@ -74,7 +74,7 @@ export default {
     },
 
     getItemsPerPage() {
-      const width = window.innerWidth;
+      const width = window.clientWidth;
       if (width <= 375) {
         return 10
       } else if (width > 375 ) {

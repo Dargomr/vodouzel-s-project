@@ -37,8 +37,8 @@
         </div>
 
         <div class="nodes-carousel-section__buttons">
-            <button class="nodes-carousel_left-button" @click="prevItem" :disabled="itemIndex === 0"></button>
-            <button class="nodes-carousel_right-button" @click="nextItem" :disabled="itemIndex === maxItemIndex"></button>
+            <button class="nodes-carousel_left-button" @click="prevItem"></button>
+            <button class="nodes-carousel_right-button" @click="nextItem"></button>
         </div>
     </section>
 
@@ -105,6 +105,17 @@ export default {
         {name: 'Одноветочный', number: '01', img: 'src/assets/img/nodes-roster-item__img1.png'},
         {name: 'Одноветочный', number: '01', img: 'src/assets/img/nodes-roster-item__img1.png'},
         {name: 'Одноветочный', number: '01', img: 'src/assets/img/nodes-roster-item__img1.png'},
+        {name: 'Одноветочный', number: '01', img: 'src/assets/img/nodes-roster-item__img1.png'},
+        {name: 'Одноветочный', number: '01', img: 'src/assets/img/nodes-roster-item__img1.png'},
+        {name: 'Одноветочный', number: '01', img: 'src/assets/img/nodes-roster-item__img1.png'},
+        {name: 'Одноветочный', number: '01', img: 'src/assets/img/nodes-roster-item__img1.png'},
+        {name: 'Одноветочный', number: '01', img: 'src/assets/img/nodes-roster-item__img1.png'},
+        {name: 'Одноветочный', number: '01', img: 'src/assets/img/nodes-roster-item__img1.png'},
+        {name: 'Одноветочный', number: '01', img: 'src/assets/img/nodes-roster-item__img1.png'},
+        {name: 'Одноветочный', number: '01', img: 'src/assets/img/nodes-roster-item__img1.png'},
+        {name: 'Одноветочный', number: '01', img: 'src/assets/img/nodes-roster-item__img1.png'},
+        {name: 'Одноветочный', number: '01', img: 'src/assets/img/nodes-roster-item__img1.png'},
+        {name: 'Одноветочный', number: '01', img: 'src/assets/img/nodes-roster-item__img1.png'},
       ],
     }
   },
@@ -116,16 +127,20 @@ export default {
 
   methods: {
     prevItem() {
-      this.$refs.nodesCarouselInner.scrollBy({
-        left: 10,
+      const container = this.$refs.nodesCarouselInner
+      if (!container) return
+      container.scrollBy({
+        left: -10,
         behavior: 'smooth'
 
       })
     },
 
     nextItem() {
-      this.$refs.nodesCarouselInner.scrollBy({
-        right: 10,
+      const container = this.$refs.nodesCarouselInner
+      if (!container) return
+      container.scrollBy({
+        left: 10,
         behavior: 'smooth'
       })
     },
