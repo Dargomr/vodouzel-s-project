@@ -123,7 +123,7 @@ export const productItems = [
     },
     {
         id: 16,
-        img: "/src/assets/img/item-page__item-img.png",
+        img: "/src/assets/img/item-page3__item-img.png",
         name: "Задвижка чугунная КНР 30ч39р Ду50 Ру16",
         article: "123456",
         prevPrice: "1 000",
@@ -131,7 +131,7 @@ export const productItems = [
     },
     {
         id: 17,
-        img: "/src/assets/img/item-page__item-img.png",
+        img: "/src/assets/img/item-page3__item-img.png",
         name: "Задвижка чугунная КНР 30ч39р Ду50 Ру16",
         article: "123456",
         prevPrice: "1 000",
@@ -139,7 +139,7 @@ export const productItems = [
     },
     {
         id: 18,
-        img: "/src/assets/img/item-page__item-img.png",
+        img: "/src/assets/img/item-page3__item-img.png",
         name: "Задвижка чугунная КНР 30ч39р Ду50 Ру16",
         article: "123456",
         prevPrice: "1 000",
@@ -147,7 +147,7 @@ export const productItems = [
     },
     {
         id: 19,
-        img: "/src/assets/img/item-page__item-img.png",
+        img: "/src/assets/img/item-page3__item-img.png",
         name: "Задвижка чугунная КНР 30ч39р Ду50 Ру16",
         article: "123456",
         prevPrice: "1 000",
@@ -155,7 +155,7 @@ export const productItems = [
     },
     {
         id: 20,
-        img: "/src/assets/img/item-page__item-img.png",
+        img: "/src/assets/img/item-page3__item-img.png",
         name: "Задвижка чугунная КНР 30ч39р Ду50 Ру16",
         article: "123456",
         prevPrice: "1 000",
@@ -163,7 +163,7 @@ export const productItems = [
     },
     {
         id: 21,
-        img: "/src/assets/img/item-page__item-img.png",
+        img: "/src/assets/img/item-page3__item-img.png",
         name: "Задвижка чугунная КНР 30ч39р Ду50 Ру16",
         article: "123456",
         prevPrice: "1 000",
@@ -171,7 +171,7 @@ export const productItems = [
     },
     {
         id: 22,
-        img: "/src/assets/img/item-page__item-img.png",
+        img: "/src/assets/img/item-page3__item-img.png",
         name: "Задвижка чугунная КНР 30ч39р Ду50 Ру16",
         article: "123456",
         prevPrice: "1 000",
@@ -179,7 +179,7 @@ export const productItems = [
     },
     {
         id: 23,
-        img: "/src/assets/img/item-page__item-img.png",
+        img: "/src/assets/img/item-page3__item-img.png",
         name: "Задвижка чугунная КНР 30ч39р Ду50 Ру16",
         article: "123456",
         prevPrice: "1 000",
@@ -187,7 +187,7 @@ export const productItems = [
     },
     {
         id: 24,
-        img: "/src/assets/img/item-page__item-img.png",
+        img: "/src/assets/img/item-page3__item-img.png",
         name: "Задвижка чугунная КНР 30ч39р Ду50 Ру16",
         article: "123456",
         prevPrice: "1 000",
@@ -195,7 +195,7 @@ export const productItems = [
     },
     {
         id: 25,
-        img: "/src/assets/img/item-page__item-img.png",
+        img: "/src/assets/img/item-page3__item-img.png",
         name: "Задвижка чугунная КНР 30ч39р Ду50 Ру16",
         article: "123456",
         prevPrice: "1 000",
@@ -203,7 +203,7 @@ export const productItems = [
     },
     {
         id: 26,
-        img: "/src/assets/img/item-page__item-img.png",
+        img: "/src/assets/img/item-page3__item-img.png",
         name: "Задвижка чугунная КНР 30ч39р Ду50 Ру16",
         article: "123456",
         prevPrice: "1 000",
@@ -211,7 +211,7 @@ export const productItems = [
     },
     {
         id: 27,
-        img: "/src/assets/img/item-page__item-img.png",
+        img: "/src/assets/img/item-page3__item-img.png",
         name: "Задвижка чугунная КНР 30ч39р Ду50 Ру16",
         article: "123456",
         prevPrice: "1 000",
@@ -219,7 +219,7 @@ export const productItems = [
     },
     {
         id: 28,
-        img: "/src/assets/img/item-page__item-img.png",
+        img: "/src/assets/img/item-page3__item-img.png",
         name: "Задвижка чугунная КНР 30ч39р Ду50 Ру16",
         article: "123456",
         prevPrice: "1 000",
@@ -227,7 +227,7 @@ export const productItems = [
     },
     {
         id: 29,
-        img: "/src/assets/img/item-page__item-img.png",
+        img: "/src/assets/img/item-page3__item-img.png",
         name: "Задвижка чугунная КНР 30ч39р Ду50 Ру16",
         article: "123456",
         prevPrice: "1 000",
@@ -235,7 +235,7 @@ export const productItems = [
     },
     {
         id: 30,
-        img: "/src/assets/img/item-page__item-img.png",
+        img: "/src/assets/img/item-page3__item-img.png",
         name: "Задвижка чугунная КНР 30ч39р Ду50 Ру16",
         article: "123456",
         prevPrice: "1 000",
@@ -243,7 +243,7 @@ export const productItems = [
     },
     {
         id: 31,
-        img: "/src/assets/img/item-page__item-img.png",
+        img: "/src/assets/img/item-page3__item-img.png",
         name: "Задвижка чугунная КНР 30ч39р Ду50 Ру16",
         article: "123456",
         prevPrice: "1 000",
@@ -251,7 +251,7 @@ export const productItems = [
     },
     {
         id: 32,
-        img: "/src/assets/img/item-page__item-img.png",
+        img: "/src/assets/img/item-page3__item-img.png",
         name: "Задвижка чугунная КНР 30ч39р Ду50 Ру16",
         article: "123456",
         prevPrice: "1 000",
@@ -259,7 +259,7 @@ export const productItems = [
     },
     {
         id: 33,
-        img: "/src/assets/img/item-page__item-img.png",
+        img: "/src/assets/img/item-page4__item-img.png",
         name: "Задвижка чугунная КНР 30ч39р Ду50 Ру16",
         article: "123456",
         prevPrice: "1 000",
@@ -267,7 +267,7 @@ export const productItems = [
     },
     {
         id: 34,
-        img: "/src/assets/img/item-page__item-img.png",
+        img: "/src/assets/img/item-page4__item-img.png",
         name: "Задвижка чугунная КНР 30ч39р Ду50 Ру16",
         article: "123456",
         prevPrice: "1 000",
@@ -275,7 +275,7 @@ export const productItems = [
     },
     {
         id: 35,
-        img: "/src/assets/img/item-page__item-img.png",
+        img: "/src/assets/img/item-page4__item-img.png",
         name: "Задвижка чугунная КНР 30ч39р Ду50 Ру16",
         article: "123456",
         prevPrice: "1 000",
@@ -283,7 +283,7 @@ export const productItems = [
     },
     {
         id: 36,
-        img: "/src/assets/img/item-page__item-img.png",
+        img: "/src/assets/img/item-page4__item-img.png",
         name: "Задвижка чугунная КНР 30ч39р Ду50 Ру16",
         article: "123456",
         prevPrice: "1 000",
@@ -291,7 +291,7 @@ export const productItems = [
     },
     {
         id: 37,
-        img: "/src/assets/img/item-page__item-img.png",
+        img: "/src/assets/img/item-page4__item-img.png",
         name: "Задвижка чугунная КНР 30ч39р Ду50 Ру16",
         article: "123456",
         prevPrice: "1 000",
@@ -299,7 +299,7 @@ export const productItems = [
     },
     {
         id: 38,
-        img: "/src/assets/img/item-page__item-img.png",
+        img: "/src/assets/img/item-page4__item-img.png",
         name: "Задвижка чугунная КНР 30ч39р Ду50 Ру16",
         article: "123456",
         prevPrice: "1 000",
@@ -307,7 +307,7 @@ export const productItems = [
     },
     {
         id: 39,
-        img: "/src/assets/img/item-page__item-img.png",
+        img: "/src/assets/img/item-page4__item-img.png",
         name: "Задвижка чугунная КНР 30ч39р Ду50 Ру16",
         article: "123456",
         prevPrice: "1 000",
@@ -315,7 +315,7 @@ export const productItems = [
     },
     {
         id: 40,
-        img: "/src/assets/img/item-page__item-img.png",
+        img: "/src/assets/img/item-page4__item-img.png",
         name: "Задвижка чугунная КНР 30ч39р Ду50 Ру16",
         article: "123456",
         prevPrice: "1 000",
@@ -323,7 +323,7 @@ export const productItems = [
     },
     {
         id: 41,
-        img: "/src/assets/img/item-page__item-img.png",
+        img: "/src/assets/img/item-page4__item-img.png",
         name: "Задвижка чугунная КНР 30ч39р Ду50 Ру16",
         article: "123456",
         prevPrice: "1 000",
@@ -331,7 +331,7 @@ export const productItems = [
     },
     {
         id: 42,
-        img: "/src/assets/img/item-page__item-img.png",
+        img: "/src/assets/img/item-page4__item-img.png",
         name: "Задвижка чугунная КНР 30ч39р Ду50 Ру16",
         article: "123456",
         prevPrice: "1 000",
@@ -339,7 +339,7 @@ export const productItems = [
     },
     {
         id: 43,
-        img: "/src/assets/img/item-page__item-img.png",
+        img: "/src/assets/img/item-page4__item-img.png",
         name: "Задвижка чугунная КНР 30ч39р Ду50 Ру16",
         article: "123456",
         prevPrice: "1 000",
@@ -347,7 +347,7 @@ export const productItems = [
     },
     {
         id: 44,
-        img: "/src/assets/img/item-page__item-img.png",
+        img: "/src/assets/img/item-page4__item-img.png",
         name: "Задвижка чугунная КНР 30ч39р Ду50 Ру16",
         article: "123456",
         prevPrice: "1 000",
@@ -355,7 +355,7 @@ export const productItems = [
     },
     {
         id: 45,
-        img: "/src/assets/img/item-page__item-img.png",
+        img: "/src/assets/img/item-page4__item-img.png",
         name: "Задвижка чугунная КНР 30ч39р Ду50 Ру16",
         article: "123456",
         prevPrice: "1 000",
@@ -363,7 +363,7 @@ export const productItems = [
     },
     {
         id: 46,
-        img: "/src/assets/img/item-page__item-img.png",
+        img: "/src/assets/img/item-page4__item-img.png",
         name: "Задвижка чугунная КНР 30ч39р Ду50 Ру16",
         article: "123456",
         prevPrice: "1 000",
@@ -371,7 +371,7 @@ export const productItems = [
     },
     {
         id: 47,
-        img: "/src/assets/img/item-page__item-img.png",
+        img: "/src/assets/img/item-page4__item-img.png",
         name: "Задвижка чугунная КНР 30ч39р Ду50 Ру16",
         article: "123456",
         prevPrice: "1 000",
@@ -379,7 +379,7 @@ export const productItems = [
     },
     {
         id: 48,
-        img: "/src/assets/img/item-page__item-img.png",
+        img: "/src/assets/img/item-page4__item-img.png",
         name: "Задвижка чугунная КНР 30ч39р Ду50 Ру16",
         article: "123456",
         prevPrice: "1 000",

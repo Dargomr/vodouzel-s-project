@@ -80,7 +80,7 @@
 
 
 <script>
-import HelpForm from "../components/common/HelpForm";
+import HelpForm from "@/components/common/HelpForm.vue";
 
 export default {
   components: {HelpForm}

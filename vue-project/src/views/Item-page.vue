@@ -12,27 +12,20 @@
         </div>
 
         <h2 class="item-page__h2">Задвижки чугунные</h2>
-      <Pagination :productItems="productItems"/>
+      <PaginationProducts :productItems="productItems"/>
     </section>
 
 </main>
 </template>
 
 
-<script>
+<script setup>
 
 import {productItems} from '@/assets/scripts/item-page-items.js'
-import Pagination from "@/components/common/Pagination-products.vue";
+import PaginationProducts from "@/components/common/PaginationProducts.vue";
 
-export default {
-  components: {Pagination},
 
-  data() {
-    return {
-      productItems,
-    }
-  }
-}
+
 </script>
 
 

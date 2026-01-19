@@ -753,7 +753,8 @@
         content: url("../img/button__diag-arrow.png");
     }
 
-    /*application-section*/
+                                                                    /*application-section*/
+
     .application-section {
         /*position: relative;*/
         padding-top: 120px;
@@ -2032,8 +2033,8 @@
     }
 
     .item-page-section {
+        padding: 0 32px 120px 32px;
         background-color: #F3F5F7;
-        padding-bottom: 120px;
     }
 
     .item-page__h2 {
@@ -2100,6 +2101,11 @@
     .item-page__item:hover {
         transform: scale(1.2);
         border:  2px solid #E1E4EF
+    }
+
+    .item-page__item-img {
+        width: 282px;
+        height: 282px;
     }
 
 
@@ -2517,6 +2523,12 @@
         font-weight: 700;
     }
 
+    .about-nodes-section__block {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column: 2/4;
+    }
+
     .about-nodes-section__big-text {
         margin-top: 60px;
         grid-column: 2/4;
@@ -2548,12 +2560,12 @@
 
 
     .areas-of-application-section {
-        display: grid;
-        grid-template-columns: 1fr 3fr ;
-        column-gap: 32px;
-        padding-top: 90px;
-        padding-bottom: 90px;
-        border-bottom: 1px solid #E1E4EF;
+        /*display: grid;*/
+        /*grid-template-columns: 1fr 3fr ;*/
+        /*column-gap: 32px;*/
+        /*padding-top: 90px;*/
+        /*padding-bottom: 90px;*/
+        /*border-bottom: 1px solid #E1E4EF;*/
 
     }
 
@@ -2789,26 +2801,31 @@
     }
 
     .nodes-details-section__content {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
         margin-top: 60px;
         grid-column: 2/4;
     }
 
     .nodes-details-section__big-text {
+        grid-column: 2/4;
         color: #18182F;
         font-size: 20px;
         font-weight: 400;
-        grid-column: 1/3
     }
 
     .nodes-details-section__text {
+        grid-column: 2/4;
         margin-top: 20px;
         color: #4F4F5F;
         font-size: 16px;
         font-weight: 400;
-        grid-column: 1/3
+
     }
 
     .nodes-details-section__list-div {
+        grid-column: 2/4;
+
         margin-top: 40px;
     }
 
@@ -2873,6 +2890,7 @@
     }
 
     .questionnaire-section__content {
+        /*grid-column: 1/5;*/
         margin-top: 60px;
         display: grid;
         grid-template-columns: 1fr 3fr;
@@ -3228,7 +3246,7 @@
     /*    overflow: hidden;*/
     /*}*/
 
-    .nodes-carousel__inner {
+    .nodes-carousel {
 
         display: flex;
         position: relative;
@@ -3339,7 +3357,7 @@
     /*—————————————————————————————————————————————————————————————————heatMeters-section————————————————————————————————————————————————————————*/
 
     .heatMeters-section {
-        padding: 120px 32px;
+        padding: 120px 0;
         display: grid;
         grid-template-columns: 1fr 3fr;
         column-gap: 32px;
@@ -3653,7 +3671,7 @@
 
     .german-quality-section__content {
         margin-top: 60px;
-        grid-column: 2/4;
+        /*grid-column: 2/4;*/
     }
 
     .german-quality-section__big-text {

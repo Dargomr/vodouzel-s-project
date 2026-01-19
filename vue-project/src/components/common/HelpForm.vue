@@ -24,10 +24,8 @@
   </section>
 </template>
 
-<script>
-export default {
-name: "HelpForm"
-}
+<script setup>
+
 </script>
 
 <style scoped>

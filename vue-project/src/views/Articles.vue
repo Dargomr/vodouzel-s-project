@@ -1,112 +1,98 @@
 <template>
   <main class="articles-main">
-      <section class="articles-section">
-          <div class="articles-section__switch">
-              <p class="main-switch">Главная</p> &nbsp;
-              <p class="proch">/</p> &nbsp;
-              <p class="articles-switch">Контакты</p>
+    <section class="articles-section">
+      <div class="articles-section__switch">
+          <p class="main-switch">Главная</p> &nbsp;
+          <p class="proch">/</p> &nbsp;
+          <p class="articles-switch">Контакты</p>
+      </div>
+      <div class="articles-section__articles">
+        <h2 class="articles-section__h2">Статьи</h2>
+        <div class="articles-section__content">
+          <div class="articles-section__articles-block">
+            <div class="article" v-for="article in displayedArticles" :key="article.id">
+              <img class="article__img" :src="article.img" alt="article">
+              <p class="article__date">{{ article.date }}</p>
+              <p class="article__text">{{ article.text }}</p>
+              <p class="article__read">{{ article.read }}</p>
+            </div>
           </div>
-          <div class="articles-section__articles">
-              <h2 class="articles-section__h2">Статьи</h2>
-              <div class="articles-section__content">
-                      <div class="articles-section__articles-block">
-                        <div class="article" v-for="article in displayedArticles" :key="article.id">
-                          <img class="article__img" :src="article.img" alt="article">
-                          <p class="article__date">{{ article.date }}</p>
-                          <p class="article__text">{{ article.text }}</p>
-                          <p class="article__read">{{ article.read }}</p>
-                        </div>
-
-                      </div>
-                  <div class="articles-section__keys-block">
-                      <button class="articles-section__left-key" @click="prevPage" :disabled="currentPage === 1"></button>
-
-                      <div class="articles-section__pages">
-                        <button :class="{'articles-section__page' : true, 'articles-section__page_active': pageNum === currentPage}" v-for="pageNum in totalPages" :key="pageNum" @click="goToPage(pageNum)">{{ pageNum }}</button>
-                      </div>
-
-                      <button class="articles-section__right-key" @click="nextPage" :disabled="currentPage === totalPages"></button>
-                  </div>
-              </div>
+          <div class="articles-section__keys-block">
+            <ArrowButton direction="prev" @click="prevPage" :disabled="currentPage === 1"/>
+            <Pagination :totalPages="totalPages" :currentPage="currentPage" @change="pageChange"/>
+            <ArrowButton direction="next" @click="nextPage" :disabled="currentPage === totalPages"/>
           </div>
-      </section>
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 
 
 
-<script>
+<script setup>
 
-import { articles } from '@/assets/scripts/articles-items.js'
+  import { articles } from '@/assets/scripts/articles-items.js'
+  import {computed, onBeforeUnmount, onMounted, ref} from "vue";
+  import Pagination from "@/components/common/Pagination.vue";
+  import ArrowButton from "@/components/common/ArrowButton.vue";
 
-export default {
-  name: 'ArticlesSection',
 
 
-  data() {
-    return {
-      itemsPerPage: 12,
-      currentPage: 1,
-      allArticles: articles,
-    }
-  },
+  const itemsPerPage = ref(12)
+  const currentPage = ref(1)
+  const allArticles = ref(articles)
 
-  computed: {
-    totalPages() {
-      return Math.ceil(this.allArticles.length / this.itemsPerPage);
-    },
 
-    displayedArticles() {
-      const start = (this.currentPage - 1) * (this.itemsPerPage)
-      const end = start + this.itemsPerPage;
-      return this.allArticles.slice(start, end)
-    }
-  },
+  const totalPages = computed(() => {
+    return Math.ceil(allArticles.value.length / itemsPerPage.value)
+  })
 
-  methods: {
 
-    getItemsPerPage() {
-      const width = window.clientWidth;
-      if (width <= 375) {
-        return 12
-      } else if (width > 375 && width <= 768) {
-        return 12
-      } else if (width > 768) {
-        return 16
-      }
-    },
+  const displayedArticles = computed(() => {
+      const start = (currentPage.value - 1) * (itemsPerPage.value)
+      const end = start + itemsPerPage.value
+      return allArticles.value.slice(start, end)
+  })
 
-    goToPage(pageNum) {
-      this.currentPage = pageNum
-    },
 
-    nextPage() {
-      if ( this.currentPage <  this.totalPages) {
-        this.currentPage++
-      }
-    },
 
-    prevPage() {
-      if ( this.currentPage >  1) {
-        this.currentPage--
-      }
-    },
-
-    updateItemsPerPage() {
-      this.itemsPerPage = this.getItemsPerPage()
-    }
-  },
-
-  mounted() {
-    this.updateItemsPerPage()
-
-    window.addEventListener('resize', this.updateItemsPerPage)
-  },
-
-  beforeUnmount() {
-    window.removeEventListener('resize', this.updateItemsPerPage)
+  const  getItemsPerPage = () => {
+    const width = document.documentElement.clientWidth;
+    return width <= 768 ? 12 : 16
   }
-}
+
+
+  const pageChange = (pageNum) => {
+      currentPage.value = pageNum
+    }
+
+  const nextPage = () => {
+      if ( currentPage.value <  totalPages.value) {
+        currentPage.value++
+      }
+    }
+
+  const prevPage = () => {
+      if ( currentPage.value >  1) {
+        currentPage.value--
+      }
+    }
+
+  const updateItemsPerPage = () => {
+      itemsPerPage.value = getItemsPerPage()
+  }
+
+  onMounted(() => {
+    updateItemsPerPage()
+
+    window.addEventListener('resize', updateItemsPerPage)
+  })
+
+  onBeforeUnmount(() => {
+    window.removeEventListener('resize', updateItemsPerPage)
+  })
+
 
 </script>
 
