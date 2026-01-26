@@ -1,4 +1,4 @@
-<template>
+ <template>
 
     <div class="areas-of-application-section__content">
       <div class="carousel">

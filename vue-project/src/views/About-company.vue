@@ -63,25 +63,9 @@
           <span class="clients-section__fat-p">Компания «Водоузел СПБ» на рынке с 2002 года.</span> <br> <br>
           Более 23 лет опыта позволяет нам реализовывать самые разные проекты начиная от работы с лучшими застройщиками Санкт-Петербурга и ЛО до работы с государственными структурами, а также с компаниями из стран СНГ (Беларусь, Казахстан).
         </p>
-        <div class="clients-section__items">
-          <img class="clients-section__img" src="@/assets/img/client-img.png" alt="clients-section__img">
-          <img class="clients-section__img" src="@/assets/img/client-img.png" alt="clients-section__img">
-          <img class="clients-section__img" src="@/assets/img/client-img.png" alt="clients-section__img">
-          <img class="clients-section__img" src="@/assets/img/client-img.png" alt="clients-section__img">
-          <img class="clients-section__img" src="@/assets/img/client-img.png" alt="clients-section__img">
-          <img class="clients-section__img" src="@/assets/img/client-img.png" alt="clients-section__img">
-          <img class="clients-section__img" src="@/assets/img/client-img.png" alt="clients-section__img">
-          <img class="clients-section__img" src="@/assets/img/client-img.png" alt="clients-section__img">
-          <img class="clients-section__img" src="@/assets/img/client-img.png" alt="clients-section__img">
-          <img class="clients-section__img" src="@/assets/img/client-img.png" alt="clients-section__img">
-          <img class="clients-section__img" src="@/assets/img/client-img.png" alt="clients-section__img">
-          <img class="clients-section__img" src="@/assets/img/client-img.png" alt="clients-section__img">
-          <img class="clients-section__img" src="@/assets/img/client-img.png" alt="clients-section__img">
-          <img class="clients-section__img" src="@/assets/img/client-img.png" alt="clients-section__img">
-          <img class="clients-section__img" src="@/assets/img/client-img.png" alt="clients-section__img">
-          <img class="clients-section__img" src="@/assets/img/client-img.png" alt="clients-section__img">
-        </div>
+        <CardTiles :tiles="tiles"></CardTiles>
       </div>
+
     </Rename>
 
     <Rename :isCarousel='true' h2="Документы" name="Наши сертификаты" :current-slide="currentSlide"
@@ -96,7 +80,27 @@
 <script setup>
   import Rename from "@/components/common/Rename.vue";
   import Carousel from "@/components/common/Carousel.vue";
+  import CardTiles from "@/components/common/CardTiles.vue";
   import {ref} from "vue";
+
+  const tiles = ref([
+    {image: 'src/assets/img/client-img.png'},
+    {image: 'src/assets/img/client-img.png'},
+    {image: 'src/assets/img/client-img.png'},
+    {image: 'src/assets/img/client-img.png'},
+    {image: 'src/assets/img/client-img.png'},
+    {image: 'src/assets/img/client-img.png'},
+    {image: 'src/assets/img/client-img.png'},
+    {image: 'src/assets/img/client-img.png'},
+    {image: 'src/assets/img/client-img.png'},
+    {image: 'src/assets/img/client-img.png'},
+    {image: 'src/assets/img/client-img.png'},
+    {image: 'src/assets/img/client-img.png'},
+    {image: 'src/assets/img/client-img.png'},
+    {image: 'src/assets/img/client-img.png'},
+    {image: 'src/assets/img/client-img.png'},
+    {image: 'src/assets/img/client-img.png'},
+  ])
 
   const items = ref( [
     {image: 'src/assets/img/certification1-img.png', text: 'Жилые комплексы', alt: 'certification__img1'},

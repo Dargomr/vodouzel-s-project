@@ -224,24 +224,7 @@
     </Rename>
 
     <Rename black-title="Наши клиенты" >
-      <div class="clients-section__items">
-        <img class="clients-section__img" src="@/assets/img/client-img.png" alt="clients-section__img">
-        <img class="clients-section__img" src="@/assets/img/client-img.png" alt="clients-section__img">
-        <img class="clients-section__img" src="@/assets/img/client-img.png" alt="clients-section__img">
-        <img class="clients-section__img" src="@/assets/img/client-img.png" alt="clients-section__img">
-        <img class="clients-section__img" src="@/assets/img/client-img.png" alt="clients-section__img">
-        <img class="clients-section__img" src="@/assets/img/client-img.png" alt="clients-section__img">
-        <img class="clients-section__img" src="@/assets/img/client-img.png" alt="clients-section__img">
-        <img class="clients-section__img" src="@/assets/img/client-img.png" alt="clients-section__img">
-        <img class="clients-section__img" src="@/assets/img/client-img.png" alt="clients-section__img">
-        <img class="clients-section__img" src="@/assets/img/client-img.png" alt="clients-section__img">
-        <img class="clients-section__img" src="@/assets/img/client-img.png" alt="clients-section__img">
-        <img class="clients-section__img" src="@/assets/img/client-img.png" alt="clients-section__img">
-        <img class="clients-section__img" src="@/assets/img/client-img.png" alt="clients-section__img">
-        <img class="clients-section__img" src="@/assets/img/client-img.png" alt="clients-section__img">
-        <img class="clients-section__img" src="@/assets/img/client-img.png" alt="clients-section__img">
-        <img class="clients-section__img" src="@/assets/img/client-img.png" alt="clients-section__img">
-      </div>
+      <CardTiles :tiles="tiles"></CardTiles>
     </Rename>
 
     <HelpForm/>
@@ -252,7 +235,27 @@
 import Carousel from "@/components/common/Carousel.vue";
 import HelpForm from "@/components/common/HelpForm.vue";
 import Rename from "@/components/common/Rename.vue";
+import CardTiles from "@/components/common/CardTiles.vue";
 import {ref} from "vue";
+
+const tiles = ref([
+  {image: 'src/assets/img/client-img.png'},
+  {image: 'src/assets/img/client-img.png'},
+  {image: 'src/assets/img/client-img.png'},
+  {image: 'src/assets/img/client-img.png'},
+  {image: 'src/assets/img/client-img.png'},
+  {image: 'src/assets/img/client-img.png'},
+  {image: 'src/assets/img/client-img.png'},
+  {image: 'src/assets/img/client-img.png'},
+  {image: 'src/assets/img/client-img.png'},
+  {image: 'src/assets/img/client-img.png'},
+  {image: 'src/assets/img/client-img.png'},
+  {image: 'src/assets/img/client-img.png'},
+  {image: 'src/assets/img/client-img.png'},
+  {image: 'src/assets/img/client-img.png'},
+  {image: 'src/assets/img/client-img.png'},
+  {image: 'src/assets/img/client-img.png'},
+])
 
 const items = ref( [
   {image: 'src/assets/img/carousel_img2.png', text: 'Жилые комплексы', alt: 'carousel__img1'},
