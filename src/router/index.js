@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from "vue-router"
+import { createRouter, createWebHistory } from 'vue-router'
 
 const Main = () => import('@/views/Main.vue')
 const Error404 = () => import('@/views/Error404.vue')
@@ -16,81 +16,81 @@ const Nodes = () => import('@/views/Nodes.vue')
 const OpenCatalog = () => import('@/views/Open-catalog.vue')
 
 const routes = [
-    {
-        path: '/',
-        name: 'Main',
-        component: Main,
-    },
-    {
-        path: '/Error404',
-        name: 'Error404',
-        component: Error404,
-    },
-    {
-            path: '/About-company',
-        name: 'About-company',
-        component: AboutCompany,
-    },
-    {
-        path: '/Articles',
-        name: 'Articles',
-        component: Articles,
-    },
-    {
-        path: '/Contacts',
-        name: 'Contacts',
-        component: Contacts,
-    },
-    {
-        path: '/Ct-17y',
-        name: 'Ct-17y',
-        component: Ct17y,
-    },
-    {
-        path: '/HeatMeters',
-        name: 'HeatMeters',
-        component: HeatMeters,
-    },
-    {
-        path: '/Item-inner-page',
-        name: 'Item-inner-page',
-        component: ItemInnerPage,
-    },
-    {
-        path: '/Item-inner-page2',
-        name: 'Item-inner-page2',
-        component: ItemInnerPage2,
-    },
-    {
-        path: '/Item-inner-page3',
-        name: 'Item-inner-page3',
-        component: ItemInnerPage3,
-    },
-    {
-        path: '/Item-page',
-        name: 'Item-page',
-        component: ItemPage,
-    },
-    {
-        path: '/Main-catalog',
-        name: 'Main-catalog',
-        component: MainCatalog,
-    },
-    {
-        path: '/Nodes',
-        name: 'Nodes',
-        component: Nodes,
-    },
-    {
-        path: '/Open-catalog',
-        name: 'Open-catalog',
-        component: OpenCatalog,
-    },
+  {
+    path: '/',
+    name: 'Main',
+    component: Main,
+  },
+  {
+    path: '/Error404',
+    name: 'Error404',
+    component: Error404,
+  },
+  {
+    path: '/About-company',
+    name: 'About-company',
+    component: AboutCompany,
+  },
+  {
+    path: '/Articles',
+    name: 'Articles',
+    component: Articles,
+  },
+  {
+    path: '/Contacts',
+    name: 'Contacts',
+    component: Contacts,
+  },
+  {
+    path: '/Ct-17y',
+    name: 'Ct-17y',
+    component: Ct17y,
+  },
+  {
+    path: '/HeatMeters',
+    name: 'HeatMeters',
+    component: HeatMeters,
+  },
+  {
+    path: '/Item-inner-page',
+    name: 'Item-inner-page',
+    component: ItemInnerPage,
+  },
+  {
+    path: '/Item-inner-page2',
+    name: 'Item-inner-page2',
+    component: ItemInnerPage2,
+  },
+  {
+    path: '/Item-inner-page3',
+    name: 'Item-inner-page3',
+    component: ItemInnerPage3,
+  },
+  {
+    path: '/Item-page',
+    name: 'Item-page',
+    component: ItemPage,
+  },
+  {
+    path: '/Main-catalog',
+    name: 'Main-catalog',
+    component: MainCatalog,
+  },
+  {
+    path: '/Nodes',
+    name: 'Nodes',
+    component: Nodes,
+  },
+  {
+    path: '/Open-catalog',
+    name: 'Open-catalog',
+    component: OpenCatalog,
+  },
 ]
 
 const router = createRouter({
-    history: createWebHistory(),
-    routes
+  history: createWebHistory(),
+  routes,
 })
 
 export default router

@@ -13,14 +13,6 @@
       "~/*": ["./*"]
     }
   },
-  "include": [
-    "src/**/*",
-    "src/**/*.vue",
-    "**/*.js",
-    "**/*.vue"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist"
-  ]
+  "include": ["src/**/*", "src/**/*.vue", "**/*.js", "**/*.vue"],
+  "exclude": ["node_modules", "dist"]
 }

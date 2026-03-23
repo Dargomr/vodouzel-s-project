@@ -5,7 +5,7 @@
         <div class="contacts-section__phone-and-email">
           <div class="contacts-section__phone">
             <p class="phone-label label">Телефон:</p>
-            <p class="contacts-phone-number ">8 800 201-55-30</p>
+            <p class="contacts-phone-number">8 800 201-55-30</p>
             <p class="phone-free">(по РФ бесплатно)</p>
           </div>
           <div class="contacts-section__email">
@@ -21,14 +21,13 @@
           </div>
           <div class="contacts-section__address">
             <p class="address-label label">Адрес:</p>
-            <p class="address-text">194292, Россия, г. Санкт-Петербург,
-              ул. Верхняя, 12А</p>
+            <p class="address-text">194292, Россия, г. Санкт-Петербург, ул. Верхняя, 12А</p>
           </div>
         </div>
       </div>
     </Rename>
 
-      <section class="map-section"></section>
+    <section class="map-section"></section>
 
     <Rename blackTitle="Юридическая информация">
       <div class="legal-information-section__content">
@@ -61,8 +60,7 @@
           </div>
           <div class="legal-information-section__bank">
             <p class="bank-label label">Банк:</p>
-            <p class="bank-text">Филиал «Санкт-Петербургский»,
-              АО «АЛЬФА-БАНК» г. Санкт-Петербург</p>
+            <p class="bank-text">Филиал «Санкт-Петербургский», АО «АЛЬФА-БАНК» г. Санкт-Петербург</p>
           </div>
           <div class="legal-information-section__kc">
             <p class="kc-label label">К/С:</p>
@@ -75,16 +73,12 @@
         </div>
       </div>
     </Rename>
-
   </main>
 </template>
 
-
-
 <script setup>
-  import Rename from "@/components/common/Rename.vue";
+import Rename from '@/components/common/Rename.vue'
 </script>
-
 
 <style scoped>
 @import '@/assets/css/1440px.css';

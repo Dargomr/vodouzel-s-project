@@ -1,7 +1,12 @@
 <template>
   <div class="item-page__pages">
-    <button v-for="pageNum in totalPages" :class="{'item-page__page': true, 'item-page__page_active': pageNum === currentPage}"
-            :key="pageNum" @click="handleClick(pageNum)">{{ pageNum }}
+    <button
+      v-for="pageNum in totalPages"
+      :class="{ 'item-page__page': true, 'item-page__page_active': pageNum === currentPage }"
+      :key="pageNum"
+      @click="handleClick(pageNum)"
+    >
+      {{ pageNum }}
     </button>
   </div>
 </template>
@@ -9,11 +14,11 @@
 <script setup>
 const props = defineProps({
   totalPages: {
-    type: Number
+    type: Number,
   },
   currentPage: {
-    type: Number
-  }
+    type: Number,
+  },
 })
 
 const emit = defineEmits(['change'])
@@ -23,7 +28,6 @@ const handleClick = (pageNum) => {
     emit('change', pageNum)
   }
 }
-
 </script>
 
 <style scoped>

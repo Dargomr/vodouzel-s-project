@@ -1,12 +1,12 @@
 <template>
   <div class="nodes-carousel" ref="nodesCarousel">
-      <div v-for="(item, index) in allItems" :key="index" class="nodes-carousel-item">
-        <div class="nodes-carousel-item__content">
-          <p class="nodes-carousel-item__name">{{ item.name }}</p>
-          <p class="nodes-carousel-item__number">{{ item.number }}</p>
-        </div>
-        <img class="nodes-carousel-item__img" :src="item.img" alt="nodes__roster-item__img">
+    <div v-for="(item, index) in allItems" :key="index" class="nodes-carousel-item">
+      <div class="nodes-carousel-item__content">
+        <p class="nodes-carousel-item__name">{{ item.name }}</p>
+        <p class="nodes-carousel-item__number">{{ item.number }}</p>
       </div>
+      <img class="nodes-carousel-item__img" :src="item.img" alt="nodes__roster-item__img" />
+    </div>
   </div>
 
   <div class="nodes-carousel-section__buttons">
@@ -17,47 +17,48 @@
 
 <script>
 export default {
-name: "ScrollByCarousel",
+  name: 'ScrollByCarousel',
   props: {
     nodesCarouselItems: {
       required: true,
-      type: Array
-    }
+      type: Array,
+    },
   },
 
   data() {
     return {
-      allItems: this.nodesCarouselItems
+      allItems: this.nodesCarouselItems,
     }
   },
   computed: {
     maxItemIndex() {
       return this.allItems.length - 1
-    }
+    },
   },
 
   methods: {
     prevItem() {
       const container = this.$refs.nodesCarousel
-      if (!container) return
+      if (!container) {
+        return
+      }
       container.scrollBy({
         left: -10,
-        behavior: 'smooth'
-
+        behavior: 'smooth',
       })
     },
 
     nextItem() {
       const container = this.$refs.nodesCarousel
-      if (!container) return
+      if (!container) {
+        return
+      }
       container.scrollBy({
         left: 10,
-        behavior: 'smooth'
+        behavior: 'smooth',
       })
     },
-
-
-  }
+  },
 }
 </script>
 

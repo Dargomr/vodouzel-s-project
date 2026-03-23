@@ -1,13 +1,9 @@
-<template>
-
-</template>
+<template></template>
 
 <script>
 export default {
-name: "Pagination-card-products"
+  name: 'Pagination-card-products',
 }
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

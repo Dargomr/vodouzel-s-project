@@ -7,19 +7,19 @@ import path from 'path'
 // const path = require('path')
 
 export default defineConfig({
-    plugins: [vue()],
-    resolve: {
-        alias: {
-            '@': path.resolve(__dirname, "src"),
-        }
+  plugins: [vue()],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
     },
-    server: {
-        port: 3000,
-        open: true,
-    },
-    // build: {
-    //     outDir: 'dist',
-    //     assetsDir: 'assets',
-    //     sourceMap: false,
-    // }
+  },
+  server: {
+    port: 3000,
+    open: true,
+  },
+  // build: {
+  //     outDir: 'dist',
+  //     assetsDir: 'assets',
+  //     sourceMap: false,
+  // }
 })

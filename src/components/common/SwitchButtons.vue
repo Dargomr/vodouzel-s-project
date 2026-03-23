@@ -7,8 +7,7 @@
 </template>
 
 <script setup>
-
-import {onMounted, ref, computed} from 'vue'
+import { onMounted, ref, computed } from 'vue'
 
 const props = defineProps({
   store: String,
@@ -32,14 +31,18 @@ onMounted(async () => {
   }
 })
 
-const products = computed (() => importedStore.value?.products || [])
-
-
+const products = computed(() => importedStore.value?.products || [])
 
 const comparePrice = (a, b) => {
-  if (a.currPrice > b.currPrice) return -1;
-  if (a.currPrice === b.currPrice) return 0;
-  if (a.currPrice < b.currPrice) return 1;
+  if (a.currPrice > b.currPrice) {
+    return -1
+  }
+  if (a.currPrice === b.currPrice) {
+    return 0
+  }
+  if (a.currPrice < b.currPrice) {
+    return 1
+  }
 }
 
 const func = () => {
@@ -48,10 +51,6 @@ const func = () => {
     importedStore.value.products = sortedProducts
   }
 }
-
 </script>
 
-
-<style scoped>
-
-</style>
+<style scoped></style>
