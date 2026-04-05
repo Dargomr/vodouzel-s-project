@@ -1,4 +1,4 @@
-import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
+import { ref, computed } from 'vue'
 
 export function compoPagination(items, defaultItemsPerPage = 16) {
   const itemsPerPage = ref(defaultItemsPerPage)

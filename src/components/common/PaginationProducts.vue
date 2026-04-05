@@ -16,7 +16,7 @@
 </template>
 
 <script setup>
-import { ref, computed, watch, onMounted, onBeforeUnmount, toRefs } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 
 import { compoPagination } from '@/composables/compoPagination.js'
 import PaginationBlock from '@/components/common/PaginationBlock.vue'

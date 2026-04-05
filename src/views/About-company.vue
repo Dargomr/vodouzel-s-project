@@ -8,14 +8,18 @@
         &nbsp;
         <p class="about-company-switch">Контакты</p>
       </div>
-      <img class="catalog-about-company-section__logo" src="@/assets/img/vodouzel.png" alt="vodouzel" />
+      <img
+        class="catalog-about-company-section__logo"
+        src="@/assets/img/vodouzel.png"
+        alt="vodouzel"
+      />
       <div class="catalog-about-company-section__text">
         <h3 class="catalog-about-company-section__h3">
           Наша компания занимается оптовой и розничной продажей трубопроводной арматуры
         </h3>
         <p class="catalog-about-company-section__also">
-          А так же продажей материалов для инженерных коммуникаций, контрольно-измерительных приборов, автоматики и
-          реализацией пожарного оборудования.
+          А так же продажей материалов для инженерных коммуникаций, контрольно-измерительных
+          приборов, автоматики и реализацией пожарного оборудования.
         </p>
       </div>
       <img
@@ -25,18 +29,19 @@
       />
       <p class="catalog-about-company-section__p">
         <span class="catalog-about-company-section__black-p">
-          Любое оборудование, приобретенное у нас имеет все необходимые сертификаты качества и гарантию, определенную
-          для него заводом-изготовителем.
+          Любое оборудование, приобретенное у нас имеет все необходимые сертификаты качества и
+          гарантию, определенную для него заводом-изготовителем.
         </span>
         <br />
         <br />
-        Сотрудничая с нами, Вы получаете качественное и недорогое оборудование. Также мы комплектуем водомерные узлы по
-        альбому ЦИРВ02А.00.00.00 для сдачи представителям Водоканала.
+        Сотрудничая с нами, Вы получаете качественное и недорогое оборудование. Также мы комплектуем
+        водомерные узлы по альбому ЦИРВ02А.00.00.00 для сдачи представителям Водоканала.
         <br />
         <br />
-        Прочно отработанные связи с предприятиями-изготовителями позволяют нам оперативно реагировать на потребности и
-        нужды наших клиентов, что благотворно сказывается на взаимном плодотворном сотрудничестве. Так же при
-        приобретении оборудования в нашей компании предусмотрены различные скидки и бонусы.
+        Прочно отработанные связи с предприятиями-изготовителями позволяют нам оперативно
+        реагировать на потребности и нужды наших клиентов, что благотворно сказывается на взаимном
+        плодотворном сотрудничестве. Так же при приобретении оборудования в нашей компании
+        предусмотрены различные скидки и бонусы.
       </p>
     </section>
 
@@ -44,8 +49,9 @@
       <div class="services-section__content">
         <CardTiles section="aboutCompanyOurServices"></CardTiles>
         <p class="services-section__p">
-          Мы организуем поставку любого оборудования широкого спектра производителей - отечественных и иностранных.
-          Гарантией качества здесь является не только гарантийный талон, но и бренд производителя.
+          Мы организуем поставку любого оборудования широкого спектра производителей - отечественных
+          и иностранных. Гарантией качества здесь является не только гарантийный талон, но и бренд
+          производителя.
         </p>
       </div>
     </Rename>
@@ -56,9 +62,9 @@
           <span class="clients-section__fat-p">Компания «Водоузел СПБ» на рынке с 2002 года.</span>
           <br />
           <br />
-          Более 23 лет опыта позволяет нам реализовывать самые разные проекты начиная от работы с лучшими застройщиками
-          Санкт-Петербурга и ЛО до работы с государственными структурами, а также с компаниями из стран СНГ (Беларусь,
-          Казахстан).
+          Более 23 лет опыта позволяет нам реализовывать самые разные проекты начиная от работы с
+          лучшими застройщиками Санкт-Петербурга и ЛО до работы с государственными структурами, а
+          также с компаниями из стран СНГ (Беларусь, Казахстан).
         </p>
         <CardTiles section="aboutCompanyOurClients"></CardTiles>
       </div>
@@ -69,15 +75,10 @@
       :withH2="true"
       h2="Документы"
       name="Наши сертификаты"
-      :current-slide="currentSlide"
-      @prev-slide="handlePrevSlide"
-      @next-slide="handleNextSlide"
-      :max-slide="carouselStore.aboutCompanyCertificationItems.length - 1"
+      section="aboutCompanyCertification"
     >
       <Carousel
-        :items="carouselStore.aboutCompanyCertificationItems"
-        :current-slide="currentSlide"
-        @slide-change="handleSlideChange"
+        section="aboutCompanyCertification"
         carousel-class="certification-item__img-block"
         carousel-class-inner="certification-item__img'"
       />
@@ -89,30 +90,6 @@
 import Rename from '@/components/common/Rename.vue'
 import Carousel from '@/components/common/Carousel.vue'
 import CardTiles from '@/components/common/CardTiles.vue'
-import { ref } from 'vue'
-import { useTilesStore } from '@/stores/TilesStore.js'
-import { useCarouselStore } from '@/stores/CarouselStore.js'
-
-const tilesStore = useTilesStore()
-const carouselStore = useCarouselStore()
-
-const currentSlide = ref(0)
-
-const handlePrevSlide = () => {
-  if (currentSlide.value > 0) {
-    currentSlide.value--
-  }
-}
-
-const handleNextSlide = () => {
-  if (currentSlide.value < carouselStore.aboutCompanyCertificationItems.length - 1) {
-    currentSlide.value++
-  }
-}
-
-const handleSlideChange = (index) => {
-  currentSlide.value = index
-}
 </script>
 
 <style scoped>

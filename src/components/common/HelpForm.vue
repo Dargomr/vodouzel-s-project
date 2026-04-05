@@ -18,7 +18,12 @@
       <div class="help-form__text-input">
         <div class="help-form__text-username-item">
           <label class="help-form__username-label" for="help-form__username">Имя:</label>
-          <input class="help-form__username-input" id="help-form__username" type="text" placeholder="Иванов Иван" />
+          <input
+            class="help-form__username-input"
+            id="help-form__username"
+            type="text"
+            placeholder="Иванов Иван"
+          />
         </div>
 
         <div class="help-form__text-phone-item">

@@ -19,11 +19,23 @@
               <p class="article__read">{{ article.read }}</p>
             </div>
           </div>
-          <div class="articles-section__keys-block">
-            <ArrowButton direction="prev" @click="prevPage" :disabled="currentPage === 1" />
-            <Pagination :totalPages="totalPages" :currentPage="currentPage" @change="pageChange" />
-            <ArrowButton direction="next" @click="nextPage" :disabled="currentPage === totalPages" />
-          </div>
+          <PaginationBlock
+            class="item-page__keys-block"
+            :total-pages="totalPages"
+            :current-page="currentPage"
+            @prev-page="prevPage"
+            @page-change="pageChange"
+            @next-page="nextPage"
+          ></PaginationBlock>
+          <!--          <div class="articles-section__keys-block">-->
+          <!--            <ArrowButton direction="prev" @click="prevPage" :disabled="currentPage === 1" />-->
+          <!--            <Pagination :totalPages="totalPages" :currentPage="currentPage" @change="pageChange" />-->
+          <!--            <ArrowButton-->
+          <!--              direction="next"-->
+          <!--              @click="nextPage"-->
+          <!--              :disabled="currentPage === totalPages"-->
+          <!--            />-->
+          <!--          </div>-->
         </div>
       </div>
     </section>
@@ -31,23 +43,23 @@
 </template>
 
 <script setup>
-import { articles } from '@/assets/scripts/articles-items.js'
+import { usePaginationStore } from '@/stores/PaginationStore.js'
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
-import Pagination from '@/components/common/Pagination.vue'
-import ArrowButton from '@/components/common/ArrowButton.vue'
+import PaginationBlock from '@/components/common/PaginationBlock.vue'
+
+const paginationStore = usePaginationStore()
 
 const itemsPerPage = ref(12)
 const currentPage = ref(1)
-const allArticles = ref(articles)
 
 const totalPages = computed(() => {
-  return Math.ceil(allArticles.value.length / itemsPerPage.value)
+  return Math.ceil(paginationStore.articlesItems.length / itemsPerPage.value)
 })
 
 const displayedArticles = computed(() => {
   const start = (currentPage.value - 1) * itemsPerPage.value
   const end = start + itemsPerPage.value
-  return allArticles.value.slice(start, end)
+  return paginationStore.articlesItems.slice(start, end)
 })
 
 const getItemsPerPage = () => {

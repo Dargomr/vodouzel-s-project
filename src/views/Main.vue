@@ -9,7 +9,11 @@
         для сдачи представителям водоканалов
       </p>
       <div class="first-section__under">
-        <img class="first-section__logo" src="@/assets/img/first-section-logo.png" alt="first-section__logo" />
+        <img
+          class="first-section__logo"
+          src="@/assets/img/first-section-logo.png"
+          alt="first-section__logo"
+        />
         <!--            <img class="first-section__logo-768px" src="@/assets/img/first-section-logo-768px.png" alt="first-section__logo">-->
         <div class="first-section__additionally">
           <p class="first-section__number"></p>
@@ -34,25 +38,29 @@
       </div>
       <div class="about-company__also">
         <p class="about-company__also-text">
-          А так же продажей материалов для инженерных коммуникаций, контрольно-измерительных приборов, автоматики и
-          реализацией пожарного оборудования.
+          А так же продажей материалов для инженерных коммуникаций, контрольно-измерительных
+          приборов, автоматики и реализацией пожарного оборудования.
         </p>
       </div>
     </section>
 
-    <Rename black-title="Почему стоит сотрудничать с нами" black-p="Берёмся за то, в чём разбираемся">
+    <Rename
+      black-title="Почему стоит сотрудничать с нами"
+      black-p="Берёмся за то, в чём разбираемся"
+    >
       <CardTiles section="mainReasons"></CardTiles>
     </Rename>
 
     <Rename class="bg-gray" name="Водомерные узлы">
       <div class="pipes-description">
         <p class="pipes-description__text">
-          Каждый водомерный узел подбирается с учетом специфики вашего объекта и требований к учету воды.
+          Каждый водомерный узел подбирается с учетом специфики вашего объекта и требований к учету
+          воды.
         </p>
         <p class="pipes-description__text2">
-          Специалисты компании «Водоузел СПБ» помогут вам сделать правильный выбор водомерного узла, проведут
-          предварительный расчет стоимости и сроков выполнения работ в полном объеме (от проектирования до установки и
-          наладки оборудования).
+          Специалисты компании «Водоузел СПБ» помогут вам сделать правильный выбор водомерного узла,
+          проведут предварительный расчет стоимости и сроков выполнения работ в полном объеме (от
+          проектирования до установки и наладки оборудования).
         </p>
         <button class="pipes-description__button button-catalog">Перейти в каталог</button>
         <div class="pipes--description__examples">
@@ -80,32 +88,43 @@
                 <br />
                 вид
               </p>
-              <img class="ae" style="fill: currentColor" src="@/assets/img/general-view__img.png" alt="asd" />
+              <img
+                class="ae"
+                style="fill: currentColor"
+                src="@/assets/img/general-view__img.png"
+                alt="asd"
+              />
             </div>
           </div>
         </div>
       </div>
     </Rename>
 
-    <Rename class="bg-gray" h2="продукция" name="Трубопроводная арматура" secondName="Инженерная сантехника">
+    <Rename
+      class="bg-gray"
+      h2="продукция"
+      name="Трубопроводная арматура"
+      secondName="Инженерная сантехника"
+    >
       <div class="fittings-section__content">
         <p class="fittings-section__big-text">
-          Компания «Водоузел СПБ» является официальным поставщиком иной трубопроводной арматуры и комплектующих таких
-          как:
+          Компания «Водоузел СПБ» является официальным поставщиком иной трубопроводной арматуры и
+          комплектующих таких как:
         </p>
         <CardTiles section="mainFittingMeters"></CardTiles>
         <p class="fittings-section__text">
-          Инженерная сантехника представляет собой набор изделий, обеспечивающих бесперебойную работу различных
-          магистральных систем, таких как отопление, водоснабжение и другие.
+          Инженерная сантехника представляет собой набор изделий, обеспечивающих бесперебойную
+          работу различных магистральных систем, таких как отопление, водоснабжение и другие.
           <br />
           <br />
-          Трубопроводы монтируются на этапе строительства здания, а арматура для труб должна функционировать без сбоев
-          на протяжении долгого времени.
+          Трубопроводы монтируются на этапе строительства здания, а арматура для труб должна
+          функционировать без сбоев на протяжении долгого времени.
           <br />
           <br />
-          Ключевым моментом является их герметичность, надежность и способность выдерживать неблагоприятные условия,
-          включая высокую влажность, агрессивные среды и температурные колебания. В компании "Водоузел СПБ" вы найдете
-          все необходимое для установки коммуникаций любого назначения.
+          Ключевым моментом является их герметичность, надежность и способность выдерживать
+          неблагоприятные условия, включая высокую влажность, агрессивные среды и температурные
+          колебания. В компании "Водоузел СПБ" вы найдете все необходимое для установки коммуникаций
+          любого назначения.
         </p>
         <button class="fittings-section__button button-catalog">Перейти в каталог</button>
       </div>
@@ -129,7 +148,11 @@
         <button class="water-meters-section__button button-catalog">Перейти в каталог</button>
       </div>
     </Rename>
-    <Rename main-class="upToDownBlock" :with-h2="false" name="Оставьте заявку на выбор оборудования">
+    <Rename
+      main-class="upToDownBlock"
+      :with-h2="false"
+      name="Оставьте заявку на выбор оборудования"
+    >
       <div class="application">
         <div class="application-section__help">
           <p class="application-section__helping">Мы поможем:</p>
@@ -156,7 +179,9 @@
         <form class="application-form">
           <div class="application-form__text-input">
             <div class="application-form__text-username-item">
-              <label class="application-form__username-label" for="application-form__username"> Имя: </label>
+              <label class="application-form__username-label" for="application-form__username">
+                Имя:
+              </label>
               <input
                 class="application-form__username-input"
                 id="application-form__username"
@@ -166,7 +191,9 @@
             </div>
 
             <div class="application-form__text-phone-item">
-              <label class="application-form__phone-label" for="application-form__phone"> Телефон: </label>
+              <label class="application-form__phone-label" for="application-form__phone">
+                Телефон:
+              </label>
               <input
                 class="application-form__phone-input"
                 id="application-form__phone"
@@ -179,7 +206,11 @@
             <input class="application-form____attach" type="file" />
           </label>
           <div class="application-form__submit-element">
-            <input class="application-form__submit orange-button" type="submit" value="Оставить заявку" />
+            <input
+              class="application-form__submit orange-button"
+              type="submit"
+              value="Оставить заявку"
+            />
             <label class="application-form__submit-text">
               Нажимая кнопку, вы соглашаетесь
               <br />
@@ -194,16 +225,9 @@
       :isCarousel="true"
       name="Наша продукция на объектах"
       h2="Проекты и клиенты"
-      @prev-slide="handlePrevSlide"
-      @next-slide="handleNextSlide"
-      :current-slide="currentSlide"
-      :max-slide="carouselStore.mainOurProductionitems.length - 1"
+      section="mainOurProduction"
     >
-      <Carousel
-        :items="carouselStore.mainOurProduction"
-        :current-slide="currentSlide"
-        @slide-change="handleSlideChange"
-      />
+      <Carousel section="mainOurProduction" />
     </Rename>
 
     <Rename black-title="Наши клиенты">
@@ -219,37 +243,6 @@ import Carousel from '@/components/common/Carousel.vue'
 import HelpForm from '@/components/common/HelpForm.vue'
 import Rename from '@/components/common/Rename.vue'
 import CardTiles from '@/components/common/CardTiles.vue'
-import { ref } from 'vue'
-import { useTilesStore } from '@/stores/TilesStore.js'
-import { useCarouselStore } from '@/stores/CarouselStore.js'
-
-const tilesStore = useTilesStore()
-const carouselStore = useCarouselStore()
-
-// const mainOurProductionitems = ref([
-//   { image: 'src/assets/img/carousel_img2.png', text: 'Жилые комплексы', alt: 'carousel__img1' },
-//   { image: 'src/assets/img/carousel_img3.png', text: 'Промышленные объекты', alt: 'carousel__img2' },
-//   { image: 'src/assets/img/carousel_img1.png', text: 'Общественные здания', alt: 'carousel__img3' },
-//   { image: 'src/assets/img/carousel_img2.png', text: 'Жилые комплексы', alt: 'carousel__img4' },
-// ])
-
-const currentSlide = ref(0)
-
-const handlePrevSlide = (data) => {
-  if (currentSlide.value > 0) {
-    currentSlide.value--
-  }
-}
-
-const handleNextSlide = (data) => {
-  if (currentSlide.value < carouselStore.mainOurProductionitems.length - 1) {
-    currentSlide.value++
-  }
-}
-
-const handleSlideChange = (index) => {
-  currentSlide.value = index
-}
 </script>
 
 <style scoped>

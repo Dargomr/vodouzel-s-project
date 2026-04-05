@@ -60,7 +60,9 @@
           </div>
           <div class="legal-information-section__bank">
             <p class="bank-label label">Банк:</p>
-            <p class="bank-text">Филиал «Санкт-Петербургский», АО «АЛЬФА-БАНК» г. Санкт-Петербург</p>
+            <p class="bank-text">
+              Филиал «Санкт-Петербургский», АО «АЛЬФА-БАНК» г. Санкт-Петербург
+            </p>
           </div>
           <div class="legal-information-section__kc">
             <p class="kc-label label">К/С:</p>

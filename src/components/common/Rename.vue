@@ -23,17 +23,16 @@
         <div v-if="isCarousel" class="areas-of-application-section-carousel__buttons">
           <button
             class="areas-of-application-section-carousel__button-left"
-            @click="prevSlide"
-            :disabled="nodesCurrentSlide === 0"
+            @click="handlePrevSlide"
+            :disabled="currentSlide === 0"
           ></button>
           <button
             class="areas-of-application-section-carousel__button-right"
-            @click="nextSlide"
-            :disabled="nodesCurrentSlide === maxSlide"
+            @click="handleNextSlide"
+            :disabled="currentSlide === maxSlide"
           ></button>
         </div>
       </div>
-
       <div :class="`${mainClass}__content`">
         <slot></slot>
       </div>
@@ -43,17 +42,12 @@
 
 <script setup>
 import { useCarouselStore } from '@/stores/CarouselStore.js'
-import { storeToRefs } from 'pinia'
+import { computed } from 'vue'
 
 const carouselStore = useCarouselStore()
-
-const { nodesCurrentSlide, nodesMaxSlide } = storeToRefs(carouselStore)
+import { defineProps } from 'vue'
 
 const props = defineProps({
-  // isSlim: {
-  //   type: Boolean,
-  //   default: false
-  // },
   bgGray: {
     type: Boolean,
     default: false,
@@ -87,26 +81,41 @@ const props = defineProps({
   isCarousel: {
     type: Boolean,
   },
-  // currentSlide: {
-  //   type: Number,
-  //   default: 0,
-  // },
+  currentSlide: {
+    type: Number,
+    default: 0,
+  },
   maxSlide: {
     type: Number,
     default: 0,
   },
+  section: {
+    type: String,
+  },
 })
 
-const prevSlide = () => {
-  // if (props.currentSlide > 0) {
-  carouselStore.nodesCurrentSlide--
-  // }
+let currentSlide = computed(() => {
+  if (!props.section || !props.isCarousel) {
+    return 0
+  }
+  const slideRef = carouselStore.getCurrentSlide(props.section)
+  return slideRef.value
+})
+
+let maxSlide = computed(() => {
+  return carouselStore.getMaxSlide(props.section)
+})
+
+const handlePrevSlide = () => {
+  if (props.section) {
+    carouselStore.prevSlide(props.section)
+  }
 }
 
-const nextSlide = () => {
-  // if (props.currentSlide < maxSlideIndex.value) {
-  carouselStore.nodesCurrentSlide++
-  // }
+const handleNextSlide = () => {
+  if (props.section) {
+    carouselStore.nextSlide(props.section)
+  }
 }
 
 // const emit = defineEmits(['prev-slide', 'next-slide'])

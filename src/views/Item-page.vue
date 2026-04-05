@@ -19,16 +19,19 @@
       </div>
 
       <h2 class="item-page__h2">Задвижки чугунные</h2>
-      <PaginationProducts store="itemPageProductsStore" :productItems="ItemPageProductsStore.products" />
+      <PaginationProducts
+        store="itemPageProductsStore"
+        :productItems="paginationStore.itemPageItems"
+      />
     </section>
   </main>
 </template>
 
 <script setup>
-import { useItemPageProductsStore } from '@/stores/itemPageProductsStore.js'
+import { usePaginationStore } from '@/stores/PaginationStore.js'
 import PaginationProducts from '@/components/common/PaginationProducts.vue'
 
-const itemPageProductsStore = useItemPageProductsStore()
+const paginationStore = usePaginationStore()
 </script>
 
 <style scoped>

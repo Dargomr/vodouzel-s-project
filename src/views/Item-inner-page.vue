@@ -48,9 +48,9 @@
           </p>
         </div>
         <p class="product-page__text">
-          Используется для полного перекрытия или регулирования потока жидкости, газа или других сред в трубопроводах.
-          Отличается высокой прочностью, долговечностью и устойчивостью к коррозии. Подходит для водоснабжения,
-          отопления, канализации и промышленных систем.
+          Используется для полного перекрытия или регулирования потока жидкости, газа или других
+          сред в трубопроводах. Отличается высокой прочностью, долговечностью и устойчивостью к
+          коррозии. Подходит для водоснабжения, отопления, канализации и промышленных систем.
           <br />
           <br />
           *цена при заказе от 100 тыс. рублей.
@@ -75,7 +75,9 @@
           Модель:
           <span class="specifications-section__specifications__item-span">30ч6бр</span>
         </p>
-        <p class="specifications-section__specifications__item specifications-section__specifications__item2">
+        <p
+          class="specifications-section__specifications__item specifications-section__specifications__item2"
+        >
           Диаметр:
           <span class="specifications-section__specifications__item-span">50 мм</span>
         </p>

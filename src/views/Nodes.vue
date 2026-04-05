@@ -20,7 +20,9 @@
             <br />
             по ЦИРВ 02А.00.00.00
           </h2>
-          <p class="nodes-selection__p">Подберем правильный водомерный узел, который останется лишь смонтировать!</p>
+          <p class="nodes-selection__p">
+            Подберем правильный водомерный узел, который останется лишь смонтировать!
+          </p>
           <button class="nodes-selection__button orange-button">Выбрать узел</button>
         </div>
       </div>
@@ -91,26 +93,27 @@
     >
       <div class="about-nodes-section__block">
         <p class="about-nodes-section__big-text">
-          Водомерные узлы состоят из приборов учета потребляемой воды (водомеров), трубопроводной арматуры (задвижек или
-          затворов), спускного крана, технического манометра, соединительных частей (колен, переходов, тройников) и
-          патрубков из водопроводных стальных труб.
+          Водомерные узлы состоят из приборов учета потребляемой воды (водомеров), трубопроводной
+          арматуры (задвижек или затворов), спускного крана, технического манометра, соединительных
+          частей (колен, переходов, тройников) и патрубков из водопроводных стальных труб.
         </p>
         <p class="about-nodes-section__text">
-          Наша организация, имея собственное производство, предлагает возможность поставки водомерных узлов по альбому
-          ЦИРВ 02А, разработанному ГУП Водоканал больше 20 лет назад, но до сих пор имеющий большое практическое
-          применение.
+          Наша организация, имея собственное производство, предлагает возможность поставки
+          водомерных узлов по альбому ЦИРВ 02А, разработанному ГУП Водоканал больше 20 лет назад, но
+          до сих пор имеющий большое практическое применение.
           <br />
           <br />
-          Водомерные узлы предназначены для учета расхода воды в коммерческих зданиях. Они состоят из участка трубы
-          холодного водоснабжения с затвором, измерительного устройства и манометра ля контроля давления подаваемой
-          воды, а также фильтра, обратного клапана и дополнительных соединительных элементов, таких как патрубки,
-          контрольно-спускной кран-вентиль и обводная линия.
+          Водомерные узлы предназначены для учета расхода воды в коммерческих зданиях. Они состоят
+          из участка трубы холодного водоснабжения с затвором, измерительного устройства и манометра
+          ля контроля давления подаваемой воды, а также фильтра, обратного клапана и дополнительных
+          соединительных элементов, таких как патрубки, контрольно-спускной кран-вентиль и обводная
+          линия.
         </p>
         <br />
         <p class="about-nodes-section__short-text">
-          В соответствии с альбомом ЦИРВ, водомерные узлы могут быть классифицированы на I тип без пожарно-резервной
-          линии) и II тип (с тройником для подключения систем пожаротушения. Узел второго типа обеспечивает подачу воды
-          во время ремонта или замены конструкции.
+          В соответствии с альбомом ЦИРВ, водомерные узлы могут быть классифицированы на I тип без
+          пожарно-резервной линии) и II тип (с тройником для подключения систем пожаротушения. Узел
+          второго типа обеспечивает подачу воды во время ремонта или замены конструкции.
         </p>
       </div>
     </Rename>
@@ -118,32 +121,31 @@
     <Rename
       black-title="Основные сферы применения"
       :is-carousel="true"
-      @next-slide="nextSlide"
-      @prev-slide="prevSlide"
-      :current-slide="currentSlide"
-      :max-slide="carouselStore.nodesAreasOfApplicationItems.length - 1"
+      section="nodesAreasOfApplication"
     >
-      <Carousel
-        :items="carouselStore.nodesAreasOfApplicationItems"
-        :current-slide="currentSlide"
-        @slide-change="handleSlideChange"
-      />
+      <Carousel section="nodesAreasOfApplication" />
     </Rename>
 
     <HelpForm />
 
-    <Rename class="bg-gray" h2="Документация" name="Что такое альбом?" secondName="И какие его требования">
+    <Rename
+      class="bg-gray"
+      h2="Документация"
+      name="Что такое альбом?"
+      secondName="И какие его требования"
+    >
       <div class="album-section__content">
         <p class="album-section__big-text">
-          Альбом ЦИРВ 02А.00.00.00 содержит в себе требования к ВУ (водомерным узлам), которые монтируются на вводе в
-          строения.
+          Альбом ЦИРВ 02А.00.00.00 содержит в себе требования к ВУ (водомерным узлам), которые
+          монтируются на вводе в строения.
         </p>
         <p class="album-section__text">
-          Такой альбом очень полезен для абонентов, которые подключены напрямую к сетям Водоканала. Абонентами могут
-          являться как юридические, так и физические лица, которые имеют в собственности здания или компании,
-          управляющие этими зданиями. Распространяются требования альбома к механическим счётчикам для воды, условный
-          проход которых имеет диаметр от 20 до 200 мм. При подключении к коммунальным системам водоснабжения диаметр
-          должен иметь от 50 до 200 мм.
+          Такой альбом очень полезен для абонентов, которые подключены напрямую к сетям Водоканала.
+          Абонентами могут являться как юридические, так и физические лица, которые имеют в
+          собственности здания или компании, управляющие этими зданиями. Распространяются требования
+          альбома к механическим счётчикам для воды, условный проход которых имеет диаметр от 20 до
+          200 мм. При подключении к коммунальным системам водоснабжения диаметр должен иметь от 50
+          до 200 мм.
         </p>
 
         <div class="album-section__pdfs">
@@ -174,9 +176,9 @@
 
         <p class="album-section__big-text">ЦИРВ 03А.00.00.00</p>
         <p class="album-section__text">
-          Есть также альбом ЦИРВ 03А.00.00.00, который содержит в себе требования к ВУ, являющихся внутренней сетью
-          различных объектов. Это могут быть люди, владеющие нежилыми помещениями, которые располагаются в жилых домах
-          (мастерские, рестораны, кафе, магазины и офисы).
+          Есть также альбом ЦИРВ 03А.00.00.00, который содержит в себе требования к ВУ, являющихся
+          внутренней сетью различных объектов. Это могут быть люди, владеющие нежилыми помещениями,
+          которые располагаются в жилых домах (мастерские, рестораны, кафе, магазины и офисы).
         </p>
 
         <div class="album-section__pdfs">
@@ -202,11 +204,12 @@
           Водомерный узел состоит: комплекта стяжек, предназначенных для подсоединения к вводу.
         </p>
         <p class="nodes-details-section__text">
-          Если ввод из стали, то в комплект ВУ входят специальные фланцы, патрубки до счётчика ПДС и патрубок после
-          счётчика ППС, фланцевый переход ПФ, фланцевый тройник и фланцевое колено. В комплект также входит обрезиненная
-          задвижка, фильтр фланцевого ФМФ, межфланцевый или фланцевый обратный клапан, затвор или задвижка с
-          электрическим приводом и щит управления ею, импульсные или простые счётчики воды типа ВСХНд, патрубки для
-          счётчиков, компенсаторы, манометр. В комплект также входят шпильки, прокладки, шайбы, гайки и болты. ВУ могут
+          Если ввод из стали, то в комплект ВУ входят специальные фланцы, патрубки до счётчика ПДС и
+          патрубок после счётчика ППС, фланцевый переход ПФ, фланцевый тройник и фланцевое колено. В
+          комплект также входит обрезиненная задвижка, фильтр фланцевого ФМФ, межфланцевый или
+          фланцевый обратный клапан, затвор или задвижка с электрическим приводом и щит управления
+          ею, импульсные или простые счётчики воды типа ВСХНд, патрубки для счётчиков, компенсаторы,
+          манометр. В комплект также входят шпильки, прокладки, шайбы, гайки и болты. ВУ могут
           комплектоваться турбинными или крыльчатыми счётчиками.
         </p>
 
@@ -225,24 +228,32 @@
 
         <p class="nodes-details-section__big-text">Где устанавливаются Водомерные узлы?</p>
         <p class="nodes-details-section__text">
-          ВУ монтируются на водопроводах, прошедших опрессовку для учёта расхода воды. В многоквартирных домах чаще
-          всего их устанавливают в подвалах, тепловых пунктах или подъездах. Контроль показаний счётчиков и их
-          обслуживание проводят специальные организации, которые имеют лицензию или допуск к таким работам.
+          ВУ монтируются на водопроводах, прошедших опрессовку для учёта расхода воды. В
+          многоквартирных домах чаще всего их устанавливают в подвалах, тепловых пунктах или
+          подъездах. Контроль показаний счётчиков и их обслуживание проводят специальные
+          организации, которые имеют лицензию или допуск к таким работам.
           <br />
           <br />
-          На трубопроводах, которые расположены горизонтально, устанавливают чаще всего крыльчатые счётчики. В таких
-          счётчиках ось вращения перпендикулярна движению воды, а крепятся они с помощью резьбового соединения.
+          На трубопроводах, которые расположены горизонтально, устанавливают чаще всего крыльчатые
+          счётчики. В таких счётчиках ось вращения перпендикулярна движению воды, а крепятся они с
+          помощью резьбового соединения.
           <br />
           <br />
-          Турбинные счётчики могут быть установлены на любые типы водопровода – они могут вести подсчёт количества воды,
-          подаваемой даже вертикально. Направление оси в турбинных счётчиках параллельно по направлению движения воды.
+          Турбинные счётчики могут быть установлены на любые типы водопровода – они могут вести
+          подсчёт количества воды, подаваемой даже вертикально. Направление оси в турбинных
+          счётчиках параллельно по направлению движения воды.
           <br />
           <br />
-          Общая стоимость ВУ определяется из расчёта стоимости оборудования, входящего во весь комплекс.
+          Общая стоимость ВУ определяется из расчёта стоимости оборудования, входящего во весь
+          комплекс.
         </p>
       </div>
     </Rename>
-    <Rename :withH2="false" name="Опросный лист для заказа водомерного узла" main-class="upToDownBlock">
+    <Rename
+      :withH2="false"
+      name="Опросный лист для заказа водомерного узла"
+      main-class="upToDownBlock"
+    >
       <div class="questionnaire-section__content">
         <div class="questionnaire-section__context">
           <p class="questionnaire-section__big-text">Я знаю, что необходимо</p>
@@ -262,14 +273,19 @@
           </div>
 
           <div class="pipe-order-form__type">
-            <label class="pipe-order-form__type-label" for="pipe-order-form__type-select"> Тип присоединения: </label>
+            <label class="pipe-order-form__type-label" for="pipe-order-form__type-select">
+              Тип присоединения:
+            </label>
             <select class="pipe-order-form__type-select" id="pipe-order-form__type-select">
               <option class="pipe-order-form__type__option">Раструб</option>
             </select>
           </div>
 
           <div class="pipe-order-form__number-list">
-            <label class="pipe-order-form__number-list-label" for="pipe-order-form__number-list-input">
+            <label
+              class="pipe-order-form__number-list-label"
+              for="pipe-order-form__number-list-input"
+            >
               Номер листа по типовому альбому ЦИРВ 02А.00.00.00:
             </label>
             <input
@@ -280,7 +296,10 @@
           </div>
 
           <div class="pipe-order-form__wanted-material">
-            <label class="pipe-order-form__wanted-material-label" for="pipe-order-form__wanted-material-input">
+            <label
+              class="pipe-order-form__wanted-material-label"
+              for="pipe-order-form__wanted-material-input"
+            >
               Желаемый материал фасонных частей:
             </label>
             <input
@@ -312,17 +331,24 @@
           </div>
 
           <div class="pipe-order-form__armature-type">
-            <label class="pipe-order-form__armature-type-label" for="pipe-order-form__armature-type-select">
+            <label
+              class="pipe-order-form__armature-type-label"
+              for="pipe-order-form__armature-type-select"
+            >
               Тип водозаборной арматуры:
             </label>
-            <select class="pipe-order-form__armature-type-select" id="pipe-order-form__armature-type-select">
+            <select
+              class="pipe-order-form__armature-type-select"
+              id="pipe-order-form__armature-type-select"
+            >
               <option class="pipe-order-form__armature-type-option">Затворы</option>
             </select>
           </div>
 
           <div class="pipe-order-form__complete-it">
             <label class="pipe-order-form__complete-it-label">
-              Доукомплектовать водомерный узел пультом управления затвора (задвижки) с электроприводом:
+              Доукомплектовать водомерный узел пультом управления затвора (задвижки) с
+              электроприводом:
             </label>
             <div class="pipe-order-form__complete-it-buttons">
               <button class="pipe-order-form__complete-it-button1">Да</button>
@@ -331,7 +357,9 @@
           </div>
 
           <div class="pipe-order-form__wishes">
-            <label class="pipe-order-form__wishes-label" for="pipe-order-form__wishes-input"> Прочие пожелания: </label>
+            <label class="pipe-order-form__wishes-label" for="pipe-order-form__wishes-input">
+              Прочие пожелания:
+            </label>
             <input
               class="pipe-order-form__wishes-input"
               id="pipe-order-form__wishes-input"
@@ -340,7 +368,9 @@
           </div>
 
           <div class="pipe-order-form__username">
-            <label class="pipe-order-form__username-label" for="pipe-order-form__username-input"> Имя: </label>
+            <label class="pipe-order-form__username-label" for="pipe-order-form__username-input">
+              Имя:
+            </label>
             <input
               class="pipe-order-form__username-input"
               id="pipe-order-form__username-input"
@@ -349,7 +379,9 @@
           </div>
 
           <div class="pipe-order-form__phone">
-            <label class="pipe-order-form__phone-label" for="pipe-order-form__phone-input"> Телефон: </label>
+            <label class="pipe-order-form__phone-label" for="pipe-order-form__phone-input">
+              Телефон:
+            </label>
             <input
               class="pipe-order-form__phone-input"
               id="pipe-order-form__phone-input"
@@ -358,7 +390,9 @@
           </div>
 
           <div class="pipe-order-form__email">
-            <label class="pipe-order-form__email-label" for="pipe-order-form__email-input"> E-mail: </label>
+            <label class="pipe-order-form__email-label" for="pipe-order-form__email-input">
+              E-mail:
+            </label>
             <input
               class="pipe-order-form__email-input"
               id="pipe-order-form__email-input"
@@ -383,7 +417,9 @@
     <section class="questionnaire-section">
       <h2 class="questionnaire-section__h2">Опросный лист для заказа водомерного узла</h2>
       <div class="questionnaire-section__select">
-        <p class="questionnaire-section__select-item questionnaire-section__select-item_selected">Подробная форма</p>
+        <p class="questionnaire-section__select-item questionnaire-section__select-item_selected">
+          Подробная форма
+        </p>
         <p class="questionnaire-section__select-item">Быстрая заявка</p>
       </div>
 
@@ -406,14 +442,19 @@
           </div>
 
           <div class="pipe-order-form__type">
-            <label class="pipe-order-form__type-label" for="pipe-order-form__type-select"> Тип присоединения: </label>
+            <label class="pipe-order-form__type-label" for="pipe-order-form__type-select">
+              Тип присоединения:
+            </label>
             <select class="pipe-order-form__type-select" id="pipe-order-form__type-select">
               <option class="pipe-order-form__type__option">Раструб</option>
             </select>
           </div>
 
           <div class="pipe-order-form__number-list">
-            <label class="pipe-order-form__number-list-label" for="pipe-order-form__number-list-input">
+            <label
+              class="pipe-order-form__number-list-label"
+              for="pipe-order-form__number-list-input"
+            >
               Номер листа по типовому альбому ЦИРВ 02А.00.00.00:
             </label>
             <input
@@ -424,7 +465,10 @@
           </div>
 
           <div class="pipe-order-form__wanted-material">
-            <label class="pipe-order-form__wanted-material-label" for="pipe-order-form__wanted-material-input">
+            <label
+              class="pipe-order-form__wanted-material-label"
+              for="pipe-order-form__wanted-material-input"
+            >
               Желаемый материал фасонных частей:
             </label>
             <input
@@ -456,17 +500,24 @@
           </div>
 
           <div class="pipe-order-form__armature-type">
-            <label class="pipe-order-form__armature-type-label" for="pipe-order-form__armature-type-select">
+            <label
+              class="pipe-order-form__armature-type-label"
+              for="pipe-order-form__armature-type-select"
+            >
               Тип водозаборной арматуры:
             </label>
-            <select class="pipe-order-form__armature-type-select" id="pipe-order-form__armature-type-select">
+            <select
+              class="pipe-order-form__armature-type-select"
+              id="pipe-order-form__armature-type-select"
+            >
               <option class="pipe-order-form__armature-type-option">Затворы</option>
             </select>
           </div>
 
           <div class="pipe-order-form__complete-it">
             <label class="pipe-order-form__complete-it-label">
-              Доукомплектовать водомерный узел пультом управления затвора (задвижки) с электроприводом:
+              Доукомплектовать водомерный узел пультом управления затвора (задвижки) с
+              электроприводом:
             </label>
             <div class="pipe-order-form__complete-it-buttons">
               <button class="pipe-order-form__complete-it-button1">Да</button>
@@ -475,7 +526,9 @@
           </div>
 
           <div class="pipe-order-form__wishes">
-            <label class="pipe-order-form__wishes-label" for="pipe-order-form__wishes-input"> Прочие пожелания: </label>
+            <label class="pipe-order-form__wishes-label" for="pipe-order-form__wishes-input">
+              Прочие пожелания:
+            </label>
             <input
               class="pipe-order-form__wishes-input"
               id="pipe-order-form__wishes-input"
@@ -484,7 +537,9 @@
           </div>
 
           <div class="pipe-order-form__username">
-            <label class="pipe-order-form__username-label" for="pipe-order-form__username-input"> Имя: </label>
+            <label class="pipe-order-form__username-label" for="pipe-order-form__username-input">
+              Имя:
+            </label>
             <input
               class="pipe-order-form__username-input"
               id="pipe-order-form__username-input"
@@ -493,7 +548,9 @@
           </div>
 
           <div class="pipe-order-form__phone">
-            <label class="pipe-order-form__phone-label" for="pipe-order-form__phone-input"> Телефон: </label>
+            <label class="pipe-order-form__phone-label" for="pipe-order-form__phone-input">
+              Телефон:
+            </label>
             <input
               class="pipe-order-form__phone-input"
               id="pipe-order-form__phone-input"
@@ -502,7 +559,9 @@
           </div>
 
           <div class="pipe-order-form__email">
-            <label class="pipe-order-form__email-label" for="pipe-order-form__email-input"> E-mail: </label>
+            <label class="pipe-order-form__email-label" for="pipe-order-form__email-input">
+              E-mail:
+            </label>
             <input
               class="pipe-order-form__email-input"
               id="pipe-order-form__email-input"
@@ -531,24 +590,6 @@
 import Carousel from '@/components/common/Carousel.vue'
 import Rename from '@/components/common/Rename.vue'
 import HelpForm from '@/components/common/HelpForm.vue'
-import { ref } from 'vue'
-import { useCarouselStore } from '@/stores/CarouselStore.js'
-
-const carouselStore = useCarouselStore()
-
-const currentSlide = ref(0)
-
-const handleSlideChange = (index) => {
-  currentSlide.value = index
-}
-
-const prevSlide = () => {
-  currentSlide.value--
-}
-
-const nextSlide = () => {
-  currentSlide.value++
-}
 </script>
 
 <style scoped>

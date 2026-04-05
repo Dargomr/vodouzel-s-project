@@ -7,11 +7,11 @@
       'clients-section__items': section.includes('OurClients'),
     }"
   >
-    <img v-for="tile in tiles" class="item" :src="tile.src" :alt="tile.alt" />
+    <img v-for="tile in tiles" class="item" :key="tile.id" :src="tile.src" :alt="tile.alt" />
   </div>
 
   <div v-else-if="prov" class="reasons-section__cards">
-    <div v-for="card in tiles" class="card">
+    <div v-for="card in tiles" class="card" :key="card.id">
       <div class="card__upper">
         <p class="card__name">{{ card.name }}</p>
         <p class="card__number">{{ card.number }}</p>
@@ -21,7 +21,7 @@
   </div>
 
   <div v-else class="services-section__services">
-    <div v-for="tile in tiles" class="service-item">
+    <div v-for="tile in tiles" class="service-item" :key="tile.id">
       <img class="service-item__img" :src="tile.src" :alt="tile.alt" />
       <div class="service-item__text">{{ tile.name }}</div>
     </div>
@@ -30,7 +30,7 @@
 
 <script setup>
 import { useTilesStore } from '@/stores/TilesStore.js'
-import { ref, computed } from 'vue'
+import { computed } from 'vue'
 
 const tilesStore = useTilesStore()
 

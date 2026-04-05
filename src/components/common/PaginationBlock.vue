@@ -2,7 +2,11 @@
   <div>
     <ArrowButton direction="prev" @click="$emit('prev-page')" :disabled="currentPage === 1" />
     <Pagination :totalPages="totalPages" :currentPage="currentPage" @change="handlePageChange" />
-    <ArrowButton direction="next" @click="$emit('next-page')" :disabled="currentPage === totalPages" />
+    <ArrowButton
+      direction="next"
+      @click="$emit('next-page')"
+      :disabled="currentPage === totalPages"
+    />
   </div>
 </template>
 
@@ -10,7 +14,9 @@
 import ArrowButton from '@/components/common/ArrowButton.vue'
 import Pagination from '@/components/common/Pagination.vue'
 
-const props = defineProps({
+import { defineProps, defineEmits } from 'vue'
+
+defineProps({
   currentPage: {
     type: Number,
   },

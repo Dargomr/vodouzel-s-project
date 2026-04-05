@@ -2,14 +2,7 @@
   <div class="areas-of-application-section__content">
     <div class="carousel">
       <div class="carousel__container">
-        <div
-          class="carousel__container-inner"
-          :style="carouselTransform"
-          ref="carouselInner"
-          @touchstart="handleTouchStart"
-          @touchmove="handleTouchMove"
-          @touchend="handleTouchEnd"
-        >
+        <div class="carousel__container-inner" :style="carouselTransform" ref="carouselInner">
           <div
             v-for="(item, index) in items"
             :key="index"
@@ -18,7 +11,7 @@
             @click="handleItemClick(index)"
           >
             <div :class="carouselClass">
-              <img :class="carouselClassInner" :src="item.image" :alt="item.alt" />
+              <img :class="carouselClassInner" :src="item.src" :alt="item.alt" />
             </div>
             <p class="carousel__text">{{ item.text }}</p>
           </div>
@@ -29,13 +22,13 @@
   <div class="areas-of-application-section-carousel__buttons-768px">
     <button
       class="areas-of-application-section-carousel__button-left"
-      @click="prevSlide"
-      :disabled="carouselStore.nodesCurrentSlide === 0"
+      @click="handlePrevSlide"
+      :disabled="currentSlide === 0"
     ></button>
     <button
       class="areas-of-application-section-carousel__button-right"
-      @click="nextSlide"
-      :disabled="carouselStore.nodesCurrentSlide === maxSlideIndex"
+      @click="handleNextSlide"
+      :disabled="currentSlide === maxSlide"
     ></button>
   </div>
 
@@ -48,14 +41,14 @@
       v-for="i in items.length"
       :key="i"
       class="carousel-indicator"
-      :class="{ active: carouselStore.nodesCurrentSlide === i - 1 }"
-      @click="goToSlide(i - 1)"
+      :class="{ active: currentSlide === i - 1 }"
+      @click="handleGoToSlide(i - 1)"
     ></button>
   </div>
 </template>
 
 <script setup>
-import { computed, onMounted, onBeforeUnmount, ref } from 'vue'
+import { computed, onMounted, onBeforeUnmount, ref, nextTick } from 'vue'
 import { useCarouselStore } from '@/stores/CarouselStore.js'
 
 const carouselStore = useCarouselStore()
@@ -69,9 +62,9 @@ const props = defineProps({
     type: String,
     default: 'carousel__img-inner',
   },
-  items: {
+  section: {
     required: true,
-    type: Array,
+    type: String,
   },
   // currentSlide: {
   //   type: Number,
@@ -93,17 +86,33 @@ const carouselItems = ref([])
 const carouselInner = ref(null)
 const itemWidth = ref(0)
 const itemMargin = ref(0)
-const touchStartX = ref(0)
-const touchEndX = ref(0)
 
-const maxSlideIndex = computed(() => {
-  return props.items.length - 1
+const items = computed(() => {
+  return carouselStore.getItems(props.section)
 })
 
-// const items = computed(() => carouselStore.getItems(props.section))
+let currentSlide = computed(() => {
+  return carouselStore.getCurrentSlide(props.section).value
+})
+
+const maxSlide = computed(() => {
+  return carouselStore.getMaxSlide(props.section)
+})
+
+const handlePrevSlide = () => {
+  carouselStore.prevSlide(props.section)
+}
+
+const handleNextSlide = () => {
+  carouselStore.nextSlide(props.section)
+}
+
+const handleGoToSlide = (index) => {
+  carouselStore.goToSlide(index)
+}
 
 const carouselTransform = computed(() => {
-  const translateX = -(itemWidth.value + itemMargin.value) * carouselStore.nodesCurrentSlide
+  const translateX = -(itemWidth.value + itemMargin.value) * currentSlide.value
   return {
     transform: `translateX(${translateX}px)`,
     transition: 'transform 0.3s ease-in-out',
@@ -129,11 +138,11 @@ const carouselTransform = computed(() => {
 // }
 
 const handleItemClick = (index) => {
-  goToSlide(index)
+  carouselStore.goToSlide(index)
 }
 
 const updateItemDimensions = () => {
-  if (carouselItems.value && carouselItems.value.length > 0) {
+  if (carouselItems.value && maxSlide.value > 0) {
     const item = carouselItems.value[0]
     if (item) {
       itemWidth.value = parseInt(window.getComputedStyle(item).getPropertyValue('width'))
@@ -142,49 +151,16 @@ const updateItemDimensions = () => {
   }
 }
 
-const handleTouchStart = (event) => {
-  touchStartX.value = event.touches[0].clientX
-}
-
-const handleTouchMove = (event) => {
-  touchEndX.value = event.touches[0].clientX
-}
-
-const handleTouchEnd = () => {
-  const touchDiff = touchStartX.value - touchEndX.value
-  const threshold = 50 // Минимальное расстояние для свайпа
-
-  if (Math.abs(touchDiff) > threshold) {
-    if (touchDiff > 0) {
-      // Свайп влево -> следующий слайд
-      goToNextSlide()
-    } else {
-      // Свайп вправо -> предыдущий слайд
-      goToPrevSlide()
-    }
-  }
-
-  // Сброс значений
-  touchStartX.value = 0
-  touchEndX.value = 0
-}
-
 const handleResize = () => {
   updateItemDimensions()
 }
 
 onMounted(() => {
-  updateItemDimensions()
-
-  setTimeout(() => {
+  nextTick(() => {
     updateItemDimensions()
-  }, 100)
+  })
 
   window.addEventListener('resize', handleResize)
-
-  // nextTick(() => {
-  //   updateItemDimensions();
-  // })
 })
 
 onBeforeUnmount(() => {

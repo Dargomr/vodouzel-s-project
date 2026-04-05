@@ -25,7 +25,9 @@
         <img class="product-page2__img" src="@/assets/img/item-page__item-img.png" alt="item-img" />
         <button class="product-page2__back-button">Назад</button>
         <div class="product-page2__header">
-          <h3 class="product-page2__h3">Одноветочные водомерные узлы с чугунными фасонными частями</h3>
+          <h3 class="product-page2__h3">
+            Одноветочные водомерные узлы с чугунными фасонными частями
+          </h3>
           <p class="product-page2__article">
             Артикул:
             <span class="product-page2__article-span">123456</span>
@@ -43,7 +45,9 @@
           </p>
           <details class="product-page2__details-item">
             <summary class="product-page2__details-summary">Сфера применения</summary>
-            <p class="product-page2__details-text">Холодное или горячее водоснабжение, пожаротушение</p>
+            <p class="product-page2__details-text">
+              Холодное или горячее водоснабжение, пожаротушение
+            </p>
           </details>
 
           <details class="product-page2__details-item">
@@ -55,7 +59,9 @@
             <summary class="product-page2__details-summary">Хранение и транспортирование</summary>
             <p class="product-page2__details-text">Заглушка</p>
           </details>
-          <p class="product-page2__details-p">Собирается и эксплуатируется без пожарно-резервной линии</p>
+          <p class="product-page2__details-p">
+            Собирается и эксплуатируется без пожарно-резервной линии
+          </p>
         </div>
       </div>
     </section>
@@ -67,7 +73,9 @@
           Модель:
           <span class="specifications-section__specifications__item-span">30ч6бр</span>
         </p>
-        <p class="specifications-section__specifications__item specifications-section__specifications__item2">
+        <p
+          class="specifications-section__specifications__item specifications-section__specifications__item2"
+        >
           Диаметр:
           <span class="specifications-section__specifications__item-span">50 мм</span>
         </p>
