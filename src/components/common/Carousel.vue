@@ -91,9 +91,7 @@ const items = computed(() => {
   return carouselStore.getItems(props.section)
 })
 
-let currentSlide = computed(() => {
-  return carouselStore.getCurrentSlide(props.section).value
-})
+let currentSlide = carouselStore.getCurrentSlide(props.section)
 
 const maxSlide = computed(() => {
   return carouselStore.getMaxSlide(props.section)
@@ -108,7 +106,7 @@ const handleNextSlide = () => {
 }
 
 const handleGoToSlide = (index) => {
-  carouselStore.goToSlide(index)
+  carouselStore.goToSlide(props.section, index)
 }
 
 const carouselTransform = computed(() => {

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-for="item in displayedItems" class="item-page__item" :key="id">
+    <div v-for="item in displayedItems" class="item-page__item" :key="item.id">
       <img class="item-page__item-img" :src="item.img" alt="item-page__item-img" />
       <p class="item-page__item-name">{{ item.name }}</p>
       <p class="item-page__item-article">

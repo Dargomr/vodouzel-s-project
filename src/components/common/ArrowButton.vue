@@ -8,6 +8,8 @@
 </template>
 
 <script setup>
+import { defineProps } from 'vue'
+
 defineProps({
   direction: {
     type: String,

@@ -80,7 +80,7 @@ export const useCarouselStore = defineStore('carouselStore', () => {
   }
 
   const getCurrentSlide = (section) => {
-    return slidesMap[section] || ref(0)
+    return slidesMap[section]
   }
 
   const getMaxSlide = (section) => {
