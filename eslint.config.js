@@ -28,6 +28,7 @@ export default defineConfig([
       sourceType: 'module',
     },
   },
+  ...pluginVue.configs['flat/essential'],
   {
     files: ['**/*.vue'],
     plugins: {
@@ -38,15 +39,16 @@ export default defineConfig([
       parser: vueParser,
       ecmaVersion: 2020,
       sourceType: 'module',
-      globals: globals.browser,
+      globals: {
+        ...globals.browser,
+      },
     },
     processor: pluginVue.processors['.vue'],
     rules: {
       ...pluginVue.configs['flat/essential'].rules,
       ...prettierPlugin.configs.recommended.rules,
       'vue/multi-word-component-names': 'off',
-      'vue/require-v-for-key': 'error', // ваше правило для key
+      'vue/require-v-for-key': 'error',
     },
   },
-  // pluginVue.configs['flat/essential'],
 ])

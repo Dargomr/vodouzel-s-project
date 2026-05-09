@@ -44,7 +44,11 @@
       <ScrollByCarousel :nodesCarouselItems="nodesCarouselItems" />
     </section>
 
-    <PaginationProducts class="item-page-section" :productItems="paginationStore.HeatMetersItems" />
+    <PaginationProducts
+      class="item-page-section"
+      section="heatMeters"
+      :productItems="paginationStore.HeatMetersItems"
+    />
 
     <Rename h2="О продукте" name="Теплосчетчики">
       <p class="heatMeters-section__big-text">

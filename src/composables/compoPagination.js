@@ -4,7 +4,13 @@ export function compoPagination(items, defaultItemsPerPage = 16) {
   const itemsPerPage = ref(defaultItemsPerPage)
   const currentPage = ref(1)
 
-  const allItems = computed(() => items.value || [])
+  const getAllItems = () => {
+    const val = items.value
+    const array = val && typeof val === 'object' && 'value' in val ? val.value : val
+    return array || []
+  }
+
+  const allItems = computed(() => getAllItems())
   const totalPages = computed(() => Math.ceil(allItems.value.length / itemsPerPage.value))
 
   const displayedItems = computed(() => {

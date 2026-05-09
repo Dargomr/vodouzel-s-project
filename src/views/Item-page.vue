@@ -21,6 +21,7 @@
       <h2 class="item-page__h2">Задвижки чугунные</h2>
       <PaginationProducts
         store="itemPageProductsStore"
+        section="itemPage"
         :productItems="paginationStore.itemPageItems"
       />
     </section>

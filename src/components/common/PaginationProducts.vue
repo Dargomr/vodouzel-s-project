@@ -1,6 +1,6 @@
 <template>
   <div>
-    <SwitchButtons class="item-page__buttons" :store="store" />
+    <SwitchButtons class="item-page__buttons" :store="store" @sort="handleSort" />
 
     <Slider class="item-page__content" :displayedItems="displayedItems" />
 
@@ -16,12 +16,14 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue'
-
+import { onMounted, computed, onBeforeUnmount } from 'vue'
 import { compoPagination } from '@/composables/compoPagination.js'
 import PaginationBlock from '@/components/common/PaginationBlock.vue'
 import Slider from '@/components/common/Slider.vue'
 import SwitchButtons from '@/components/common/SwitchButtons.vue'
+import { usePaginationStore } from '@/stores/PaginationStore.js'
+
+const paginationStore = usePaginationStore()
 
 const props = defineProps({
   productItems: {
@@ -32,9 +34,19 @@ const props = defineProps({
   store: {
     type: String,
   },
+  section: {
+    type: String,
+  },
 })
 
-const items = ref(props.productItems)
+const items = computed(() => {
+  return paginationStore.getItems(props.section)
+})
+
+const handleSort = () => {
+  paginationStore.sortItemsByPrice(props.section, 'asc')
+  currentPage.value = 1
+}
 
 const {
   currentPage,

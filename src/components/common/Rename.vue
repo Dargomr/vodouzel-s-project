@@ -21,16 +21,17 @@
         </div>
 
         <div v-if="isCarousel" class="areas-of-application-section-carousel__buttons">
-          <button
-            class="areas-of-application-section-carousel__button-left"
+          <ArrowButton
             @click="handlePrevSlide"
+            direction="prev"
             :disabled="currentSlide === 0"
-          ></button>
-          <button
-            class="areas-of-application-section-carousel__button-right"
+          ></ArrowButton>
+          <ArrowButton
             @click="handleNextSlide"
+            direction="next"
             :disabled="currentSlide === maxSlide"
-          ></button>
+            style="margin-left: 10px"
+          ></ArrowButton>
         </div>
       </div>
       <div :class="`${mainClass}__content`">
@@ -46,6 +47,7 @@ import { computed } from 'vue'
 
 const carouselStore = useCarouselStore()
 import { defineProps } from 'vue'
+import ArrowButton from '@/components/common/ArrowButton.vue'
 
 const props = defineProps({
   bgGray: {

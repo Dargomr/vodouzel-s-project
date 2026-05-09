@@ -20,16 +20,17 @@
     </div>
   </div>
   <div class="areas-of-application-section-carousel__buttons-768px">
-    <button
-      class="areas-of-application-section-carousel__button-left"
+    <ArrowButton
       @click="handlePrevSlide"
+      direction="prev"
       :disabled="currentSlide === 0"
-    ></button>
-    <button
-      class="areas-of-application-section-carousel__button-right"
+    ></ArrowButton>
+    <ArrowButton
       @click="handleNextSlide"
+      direction="next"
       :disabled="currentSlide === maxSlide"
-    ></button>
+      style="margin-left: 10px"
+    ></ArrowButton>
   </div>
 
   <p v-if="showDescription" class="areas-of-application-section__post-p">
@@ -50,6 +51,7 @@
 <script setup>
 import { computed, onMounted, onBeforeUnmount, ref, nextTick } from 'vue'
 import { useCarouselStore } from '@/stores/CarouselStore.js'
+import ArrowButton from '@/components/common/ArrowButton.vue'
 
 const carouselStore = useCarouselStore()
 

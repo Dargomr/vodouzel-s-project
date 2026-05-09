@@ -2,126 +2,126 @@ import { defineStore } from 'pinia'
 import { ref } from 'vue'
 
 export const usePaginationStore = defineStore('paginationStore', () => {
-  const HeatMetersItems = ref([
+  const heatMetersItems = ref([
       {
         id: 1,
         img: '/src/assets/img/item-page__item-img.png',
         name: 'Задвижка чугунная КНР 30ч39р Ду50 Ру16',
         article: '123456',
-        prevPrice: '1 000',
-        currPrice: '1 000',
+        prevPrice: '2 000',
+        currPrice: '2 000',
       },
       {
         id: 2,
         img: '/src/assets/img/item-page__item-img.png',
         name: 'Задвижка чугунная КНР 30ч39р Ду50 Ру16',
         article: '123456',
-        prevPrice: '1 000',
-        currPrice: '1 000',
+        prevPrice: '2 000',
+        currPrice: '2 000',
       },
       {
         id: 3,
         img: '/src/assets/img/item-page__item-img.png',
         name: 'Задвижка чугунная КНР 30ч39р Ду50 Ру16',
         article: '123456',
-        prevPrice: '1 000',
-        currPrice: '1 000',
+        prevPrice: '2 000',
+        currPrice: '2 000',
       },
       {
         id: 4,
         img: '/src/assets/img/item-page__item-img.png',
         name: 'Задвижка чугунная КНР 30ч39р Ду50 Ру16',
         article: '123456',
-        prevPrice: '1 000',
-        currPrice: '1 000',
+        prevPrice: '2 000',
+        currPrice: '2 000',
       },
       {
         id: 5,
         img: '/src/assets/img/item-page__item-img.png',
         name: 'Задвижка чугунная КНР 30ч39р Ду50 Ру16',
         article: '123456',
-        prevPrice: '1 000',
-        currPrice: '1 000',
+        prevPrice: '2 000',
+        currPrice: '2 000',
       },
       {
         id: 6,
         img: '/src/assets/img/item-page__item-img.png',
         name: 'Задвижка чугунная КНР 30ч39р Ду50 Ру16',
         article: '123456',
-        prevPrice: '1 000',
-        currPrice: '1 000',
+        prevPrice: '2 000',
+        currPrice: '2 000',
       },
       {
         id: 7,
         img: '/src/assets/img/item-page__item-img.png',
         name: 'Задвижка чугунная КНР 30ч39р Ду50 Ру16',
         article: '123456',
-        prevPrice: '1 000',
-        currPrice: '1 000',
+        prevPrice: '2 000',
+        currPrice: '2 000',
       },
       {
         id: 8,
         img: '/src/assets/img/item-page__item-img.png',
         name: 'Задвижка чугунная КНР 30ч39р Ду50 Ру16',
         article: '123456',
-        prevPrice: '1 000',
-        currPrice: '1 000',
+        prevPrice: '2 000',
+        currPrice: '2 000',
       },
       {
         id: 9,
         img: '/src/assets/img/item-page__item-img.png',
         name: 'Задвижка чугунная КНР 30ч39р Ду50 Ру16',
         article: '123456',
-        prevPrice: '1 000',
-        currPrice: '1 000',
+        prevPrice: '2 000',
+        currPrice: '2 000',
       },
       {
         id: 10,
         img: '/src/assets/img/item-page__item-img.png',
         name: 'Задвижка чугунная КНР 30ч39р Ду50 Ру16',
         article: '123456',
-        prevPrice: '1 000',
-        currPrice: '1 000',
+        prevPrice: '2 000',
+        currPrice: '2 000',
       },
       {
         id: 11,
         img: '/src/assets/img/item-page__item-img.png',
         name: 'Задвижка чугунная КНР 30ч39р Ду50 Ру16',
         article: '123456',
-        prevPrice: '1 000',
-        currPrice: '1 000',
+        prevPrice: '2 000',
+        currPrice: '2 000',
       },
       {
         id: 12,
         img: '/src/assets/img/item-page__item-img.png',
         name: 'Задвижка чугунная КНР 30ч39р Ду50 Ру16',
         article: '123456',
-        prevPrice: '1 000',
-        currPrice: '1 000',
+        prevPrice: '2 000',
+        currPrice: '2 000',
       },
       {
         id: 13,
         img: '/src/assets/img/item-page__item-img.png',
         name: 'Задвижка чугунная КНР 30ч39р Ду50 Ру16',
         article: '123456',
-        prevPrice: '1 000',
-        currPrice: '1 000',
+        prevPrice: '2 000',
+        currPrice: '2 000',
       },
       {
         id: 14,
         img: '/src/assets/img/item-page__item-img.png',
         name: 'Задвижка чугунная КНР 30ч39р Ду50 Ру16',
         article: '123456',
-        prevPrice: '1 000',
-        currPrice: '1 000',
+        prevPrice: '2 000',
+        currPrice: '2 000',
       },
       {
         id: 15,
         img: '/src/assets/img/item-page__item-img.png',
         name: 'Задвижка чугунная КНР 30ч39р Ду50 Ру16',
         article: '123456',
-        prevPrice: '1 000',
-        currPrice: '1 000',
+        prevPrice: '2 000',
+        currPrice: '2 000',
       },
       {
         id: 16,
@@ -264,128 +264,128 @@ export const usePaginationStore = defineStore('paginationStore', () => {
         img: '/src/assets/img/item-page4__item-img.png',
         name: 'Задвижка чугунная КНР 30ч39р Ду50 Ру16',
         article: '123456',
-        prevPrice: '1 000',
-        currPrice: '1 000',
+        prevPrice: '3 000',
+        currPrice: '3 000',
       },
       {
         id: 34,
         img: '/src/assets/img/item-page4__item-img.png',
         name: 'Задвижка чугунная КНР 30ч39р Ду50 Ру16',
         article: '123456',
-        prevPrice: '1 000',
-        currPrice: '1 000',
+        prevPrice: '3 000',
+        currPrice: '3 000',
       },
       {
         id: 35,
         img: '/src/assets/img/item-page4__item-img.png',
         name: 'Задвижка чугунная КНР 30ч39р Ду50 Ру16',
         article: '123456',
-        prevPrice: '1 000',
-        currPrice: '1 000',
+        prevPrice: '3 000',
+        currPrice: '3 000',
       },
       {
         id: 36,
         img: '/src/assets/img/item-page4__item-img.png',
         name: 'Задвижка чугунная КНР 30ч39р Ду50 Ру16',
         article: '123456',
-        prevPrice: '1 000',
-        currPrice: '1 000',
+        prevPrice: '3 000',
+        currPrice: '3 000',
       },
       {
         id: 37,
         img: '/src/assets/img/item-page4__item-img.png',
         name: 'Задвижка чугунная КНР 30ч39р Ду50 Ру16',
         article: '123456',
-        prevPrice: '1 000',
-        currPrice: '1 000',
+        prevPrice: '3 000',
+        currPrice: '3 000',
       },
       {
         id: 38,
         img: '/src/assets/img/item-page4__item-img.png',
         name: 'Задвижка чугунная КНР 30ч39р Ду50 Ру16',
         article: '123456',
-        prevPrice: '1 000',
-        currPrice: '1 000',
+        prevPrice: '3 000',
+        currPrice: '3 000',
       },
       {
         id: 39,
         img: '/src/assets/img/item-page4__item-img.png',
         name: 'Задвижка чугунная КНР 30ч39р Ду50 Ру16',
         article: '123456',
-        prevPrice: '1 000',
-        currPrice: '1 000',
+        prevPrice: '3 000',
+        currPrice: '3 000',
       },
       {
         id: 40,
         img: '/src/assets/img/item-page4__item-img.png',
         name: 'Задвижка чугунная КНР 30ч39р Ду50 Ру16',
         article: '123456',
-        prevPrice: '1 000',
-        currPrice: '1 000',
+        prevPrice: '3 000',
+        currPrice: '3 000',
       },
       {
         id: 41,
         img: '/src/assets/img/item-page4__item-img.png',
         name: 'Задвижка чугунная КНР 30ч39р Ду50 Ру16',
         article: '123456',
-        prevPrice: '1 000',
-        currPrice: '1 000',
+        prevPrice: '3 000',
+        currPrice: '3 000',
       },
       {
         id: 42,
         img: '/src/assets/img/item-page4__item-img.png',
         name: 'Задвижка чугунная КНР 30ч39р Ду50 Ру16',
         article: '123456',
-        prevPrice: '1 000',
-        currPrice: '1 000',
+        prevPrice: '3 000',
+        currPrice: '3 000',
       },
       {
         id: 43,
         img: '/src/assets/img/item-page4__item-img.png',
         name: 'Задвижка чугунная КНР 30ч39р Ду50 Ру16',
         article: '123456',
-        prevPrice: '1 000',
-        currPrice: '1 000',
+        prevPrice: '3 000',
+        currPrice: '3 000',
       },
       {
         id: 44,
         img: '/src/assets/img/item-page4__item-img.png',
         name: 'Задвижка чугунная КНР 30ч39р Ду50 Ру16',
         article: '123456',
-        prevPrice: '1 000',
-        currPrice: '1 000',
+        prevPrice: '3 000',
+        currPrice: '3 000',
       },
       {
         id: 45,
         img: '/src/assets/img/item-page4__item-img.png',
         name: 'Задвижка чугунная КНР 30ч39р Ду50 Ру16',
         article: '123456',
-        prevPrice: '1 000',
-        currPrice: '1 000',
+        prevPrice: '3 000',
+        currPrice: '3 000',
       },
       {
         id: 46,
         img: '/src/assets/img/item-page4__item-img.png',
         name: 'Задвижка чугунная КНР 30ч39р Ду50 Ру16',
         article: '123456',
-        prevPrice: '1 000',
-        currPrice: '1 000',
+        prevPrice: '3 000',
+        currPrice: '3 000',
       },
       {
         id: 47,
         img: '/src/assets/img/item-page4__item-img.png',
         name: 'Задвижка чугунная КНР 30ч39р Ду50 Ру16',
         article: '123456',
-        prevPrice: '1 000',
-        currPrice: '1 000',
+        prevPrice: '3 000',
+        currPrice: '3 000',
       },
       {
         id: 48,
         img: '/src/assets/img/item-page4__item-img.png',
         name: 'Задвижка чугунная КНР 30ч39р Ду50 Ру16',
         article: '123456',
-        prevPrice: '1 000',
-        currPrice: '1 000',
+        prevPrice: '3 000',
+        currPrice: '3 000',
       },
     ]),
     articlesItems = ref([
@@ -1114,15 +1114,42 @@ export const usePaginationStore = defineStore('paginationStore', () => {
     ])
 
   const itemsMap = {
-    HeatMeters: HeatMetersItems,
+    heatMeters: heatMetersItems,
     articles: articlesItems,
     itemPage: itemPageItems,
   }
 
+  const getItems = (section) => {
+    return itemsMap[section]
+  }
+
+  const sortItemsByPrice = (section, direction = 'asc') => {
+    const itemsRef = itemsMap[section]
+    if (!itemsRef) {
+      return
+    }
+
+    const sorted = [...itemsRef.value].sort((a, b) => {
+      // Преобразуем строки с пробелами в числа
+      const priceA = parseInt(a.currPrice.replace(/\s/g, ''))
+      const priceB = parseInt(b.currPrice.replace(/\s/g, ''))
+
+      if (direction === 'asc') {
+        return priceA - priceB
+      } else {
+        return priceB - priceA
+      }
+    })
+
+    itemsRef.value = sorted
+  }
+
   return {
-    HeatMetersItems,
+    heatMetersItems,
     articlesItems,
     itemPageItems,
     itemsMap,
+    getItems,
+    sortItemsByPrice,
   }
 })
