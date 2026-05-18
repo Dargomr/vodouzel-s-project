@@ -49,6 +49,7 @@ export default defineConfig([
       ...prettierPlugin.configs.recommended.rules,
       'vue/multi-word-component-names': 'off',
       'vue/require-v-for-key': 'error',
+      'media-feature-range-notation': 'context',
     },
   },
 ])
