@@ -1,13 +1,7 @@
 <template>
   <div class="404-main">
     <section class="error-404-section">
-      <div class="error-404__switch">
-        <p class="main-switch">Главная</p>
-        &nbsp;
-        <p class="proch">/</p>
-        &nbsp;
-        <p class="about-company-switch">Контакты</p>
-      </div>
+      <Breadcrumbs :breadcrumbs-items="[{ path: '/', name: 'Главная' }, { name: '404' }]" />
       <div class="error-404-content">
         <img class="error-404__logo" src="@/assets/img/404.svg" alt="logo" />
         <p class="error-404__text">
@@ -24,7 +18,14 @@
   </div>
 </template>
 
-<script></script>
+<script>
+import { defineComponent } from 'vue'
+import Breadcrumbs from '@/components/common/Breadcrumbs.vue'
+
+export default defineComponent({
+  components: { Breadcrumbs },
+})
+</script>
 
 <style scoped>
 @import '@/assets/css/1440px.css';

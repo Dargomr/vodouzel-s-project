@@ -1,9 +1,9 @@
 <template>
-  <main class="open-catalog__main">
+  <div class="open-catalog__main">
     <section class="open-catalog__section">
       <div class="open-catalog-header">
         <h2 class="open-catalog-h2">Каталог продукции</h2>
-        <button class="open-catalog-close-button">Закрыть</button>
+        <button @click="$emit('close')" class="open-catalog-close-button">Закрыть</button>
       </div>
       <div class="open-catalog-content">
         <div class="open-catalog__item">
@@ -147,14 +147,215 @@
         </div>
       </div>
     </section>
-    <button class="open-catalog-close-button-375px">Закрыть</button>
-  </main>
+    <button @click="$emit('close')" class="open-catalog-close-button-375px">Закрыть</button>
+  </div>
 </template>
 
-<script></script>
+<script setup>
+defineEmits(['close'])
+</script>
 
 <style scoped>
-@import '@/assets/css/1440px.css';
-@import '@/assets/css/768px.css';
-@import '@/assets/css/375px.css';
+.open-catalog__main {
+  max-height: calc(100vh - 120px); /* отступ под шапку */
+  background-color: white;
+  border-top: 1px solid #f2f2f8;
+  overflow-y: auto; /* скролл внутри */
+  -webkit-overflow-scrolling: touch; /* ← плавный скролл на iOS */
+}
+
+.open-catalog__section {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.open-catalog-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.open-catalog-h2 {
+  font-size: 30px;
+  color: #002d82;
+  font-weight: 700;
+}
+
+.open-catalog-close-button {
+  width: 123px;
+  height: 34px;
+  color: #002d82;
+  background-color: #e1e4ef;
+  border: none;
+  border-radius: 4px;
+}
+
+.open-catalog-content {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px 32px;
+}
+
+.open-catalog-h3 {
+  font-size: 20px;
+  color: #002d82;
+  font-weight: 600;
+}
+
+.open-catalog-p,
+.attached-p {
+  font-size: 16px;
+  color: #18182f;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.open-catalog-p:first-of-type {
+  margin-top: 20px;
+}
+
+.open-catalog-p:not(:first-of-type),
+.attached-p:not(:first-of-type) {
+  margin-top: 8px;
+}
+
+.attached {
+  padding: 14px 0 6px 20px;
+}
+
+.open-catalog-close-button-375px {
+  width: 100%;
+  height: 36px;
+  background-color: #d9d9d9;
+  color: #002d82;
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .open-catalog__main {
+    max-height: calc(100vh - 80px);
+  }
+
+  .open-catalog__section {
+    padding-top: 24px;
+    padding-bottom: 40px;
+  }
+
+  .open-catalog-header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .open-catalog-h2 {
+    font-size: 30px;
+    color: #002d82;
+    font-weight: 700;
+  }
+
+  .open-catalog-close-button {
+    width: 123px;
+    height: 34px;
+    color: #002d82;
+    background-color: #e1e4ef;
+    border: none;
+    border-radius: 4px;
+  }
+
+  .open-catalog-content {
+    margin-top: 41px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 24px;
+  }
+
+  .open-catalog-h3 {
+    font-size: 20px;
+    color: #002d82;
+    font-weight: 600;
+  }
+
+  .open-catalog-p,
+  .attached-p {
+    font-size: 16px;
+    color: #18182f;
+    font-weight: 400;
+    line-height: 120%;
+  }
+
+  .attached {
+    padding: 14px 0 6px 20px;
+  }
+
+  .open-catalog-close-button-375px {
+    width: 100%;
+    height: 36px;
+    background-color: #d9d9d9;
+    color: #002d82;
+    display: none;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .open-catalog__main {
+    max-height: calc(100vh - 165px); /* отступ под шапку */
+    border-top: none;
+  }
+
+  .open-catalog__section {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .open-catalog-header {
+    display: block;
+  }
+
+  .open-catalog-h2 {
+    font-size: 22px;
+    color: #002d82;
+    font-weight: 700;
+  }
+
+  .open-catalog-close-button {
+    display: none;
+  }
+
+  .open-catalog-content {
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 32px;
+  }
+
+  .open-catalog-h3 {
+    font-size: 18px;
+    color: #002d82;
+    font-weight: 600;
+  }
+
+  .open-catalog-p,
+  .attached-p {
+    font-size: 14px;
+    color: #18182f;
+    font-weight: 400;
+    line-height: 120%;
+  }
+
+  .attached {
+    padding: 14px 0 6px 20px;
+  }
+
+  .open-catalog-close-button-375px {
+    margin: 0 16px;
+    width: 100%;
+    height: 36px;
+    background-color: #d9d9d9;
+    color: #002d82;
+    display: block;
+    position: fixed;
+    bottom: 12px;
+    border: none;
+    border-radius: 4px;
+  }
+}
 </style>

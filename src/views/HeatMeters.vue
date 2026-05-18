@@ -1,22 +1,13 @@
 <template>
   <main>
     <section class="dealer-section">
-      <div class="dealer-section__switch">
-        <p class="switch">Главная</p>
-        &nbsp;
-        <p class="proch">/</p>
-        &nbsp;
-        <p class="switch">Каталог</p>
-        &nbsp;
-        <p class="proch">/</p>
-        &nbsp;
-        <p class="switch">Задвижки</p>
-        &nbsp;
-        <p class="proch">/</p>
-        &nbsp;
-        <p class="switch">Задвижки чугунные</p>
-        &nbsp;
-      </div>
+      <Breadcrumbs
+        :breadcrumbs-items="[
+          { path: '/', name: 'Главная' },
+          { path: '/catalog', name: 'Каталог' },
+          { name: 'Теплосчетчики' },
+        ]"
+      />
 
       <div class="dealer-section__content">
         <div class="dealer-section__text-block">
@@ -98,6 +89,7 @@ import PaginationProducts from '@/components/common/PaginationProducts.vue'
 import ScrollByCarousel from '@/components/common/ScrollByCarousel.vue'
 import { usePaginationStore } from '@/stores/PaginationStore.js'
 import Rename from '@/components/common/Rename.vue'
+import Breadcrumbs from '@/components/common/Breadcrumbs.vue'
 
 const paginationStore = usePaginationStore()
 

@@ -1,14 +1,6 @@
 <template>
   <section :class="['rename-section', bgGray ? 'bg-gray' : '']">
-    <div v-if="isFirstSection" class="contacts-section__switch">
-      <p class="main-switch">Главная</p>
-      &nbsp;
-      <p class="proch">/</p>
-      &nbsp;
-      <p class="contacts-switch">Контакты</p>
-    </div>
-
-    <div :class="mainClass">
+    <div :class="[mainClass, { 'no-padding-top': noTopPadding }]">
       <div :class="`${mainClass}__type-and-name`">
         <div v-if="blackTitle">
           <h2 class="clients-section__h2">{{ blackTitle }}</h2>
@@ -48,6 +40,7 @@ import { computed } from 'vue'
 const carouselStore = useCarouselStore()
 import { defineProps } from 'vue'
 import ArrowButton from '@/components/common/ArrowButton.vue'
+import Breadcrumbs from '@/components/common/Breadcrumbs.vue'
 
 const props = defineProps({
   bgGray: {
@@ -94,6 +87,9 @@ const props = defineProps({
   section: {
     type: String,
   },
+  noTopPadding: {
+    Boolean,
+  },
 })
 
 let currentSlide = computed(() => {
@@ -119,8 +115,6 @@ const handleNextSlide = () => {
     carouselStore.nextSlide(props.section)
   }
 }
-
-// const emit = defineEmits(['prev-slide', 'next-slide'])
 </script>
 
 <style scoped>
@@ -178,5 +172,9 @@ const handleNextSlide = () => {
 
 .contacts-section__switch {
   display: flex;
+}
+
+.no-padding-top {
+  padding-top: 60px;
 }
 </style>

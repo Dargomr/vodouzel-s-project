@@ -2,18 +2,13 @@
   <main>
     <section class="nodes-section">
       <div class="nodes-selection">
-        <div class="nodes-selection__switch">
-          <p class="switch">Главная</p>
-          &nbsp;
-          <p class="proch">/</p>
-          &nbsp;
-          <p class="switch">Каталог</p>
-          &nbsp;
-          <p class="proch">/</p>
-          &nbsp;
-          <p class="switch">Водомерные трубы</p>
-          &nbsp;
-        </div>
+        <Breadcrumbs
+          :breadcrumbs-items="[
+            { path: '/', name: 'Главная' },
+            { path: '/catalog', name: 'Каталог' },
+            { name: 'Водомерные узлы' },
+          ]"
+        />
         <div class="nodes-selection__content">
           <h2 class="nodes-selection__h2">
             Водомерные узлы
@@ -590,6 +585,7 @@
 import Carousel from '@/components/common/Carousel.vue'
 import Rename from '@/components/common/Rename.vue'
 import HelpForm from '@/components/common/HelpForm.vue'
+import Breadcrumbs from '@/components/common/Breadcrumbs.vue'
 </script>
 
 <style scoped>

@@ -14,7 +14,6 @@
           src="@/assets/img/first-section-logo.png"
           alt="first-section__logo"
         />
-        <!--            <img class="first-section__logo-768px" src="@/assets/img/first-section-logo-768px.png" alt="first-section__logo">-->
         <div class="first-section__additionally">
           <p class="first-section__number"></p>
           <div class="buttons">
@@ -64,10 +63,6 @@
         </p>
         <button class="pipes-description__button button-catalog">Перейти в каталог</button>
         <div class="pipes--description__examples">
-          <!--                <div class="example__top">-->
-          <!--                    <img class="example__img" src="@/assets/img/example__img.png" alt="example__img">-->
-          <!--                    <p class="example__type">Общий<br>>вид</p>-->
-          <!--                </div>-->
           <div class="example__bottom">
             <div class="change-view">
               <button class="side-view">
@@ -133,11 +128,6 @@
     <Rename class="bg-gray" h2="продукция" name="Счетчики воды">
       <div class="water-meters-section__content">
         <CardTiles section="mainWaterMeters"></CardTiles>
-        <!--        <div class="water-meters-section__items">-->
-        <!--          <div class="item" v-for="item in tilesStore.mainWaterMetersTiles">-->
-        <!--            <img class="item__img" :src="item.src" :alt="item.alt" />-->
-        <!--          </div>-->
-        <!--        </div>-->
         <p class="water-meters-section__text">
           Точный контроль и снижение расходов.
           <br />

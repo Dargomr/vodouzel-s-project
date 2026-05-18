@@ -1,12 +1,6 @@
 <template>
   <main class="main-catalog__main">
-    <div class="main-catalog__switch">
-      <p class="main-switch">Главная</p>
-      &nbsp;
-      <p class="proch">/</p>
-      &nbsp;
-      <p class="catalog-switch">Каталог</p>
-    </div>
+    <Breadcrumbs :breadcrumbs-items="[{ path: '/', name: 'Главная' }, { name: 'Каталог' }]" />
     <section class="feature-section">
       <p class="feature-text">
         Сертифицированная
@@ -240,7 +234,14 @@
   </main>
 </template>
 
-<script></script>
+<script>
+import { defineComponent } from 'vue'
+import Breadcrumbs from '@/components/common/Breadcrumbs.vue'
+
+export default defineComponent({
+  components: { Breadcrumbs },
+})
+</script>
 
 <style scoped>
 @import '@/assets/css/1440px.css';

@@ -35,6 +35,10 @@
     padding: 0 32px;
   }
 
+  a {
+    text-decoration: none;
+  }
+
   header {
     margin-bottom: 30px;
   }
@@ -1277,11 +1281,6 @@
 
   /* —————————————————————————————————————————————————————————————————contacts———————————————————————————————————————————————————————— */
 
-  .proch {
-    font-size: 16px;
-    color: #6d6d6d;
-  }
-
   .contacts-main {
     background-color: #f2f2f8;
   }
@@ -1328,22 +1327,11 @@
     padding-top: 20px;
   }
 
-  .contacts-section__switch {
-    display: flex;
-  }
-
   .contacts-section__contacts {
     margin-top: 60px;
     display: grid;
     grid-template-columns: 1fr 3fr;
     column-gap: 33px;
-  }
-
-  .main-switch,
-  .contacts-switch {
-    font-size: 16px;
-    font-weight: 400;
-    color: #6d6d6d;
   }
 
   .contacts-section__h2 {
@@ -1402,17 +1390,6 @@
   .articles-section {
     padding-top: 20px;
     padding-bottom: 120px;
-  }
-
-  .articles-section__switch {
-    display: flex;
-  }
-
-  .main-switch,
-  .articles-switch {
-    font-size: 16px;
-    font-weight: 400;
-    color: #6d6d6d;
   }
 
   .articles-section__articles {
@@ -1561,17 +1538,6 @@
   .catalog-about-company-section {
     padding-top: 20px;
     padding-bottom: 120px;
-  }
-
-  .catalog-about-company__switch {
-    display: flex;
-  }
-
-  .main-switch,
-  .about-company-switch {
-    font-size: 16px;
-    font-weight: 400;
-    color: #6d6d6d;
   }
 
   .catalog-about-company-section__logo {
@@ -1811,17 +1777,6 @@
     background-color: #f2f2f8;
   }
 
-  .error-404__switch {
-    display: flex;
-  }
-
-  .main-switch,
-  .about-company-switch {
-    font-size: 16px;
-    font-weight: 400;
-    color: #6d6d6d;
-  }
-
   .error-404-content {
     display: flex;
     flex-direction: column;
@@ -1943,18 +1898,6 @@
     padding-bottom: 120px;
   }
 
-  .main-catalog__switch {
-    padding-top: 20px;
-    display: flex;
-  }
-
-  .main-switch,
-  .catalog-switch {
-    font-size: 16px;
-    font-weight: 400;
-    color: #6d6d6d;
-  }
-
   .feature-section {
     margin: 60px 32px 0;
 
@@ -2057,17 +2000,6 @@
   .item-page-main {
     background-color: #f3f5f7;
     padding-bottom: 120px;
-  }
-
-  .item-page-main__switch {
-    display: flex;
-    padding-top: 20px;
-  }
-
-  .switch {
-    font-size: 14px;
-    font-weight: 400;
-    color: #6d6d6d;
   }
 
   .item-page-section {
@@ -2466,10 +2398,6 @@
     align-items: start;
     background-image: url('../img/nodes-selection__back.png');
     background-size: cover;
-  }
-
-  .nodes-selection__switch {
-    display: flex;
   }
 
   .nodes-selection__content {
@@ -3264,11 +3192,6 @@
 
   .dealer-section {
     background-color: #f3f5f7;
-  }
-
-  .dealer-section__switch {
-    display: flex;
-    padding-top: 20px;
   }
 
   .dealer-section__content {

@@ -1,13 +1,7 @@
 <template>
   <main class="about-company-main">
     <section class="catalog-about-company-section">
-      <div class="catalog-about-company__switch">
-        <p class="main-switch">Главная</p>
-        &nbsp;
-        <p class="proch">/</p>
-        &nbsp;
-        <p class="about-company-switch">Контакты</p>
-      </div>
+      <Breadcrumbs :breadcrumbs-items="[{ path: '/', name: 'Главная' }, { name: 'О компании' }]" />
       <img
         class="catalog-about-company-section__logo"
         src="@/assets/img/vodouzel.png"
@@ -90,6 +84,7 @@
 import Rename from '@/components/common/Rename.vue'
 import Carousel from '@/components/common/Carousel.vue'
 import CardTiles from '@/components/common/CardTiles.vue'
+import Breadcrumbs from '@/components/common/Breadcrumbs.vue'
 </script>
 
 <style scoped>

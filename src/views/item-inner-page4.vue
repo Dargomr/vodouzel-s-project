@@ -1,22 +1,14 @@
 <template>
   <main class="item-page-main">
     <section class="item-page-section">
-      <div class="item-page-main__switch">
-        <p class="switch">Главная</p>
-        &nbsp;
-        <p class="proch">/</p>
-        &nbsp;
-        <p class="switch">Каталог</p>
-        &nbsp;
-        <p class="proch">/</p>
-        &nbsp;
-        <p class="switch">Задвижки</p>
-        &nbsp;
-        <p class="proch">/</p>
-        &nbsp;
-        <p class="switch">Задвижки чугунные</p>
-        &nbsp;
-      </div>
+      <Breadcrumbs
+        :breadcrumbs-items="[
+          { path: '/', name: 'Главная' },
+          { path: '/catalog', name: 'Каталог' },
+          { path: '/catalog/gates', name: 'Задвижки' },
+          { name: 'Задвижки чугунные' },
+        ]"
+      />
 
       <h2 class="item-page__h2">Задвижки чугунные</h2>
       <PaginationProducts
@@ -31,6 +23,7 @@
 <script setup>
 import { usePaginationStore } from '@/stores/PaginationStore.js'
 import PaginationProducts from '@/components/common/PaginationProducts.vue'
+import Breadcrumbs from '@/components/common/Breadcrumbs.vue'
 
 const paginationStore = usePaginationStore()
 </script>

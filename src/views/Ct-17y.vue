@@ -1,27 +1,18 @@
 <template>
   <main class="item-inner-page3-main">
     <section class="">
-      <div class="item-div-section__switch">
-        <p class="switch">Главная</p>
-        &nbsp;
-        <p class="proch">/</p>
-        &nbsp;
-        <p class="switch">Каталог</p>
-        &nbsp;
-        <p class="proch">/</p>
-        &nbsp;
-        <p class="switch">Задвижки</p>
-        &nbsp;
-        <p class="proch">/</p>
-        &nbsp;
-        <p class="switch">Задвижки чугунные</p>
-        &nbsp;
-        <p class="proch">/</p>
-        &nbsp;
-        <p class="switch">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-        &nbsp;
-      </div>
-      <!--        <button class="product-page3__back-button-1440px">Назад</button>-->
+      <Breadcrumbs
+        :breadcrumbs-items="[
+          { path: '/', name: 'Главная' },
+          { path: '/catalog', name: 'Каталог' },
+          { path: '/catalog/gates', name: 'Задвижки' },
+          { path: '/catalog/gates/cast-iron-gates', name: 'Задвижки чугунные' },
+          {
+            path: '/catalog/gates/cast-iron-gates//Ct-17y',
+            name: 'Задвижка чугунная КНР 30ч39р Ду50 Ру16',
+          },
+        ]"
+      />
       <div class="product-page3">
         <img
           class="product-page3__img"
@@ -40,7 +31,7 @@
             <span class="product-page3__price-span">5 600</span>
             ₽
           </p>
-          <button class="product-page3__button-price">Узнать цену</button>
+          <button class="product-page3__button-price orange-button">Узнать цену</button>
         </div>
         <div class="product-page3__details-content">
           <div class="product-page3__details-column">
@@ -272,6 +263,7 @@
 <script setup>
 import HelpForm from '@/components/common/HelpForm.vue'
 import Rename from '@/components/common/Rename.vue'
+import Breadcrumbs from '@/components/common/Breadcrumbs.vue'
 </script>
 
 <style scoped>

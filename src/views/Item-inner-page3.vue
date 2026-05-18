@@ -1,26 +1,15 @@
 <template>
   <main class="item-inner-page3-main">
     <section class="">
-      <div class="item-div-section__switch">
-        <p class="switch">Главная</p>
-        &nbsp;
-        <p class="proch">/</p>
-        &nbsp;
-        <p class="switch">Каталог</p>
-        &nbsp;
-        <p class="proch">/</p>
-        &nbsp;
-        <p class="switch">Задвижки</p>
-        &nbsp;
-        <p class="proch">/</p>
-        &nbsp;
-        <p class="switch">Задвижки чугунные</p>
-        &nbsp;
-        <p class="proch">/</p>
-        &nbsp;
-        <p class="switch">Задвижка чугунная КНР 30ч39р Ду50 Ру16</p>
-        &nbsp;
-      </div>
+      <Breadcrumbs
+        :breadcrumbs-items="[
+          { path: '/', name: 'Главная' },
+          { path: '/catalog', name: 'Каталог' },
+          { path: '/catalog/gates', name: 'Задвижки' },
+          { path: '/catalog/gates/cast-iron', name: 'Задвижки чугунные' },
+          { name: 'Задвижка чугунная КНР 30ч39р Ду50 Ру16' },
+        ]"
+      />
       <!--        <button class="product-page3__back-button-1440px">Назад</button>-->
       <div class="product-page3">
         <img
@@ -38,7 +27,7 @@
           <p class="product-page3__price">
             от
             <span class="product-page3__price-span">12 750</span>
-            > ₽
+            ₽
           </p>
           <button class="product-page3__button-price">Узнать цену</button>
         </div>
@@ -159,35 +148,13 @@
       </Rename>
     </section>
     <HelpForm />
-    <!--    <section class="help-section">-->
-    <!--        <div class="help-section__texts">-->
-    <!--            <h2 class="help-section__h2">Нужна помощь? Не знаете<br>подойдут ли комплектующие<br>для вашего проекта?</h2>-->
-    <!--            <p class="help-section__text">Оставьте заявку на бесплатную<br>консультацию</p>-->
-    <!--        </div>-->
-    <!--        <form class="help-form">-->
-    <!--            <div class="help-form__text-input">-->
-    <!--                <div class="help-form__text-username-item">-->
-    <!--                    <label class="help-form__username-label" for="help-form__username">Имя:</label>-->
-    <!--                    <input class="help-form__username-input" id="help-form__username" type="text" placeholder="Иванов Иван" />-->
-    <!--                </div>-->
-
-    <!--                <div class="help-form__text-phone-item">-->
-    <!--                    <label class="help-form__phone-label" for="help-form__phone">Телефон:</label>-->
-    <!--                    <input class="help-form__phone-input" id="help-form__phone" type="number" placeholder="+7 ( ___ ) - ___ - __ - __" />-->
-    <!--                </div>-->
-    <!--            </div>-->
-    <!--            <div class="help-form__submit-element">-->
-    <!--                <input class="help-form__submit orange-button" type="submit" value="Оставить заявку"/>-->
-    <!--                <label class="help-form__submit-text">Нажимая кнопку, вы соглашаетесь<br>с условиями политики конфиденциальности</label>-->
-    <!--            </div>-->
-    <!--        </form>-->
-    <!--    </section>-->
   </main>
 </template>
 
 <script setup>
 import HelpForm from '@//components/common/HelpForm.vue'
 import Rename from '@/components/common/Rename.vue'
+import Breadcrumbs from '@/components/common/Breadcrumbs.vue'
 </script>
 
 <style>

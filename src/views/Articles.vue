@@ -1,13 +1,7 @@
 <template>
   <main class="articles-main">
     <section class="articles-section">
-      <div class="articles-section__switch">
-        <p class="main-switch">Главная</p>
-        &nbsp;
-        <p class="proch">/</p>
-        &nbsp;
-        <p class="articles-switch">Контакты</p>
-      </div>
+      <Breadcrumbs :breadcrumbs-items="[{ path: '/', name: 'Главная' }, { name: 'Статьи' }]" />
       <div class="articles-section__articles">
         <h2 class="articles-section__h2">Статьи</h2>
         <div class="articles-section__content">
@@ -26,16 +20,7 @@
             @prev-page="prevPage"
             @page-change="pageChange"
             @next-page="nextPage"
-          ></PaginationBlock>
-          <!--          <div class="articles-section__keys-block">-->
-          <!--            <ArrowButton direction="prev" @click="prevPage" :disabled="currentPage === 1" />-->
-          <!--            <Pagination :totalPages="totalPages" :currentPage="currentPage" @change="pageChange" />-->
-          <!--            <ArrowButton-->
-          <!--              direction="next"-->
-          <!--              @click="nextPage"-->
-          <!--              :disabled="currentPage === totalPages"-->
-          <!--            />-->
-          <!--          </div>-->
+          />
         </div>
       </div>
     </section>
@@ -46,6 +31,7 @@
 import { usePaginationStore } from '@/stores/PaginationStore.js'
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import PaginationBlock from '@/components/common/PaginationBlock.vue'
+import Breadcrumbs from '@/components/common/Breadcrumbs.vue'
 
 const paginationStore = usePaginationStore()
 

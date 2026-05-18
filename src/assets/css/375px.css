@@ -577,10 +577,6 @@
 
   /* —————————————————————————————————————————————————————————————————contacts———————————————————————————————————————————————————————— */
 
-  .proch {
-    font-size: 12px;
-    color: #6d6d6d;
-  }
 
   .label {
     font-size: 18px;
@@ -624,16 +620,11 @@
     padding-top: 16px;
   }
 
-  .contacts-section__switch {
-    display: flex;
-  }
-
   .contacts-section__contacts {
     margin-top: 60px;
     display: block;
   }
 
-  .main-switch,
   .contacts-switch {
     font-size: 12px;
     font-weight: 400;
@@ -703,17 +694,6 @@
   .articles-section {
     padding-top: 20px;
     padding-bottom: 90px;
-  }
-
-  .articles-section__switch {
-    display: flex;
-  }
-
-  .main-switch,
-  .articles-switch {
-    font-size: 12px;
-    font-weight: 400;
-    color: #6d6d6d;
   }
 
   .articles-section__articles {
@@ -840,17 +820,6 @@
   .catalog-about-company-section {
     padding-top: 16px;
     padding-bottom: 90px;
-  }
-
-  .catalog-about-company__switch {
-    display: flex;
-  }
-
-  .main-switch,
-  .about-company-switch {
-    font-size: 12px;
-    font-weight: 400;
-    color: #6d6d6d;
   }
 
   .catalog-about-company-section__logo {
@@ -1083,17 +1052,6 @@
     background-color: #f2f2f8;
   }
 
-  .error-404__switch {
-    display: flex;
-  }
-
-  .main-switch,
-  .about-company-switch {
-    font-size: 12px;
-    font-weight: 400;
-    color: #6d6d6d;
-  }
-
   .error-404-content {
     display: flex;
     flex-direction: column;
@@ -1324,17 +1282,6 @@
   .item-page-main {
     background-color: #f3f5f7;
     padding-bottom: 90px;
-  }
-
-  .item-page-main__switch {
-    display: flex;
-    padding-top: 16px;
-  }
-
-  .switch {
-    font-size: 12px;
-    font-weight: 400;
-    color: #6d6d6d;
   }
 
   .item-page-section {
@@ -1666,10 +1613,6 @@
     align-items: start;
     background-image: url('../img/nodes-selection__back-375px.png');
     background-size: cover;
-  }
-
-  .nodes-selection__switch {
-    display: flex;
   }
 
   .nodes-selection__content {
@@ -2449,11 +2392,6 @@
 
   .dealer-section {
     background-color: #f3f5f7;
-  }
-
-  .dealer-section__switch {
-    display: flex;
-    padding-top: 16px;
   }
 
   .dealer-section__content {

@@ -5,15 +5,15 @@ const Error404 = () => import('@/views/Error404.vue')
 const AboutCompany = () => import('@/views/About-company.vue')
 const Articles = () => import('@/views/Articles.vue')
 const Contacts = () => import('@/views/Contacts.vue')
-const Ct17y = () => import('@/views/Ct-17y.vue')
+const ItemInnerPage4 = () => import('@/views/Item-inner-page4.vue')
 const HeatMeters = () => import('@/views/HeatMeters.vue')
 const ItemInnerPage = () => import('@/views/Item-inner-page.vue')
 const ItemInnerPage2 = () => import('@/views/Item-inner-page2.vue')
 const ItemInnerPage3 = () => import('@/views/Item-inner-page3.vue')
-const ItemPage = () => import('@/views/Item-page.vue')
+const ItemPage = () => import('@/views/item-inner-page4.vue')
 const MainCatalog = () => import('@/views/Main-catalog.vue')
 const Nodes = () => import('@/views/Nodes.vue')
-const OpenCatalog = () => import('@/views/Open-catalog.vue')
+const OpenCatalog = () => import('@/components/common/Open-catalog.vue')
 
 const routes = [
   {
@@ -22,68 +22,68 @@ const routes = [
     component: Main,
   },
   {
-    path: '/Error404',
+    path: '/404',
     name: 'Error404',
     component: Error404,
   },
   {
-    path: '/About-company',
-    name: 'About-company',
+    path: '/about-company',
+    name: 'AboutCompany',
     component: AboutCompany,
   },
   {
-    path: '/Articles',
+    path: '/articles',
     name: 'Articles',
     component: Articles,
   },
   {
-    path: '/Contacts',
+    path: '/contacts',
     name: 'Contacts',
     component: Contacts,
   },
   {
-    path: '/Ct-17y',
-    name: 'Ct-17y',
-    component: Ct17y,
+    path: '/gates/cast-iron-gates/item-inner-page4',
+    name: 'ItemInnerPage4',
+    component: ItemInnerPage4,
   },
   {
-    path: '/HeatMeters',
+    path: '/catalog/heat-meters',
     name: 'HeatMeters',
     component: HeatMeters,
   },
   {
-    path: '/Item-inner-page',
-    name: 'Item-inner-page',
+    path: '/gates/cast-iron-gates/item-inner-page',
+    name: 'ItemInnerPage',
     component: ItemInnerPage,
   },
   {
-    path: '/Item-inner-page2',
-    name: 'Item-inner-page2',
+    path: '/gates/cast-iron-gates/item-inner-page2',
+    name: 'ItemInnerPage2',
     component: ItemInnerPage2,
   },
   {
-    path: '/Item-inner-page3',
-    name: 'Item-inner-page3',
+    path: '/gates/cast-iron-gates/item-inner-page3',
+    name: 'ItemInnerPage3',
     component: ItemInnerPage3,
   },
   {
-    path: '/Item-page',
-    name: 'Item-page',
+    path: '/gates/cast-iron-gates',
+    name: 'ItemPage',
     component: ItemPage,
   },
   {
-    path: '/Main-catalog',
-    name: 'Main-catalog',
+    path: '/catalog',
+    name: 'MainCatalog',
     component: MainCatalog,
   },
   {
-    path: '/Nodes',
+    path: '/catalog/nodes',
     name: 'Nodes',
     component: Nodes,
   },
   {
-    path: '/Open-catalog',
-    name: 'Open-catalog',
+    path: '/open-catalog',
+    name: 'OpenCatalog',
     component: OpenCatalog,
   },
 ]
