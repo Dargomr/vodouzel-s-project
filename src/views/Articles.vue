@@ -1,7 +1,7 @@
 <template>
   <main class="articles-main">
+    <Breadcrumbs :breadcrumbs-items="[{ path: '/', name: 'Главная' }, { name: 'Статьи' }]" />
     <section class="articles-section">
-      <Breadcrumbs :breadcrumbs-items="[{ path: '/', name: 'Главная' }, { name: 'Статьи' }]" />
       <div class="articles-section__articles">
         <h2 class="articles-section__h2">Статьи</h2>
         <div class="articles-section__content">
@@ -85,7 +85,174 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped>
-@import '@/assets/css/1440px.css';
-@import '@/assets/css/768px.css';
-@import '@/assets/css/375px.css';
+.articles-main {
+  background-color: #f2f2f8;
+}
+
+.articles-section {
+  padding-top: 20px;
+  padding-bottom: 120px;
+}
+
+.articles-section__articles {
+  margin-top: 60px;
+}
+
+.articles-section__h2 {
+  font-size: 40px;
+  font-weight: 500;
+  color: #002d82;
+}
+
+.articles-section__content {
+  margin-top: 40px;
+}
+
+.articles-section__articles-block {
+  width: 100%;
+  display: grid;
+  gap: 60px 32px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.article {
+  width: 100%;
+  transition: transform 0.5s;
+}
+
+.article:hover {
+  transform: scale(1.2);
+  border: 2px solid #e1e4ef;
+}
+
+.article__img {
+  width: 100%;
+  height: 200px;
+}
+
+.article__date {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #6d6d6d;
+  font-weight: 400;
+}
+
+.article__text {
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #002d82;
+}
+
+.article__read {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #18182f;
+}
+
+.article__read::after {
+  content: url('@/assets/img/diag-arrow-blue.png');
+  position: relative;
+  right: -6px;
+}
+
+/* Стили для пагинации */
+.item-page__keys-block {
+  margin: 40px auto 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 338px;
+}
+
+/* Адаптив планшеты */
+@media screen and (max-width: 768px) {
+  .articles-section {
+    padding-bottom: 120px;
+  }
+
+  .articles-section__articles {
+    margin-top: 60px;
+  }
+
+  .articles-section__h2 {
+    font-size: 40px;
+    font-weight: 500;
+  }
+
+  .articles-section__content {
+    margin-top: 40px;
+  }
+
+  .articles-section__articles-block {
+    gap: 40px 24px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .article__img {
+    height: 200px;
+  }
+
+  .article__date {
+    font-size: 12px;
+  }
+
+  .article__text {
+    font-size: 16px;
+  }
+
+  .article__read {
+    font-size: 16px;
+  }
+
+  .item-page__keys-block {
+    width: 338px;
+  }
+}
+
+/* Адаптив телефоны */
+@media screen and (max-width: 375px) {
+  .articles-section {
+    padding-bottom: 90px;
+  }
+
+  .articles-section__articles {
+    margin-top: 60px;
+  }
+
+  .articles-section__h2 {
+    font-size: 26px;
+    font-weight: 700;
+  }
+
+  .articles-section__content {
+    margin-top: 40px;
+  }
+
+  .articles-section__articles-block {
+    gap: 40px 24px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .article__img {
+    height: 200px;
+  }
+
+  .article__date {
+    font-size: 14px;
+  }
+
+  .article__text {
+    font-size: 14px;
+  }
+
+  .article__read {
+    font-size: 14px;
+  }
+
+  .item-page__keys-block {
+    width: 234px;
+  }
+}
 </style>

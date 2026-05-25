@@ -5,12 +5,12 @@ const Error404 = () => import('@/views/Error404.vue')
 const AboutCompany = () => import('@/views/About-company.vue')
 const Articles = () => import('@/views/Articles.vue')
 const Contacts = () => import('@/views/Contacts.vue')
-const ItemInnerPage4 = () => import('@/views/Item-inner-page4.vue')
 const HeatMeters = () => import('@/views/HeatMeters.vue')
+const castIronGates = () => import('@/views/cast-iron-gates.vue')
 const ItemInnerPage = () => import('@/views/Item-inner-page.vue')
 const ItemInnerPage2 = () => import('@/views/Item-inner-page2.vue')
 const ItemInnerPage3 = () => import('@/views/Item-inner-page3.vue')
-const ItemPage = () => import('@/views/item-inner-page4.vue')
+const ItemInnerPage4 = () => import('@/views/Item-inner-page4.vue')
 const MainCatalog = () => import('@/views/Main-catalog.vue')
 const Nodes = () => import('@/views/Nodes.vue')
 const OpenCatalog = () => import('@/components/common/Open-catalog.vue')
@@ -42,7 +42,7 @@ const routes = [
     component: Contacts,
   },
   {
-    path: '/gates/cast-iron-gates/item-inner-page4',
+    path: '/catalog/gates/cast-iron-gates/item-inner-page4',
     name: 'ItemInnerPage4',
     component: ItemInnerPage4,
   },
@@ -52,24 +52,24 @@ const routes = [
     component: HeatMeters,
   },
   {
-    path: '/gates/cast-iron-gates/item-inner-page',
+    path: '/catalog/gates/cast-iron-gates/item-inner-page',
     name: 'ItemInnerPage',
     component: ItemInnerPage,
   },
   {
-    path: '/gates/cast-iron-gates/item-inner-page2',
+    path: '/catalog/gates/cast-iron-gates/item-inner-page2',
     name: 'ItemInnerPage2',
     component: ItemInnerPage2,
   },
   {
-    path: '/gates/cast-iron-gates/item-inner-page3',
+    path: '/catalog/gates/cast-iron-gates/item-inner-page3',
     name: 'ItemInnerPage3',
     component: ItemInnerPage3,
   },
   {
-    path: '/gates/cast-iron-gates',
-    name: 'ItemPage',
-    component: ItemPage,
+    path: '/catalog/gates/cast-iron-gates',
+    name: 'cast-iron-gates',
+    component: castIronGates,
   },
   {
     path: '/catalog',

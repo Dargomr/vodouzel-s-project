@@ -50,6 +50,7 @@ export default defineConfig([
       'vue/multi-word-component-names': 'off',
       'vue/require-v-for-key': 'error',
       'media-feature-range-notation': 'context',
+      'number-leading-zero': 'never',
     },
   },
 ])

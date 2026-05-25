@@ -33,7 +33,42 @@ const handleClick = (pageNum) => {
 </script>
 
 <style scoped>
-@import '@/assets/css/1440px.css';
-@import '@/assets/css/768px.css';
-@import '@/assets/css/375px.css';
+.item-page__pages {
+  display: flex;
+}
+
+.item-page__page {
+  height: 34px;
+  width: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: #002d82;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.item-page__page_active {
+  background-color: #e1e4ef;
+}
+
+/* Адаптив планшеты */
+@media screen and (max-width: 768px) {
+  .item-page__page {
+    height: 30px;
+    width: 30px;
+  }
+}
+
+/* Адаптив телефоны */
+@media screen and (max-width: 375px) {
+  .item-page__page {
+    height: 23px;
+    width: 23px;
+    font-size: 14px;
+  }
+}
 </style>

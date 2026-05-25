@@ -1,0 +1,77 @@
+/* Подключение шрифтов */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap');
+
+/* Глобальные сбросы */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Inter, sans-serif;
+
+}
+
+body {
+    font-family: Inter, sans-serif;
+}
+
+h2, p {
+    font-family: Manrope, sans-serif;
+}
+
+p,
+label {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Inter, sans-serif;
+    color: #3c3c50;
+    line-height: 120%;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+/* Общие отступы для секций (если не перенесены в компоненты) */
+section, header, footer {
+    padding: 0 32px;
+}
+
+a {
+    text-decoration: none;
+}
+
+button:active {
+    background-color: #001c50;
+    color: white;
+}
+
+.orange-button:active {
+    background-color: #cd3700;
+}
+
+button:disabled {
+    background-color: #a9a9a9;
+    color: white;
+}
+
+/* .item { */
+/*  width: 100%;  */
+/*    margin-bottom: 32px; */
+/*    transition: transform 0.5s ease; */
+/* } */
+
+
+@media screen and (width <= 768px) {
+    section, header, footer {
+        padding: 0 24px;
+    }
+}
+
+@media screen and (width <= 375px) {
+    section, header, footer {
+        padding: 0 16px;
+    }
+}

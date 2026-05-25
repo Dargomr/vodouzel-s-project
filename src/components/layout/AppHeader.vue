@@ -23,7 +23,7 @@
         </div>
 
         <div class="menu-375px">
-          <p class="menu__p">Меню</p>
+          <p class="menu__p" @click="openMenu">Меню</p>
         </div>
       </div>
     </div>
@@ -36,7 +36,7 @@
       <input class="search-input" type="text" placeholder="Введите запрос ..." />
       <button class="button-search orange-button">Поиск</button>
       <div class="menu-768px">
-        <p class="menu__p">Меню</p>
+        <p class="menu__p" @click="openMenu">Меню</p>
       </div>
       <div class="managers">
         <img class="telegram" src="@/assets/img/tg-icon.png" alt="telegram" />
@@ -46,14 +46,19 @@
     <div v-if="isCatalogOpen" class="open-catalog-wrapper">
       <Open-catalog @close="closeCatalog" />
     </div>
+    <div v-if="isMenuOpen" class="open-menu-wrapper">
+      <Open-menu @close="closeMenu" />
+    </div>
   </header>
 </template>
 
 <script setup>
 import { ref } from 'vue'
 import OpenCatalog from '@/components/common/Open-catalog.vue'
+import OpenMenu from '@/components/common/Open-menu.vue'
 
 const isCatalogOpen = ref(false)
+const isMenuOpen = ref(false)
 
 const openCatalog = () => {
   isCatalogOpen.value = true
@@ -64,6 +69,20 @@ const openCatalog = () => {
 
 const closeCatalog = () => {
   isCatalogOpen.value = false
+  document.body.style.overflow = ''
+  document.body.style.position = ''
+  document.body.style.width = ''
+}
+
+const openMenu = () => {
+  isMenuOpen.value = true
+  document.body.style.overflow = 'hidden'
+  document.body.style.position = 'fixed'
+  document.body.style.width = '100%'
+}
+
+const closeMenu = () => {
+  isMenuOpen.value = false
   document.body.style.overflow = ''
   document.body.style.position = ''
   document.body.style.width = ''
@@ -178,7 +197,6 @@ header {
 }
 
 .catalog {
-  margin-left: 20px;
   padding: 0 20px;
   width: 128px;
   height: 48px;

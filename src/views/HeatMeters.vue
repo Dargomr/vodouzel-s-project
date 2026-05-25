@@ -114,7 +114,309 @@ const nodesCarouselItems = ref([
 </script>
 
 <style scoped>
-@import '@/assets/css/1440px.css';
-@import '@/assets/css/768px.css';
-@import '@/assets/css/375px.css';
+/* Dealer section */
+.dealer-section {
+  background-color: #f3f5f7;
+}
+
+.dealer-section__content {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  background-color: #002d82;
+  background-position: center;
+  background-size: cover;
+}
+
+.dealer-section__text-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dealer-section__h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: white;
+}
+
+.dealer-section__p {
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+}
+
+.dealer-section__img {
+  margin: 10px;
+  width: 180px;
+  height: 160px;
+}
+
+/* Nodes carousel section */
+.nodes-carousel-section {
+  padding-top: 60px;
+  background-color: #f2f2f8;
+}
+
+.nodes-carousel-section__h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #002d82;
+}
+
+/* Heat meters section */
+.heatMeters-section {
+  padding: 120px 0;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  column-gap: 32px;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.heatMeters-section__type {
+  font-size: 16px;
+  color: #002d82;
+  font-weight: 400;
+}
+
+.heatMeters-section__type::before {
+  content: url('@/assets/img/orange-circle.png');
+  margin-right: 6px;
+}
+
+.heatMeters-section__name {
+  font-family: 'Manrope', sans-serif;
+  margin-top: 10px;
+  color: #002d82;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.heatMeters-section__content {
+  display: grid;
+  grid-template-columns: 3fr;
+}
+
+.heatMeters-section__big-text {
+  grid-column: 1/2;
+  font-size: 20px;
+  font-weight: 400;
+  color: #18182f;
+}
+
+.heatMeters-section__text {
+  grid-column: 1/2;
+  margin-top: 32px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #18182f;
+}
+
+/* Thermal calculators section */
+.thermal-calculators-section {
+  background-color: white;
+  margin: 120px 0 208px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  column-gap: 32px;
+}
+
+.thermal-calculators-section__type {
+  font-size: 16px;
+  color: #002d82;
+  font-weight: 400;
+}
+
+.thermal-calculators-section__type::before {
+  content: url('@/assets/img/orange-circle.png');
+  margin-right: 6px;
+}
+
+.thermal-calculators-section__name {
+  font-family: 'Manrope', sans-serif;
+  margin-top: 10px;
+  color: #002d82;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.thermal-calculators-section__content {
+  display: grid;
+  grid-template-columns: 3fr;
+}
+
+.thermal-calculators-section__text {
+  margin-top: 132px;
+  grid-column: 1/2;
+  font-size: 16px;
+  font-weight: 400;
+  color: #18182f;
+}
+
+/* Адаптив планшеты */
+@media screen and (max-width: 768px) {
+  .dealer-section__content {
+    margin-top: 60px;
+    height: 253px;
+    padding: 30px;
+  }
+
+  .dealer-section__h2 {
+    font-size: 36px;
+  }
+
+  .dealer-section__p {
+    font-size: 20px;
+  }
+
+  .dealer-section__img {
+    width: 180px;
+    height: 160px;
+  }
+
+  .nodes-carousel-section {
+    padding-top: 60px;
+  }
+
+  .nodes-carousel-section__h2 {
+    font-size: 36px;
+  }
+
+  .heatMeters-section {
+    padding: 120px 24px;
+    display: block;
+  }
+
+  .heatMeters-section__type {
+    font-size: 16px;
+  }
+
+  .heatMeters-section__name {
+    font-size: 36px;
+  }
+
+  .heatMeters-section__content {
+    margin-top: 40px;
+    display: block;
+  }
+
+  .heatMeters-section__big-text {
+    font-size: 20px;
+  }
+
+  .heatMeters-section__text {
+    margin-top: 32px;
+    font-size: 16px;
+  }
+
+  .thermal-calculators-section {
+    margin: 120px 0;
+    display: block;
+  }
+
+  .thermal-calculators-section__type {
+    font-size: 16px;
+  }
+
+  .thermal-calculators-section__name {
+    font-size: 36px;
+  }
+
+  .thermal-calculators-section__content {
+    margin-top: 40px;
+    display: block;
+  }
+
+  .thermal-calculators-section__text {
+    margin-top: 0;
+    font-size: 16px;
+  }
+}
+
+/* Адаптив телефоны */
+@media screen and (max-width: 375px) {
+  .dealer-section__content {
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 24px;
+  }
+
+  .dealer-section__text-block {
+    display: block;
+  }
+
+  .dealer-section__h2 {
+    font-size: 26px;
+  }
+
+  .dealer-section__p {
+    margin-top: 16px;
+    font-size: 14px;
+  }
+
+  .dealer-section__img {
+    margin: 0;
+    width: 67px;
+    height: 60px;
+  }
+
+  .nodes-carousel-section {
+    padding-top: 60px;
+  }
+
+  .nodes-carousel-section__h2 {
+    font-size: 32px;
+  }
+
+  .heatMeters-section {
+    padding: 90px 16px 73px;
+    display: block;
+  }
+
+  .heatMeters-section__type {
+    font-size: 16px;
+  }
+
+  .heatMeters-section__name {
+    font-size: 26px;
+  }
+
+  .heatMeters-section__content {
+    margin-top: 40px;
+    display: block;
+  }
+
+  .heatMeters-section__big-text {
+    font-size: 18px;
+  }
+
+  .heatMeters-section__text {
+    margin-top: 32px;
+    font-size: 14px;
+  }
+
+  .thermal-calculators-section {
+    margin: 90px 0;
+    display: block;
+  }
+
+  .thermal-calculators-section__type {
+    font-size: 16px;
+  }
+
+  .thermal-calculators-section__name {
+    font-size: 26px;
+  }
+
+  .thermal-calculators-section__content {
+    margin-top: 40px;
+    display: block;
+  }
+
+  .thermal-calculators-section__text {
+    font-size: 16px;
+  }
+}
 </style>

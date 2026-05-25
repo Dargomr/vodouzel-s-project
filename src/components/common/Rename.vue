@@ -1,7 +1,7 @@
 <template>
   <section :class="['rename-section', bgGray ? 'bg-gray' : '']">
     <div :class="[mainClass, { 'no-padding-top': noTopPadding }]">
-      <div :class="`${mainClass}__type-and-name`">
+      <div :class="[{ 'long-header': isLongHeader }, `${mainClass}__type-and-name`]">
         <div v-if="blackTitle">
           <h2 class="clients-section__h2">{{ blackTitle }}</h2>
           <p v-if="blackP" class="reasons-section__text">{{ blackP }}</p>
@@ -88,7 +88,10 @@ const props = defineProps({
     type: String,
   },
   noTopPadding: {
-    Boolean,
+    type: Boolean,
+  },
+  isLongHeader: {
+    type: Boolean,
   },
 })
 
@@ -118,12 +121,144 @@ const handleNextSlide = () => {
 </script>
 
 <style scoped>
+/* Стили для rename-section */
+
+.upToDownBlock__type-and-name.long-header {
+  grid-column: 1/4;
+  grid-row: 1/2;
+}
 .rename-section {
   grid-column: 1/5;
 }
 
 .bg-gray {
   background-color: #f2f2f8;
+}
+
+/* Стили для upToDownBlock */
+.upToDownBlock {
+  padding: 120px 0 90px 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 32px;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.upToDownBlock__type-and-name {
+  grid-column: 1/3;
+  grid-row: 1/2;
+}
+
+.upToDownBlock__content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column: 1/5;
+}
+
+/* Стили для секций с продуктами */
+
+.heatMeters-section {
+  padding: 120px 0;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  column-gap: 32px;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.heatMeters-section__type {
+  font-size: 16px;
+  color: #002d82;
+  font-weight: 400;
+}
+
+.heatMeters-section__type::before {
+  content: url('../img/orange-circle.png');
+  margin-right: 6px;
+}
+
+.heatMeters-section__name {
+  font-family: 'Manrope', sans-serif;
+  margin-top: 10px;
+  color: #002d82;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.heatMeters-section__secondName {
+  font-family: 'Manrope', sans-serif;
+  margin-top: 20px;
+  color: #002d82;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+/* Стили для клиентов */
+.clients-section__h2 {
+  font-family: 'Manrope', sans-serif;
+  color: #18182f;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.reasons-section__text {
+  margin-top: 40px;
+  font-size: 20px;
+  font-weight: 400;
+  color: #3c3c50;
+}
+
+/* Кнопки карусели */
+.areas-of-application-section-carousel__buttons {
+  margin-top: 354px;
+  display: flex;
+}
+
+.contacts-section__switch {
+  padding-top: 20px;
+  display: flex;
+}
+
+/* Кнопки карусели в Rename */
+.areas-of-application-section-carousel__buttons {
+  margin-top: 354px;
+  display: flex;
+}
+
+.areas-of-application-section-carousel__button-left {
+  width: 60px;
+  height: 60px;
+  background-position: center;
+  border: none;
+  border-radius: 50%;
+  background-image: url('../img/carousel-button-left.png');
+}
+
+.areas-of-application-section-carousel__button-right {
+  width: 60px;
+  height: 60px;
+  margin-left: 10px;
+  background-position: center;
+  border: none;
+  border-radius: 50%;
+  background-image: url('../img/carousel-button-right.png');
+}
+
+/* Кнопки внутри Carousel.vue для планшетов */
+.areas-of-application-section-carousel__buttons-768px {
+  display: none;
+}
+
+.rename-section {
+  grid-column: 1/5;
+}
+
+.bg-gray {
+  background-color: #f2f2f8;
+}
+
+.heatMeters-section__content {
+  display: grid;
+  grid-template-columns: 3fr;
 }
 
 .heatMeters-section__secondName {
@@ -144,12 +279,6 @@ const handleNextSlide = () => {
   grid-template-columns: repeat(4, 1fr);
   column-gap: 32px;
   border-bottom: 1px solid #d9d9d9;
-}
-
-@media screen and (max-width: 769px) {
-  .upToDownBlock {
-    display: block;
-  }
 }
 
 .upToDownBlock__type-and-name {
@@ -176,5 +305,69 @@ const handleNextSlide = () => {
 
 .no-padding-top {
   padding-top: 60px;
+}
+
+@media screen and (max-width: 769px) {
+  .upToDownBlock {
+    display: block;
+  }
+
+  .upToDownBlock {
+    display: block;
+  }
+
+  .heatMeters-section {
+    display: block;
+  }
+
+  .heatMeters-section__name {
+    font-size: 36px;
+  }
+
+  .clients-section__h2 {
+    font-size: 30px;
+  }
+
+  .clients-section__items {
+    grid-template-columns: 3fr;
+  }
+
+  .areas-of-application-section-carousel__buttons {
+    margin-top: 0;
+    display: none;
+  }
+
+  .upToDownBlock__content {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .heatMeters-section {
+    padding-top: 90px;
+    display: block;
+  }
+
+  .heatMeters-section__name {
+    font-size: 26px;
+  }
+
+  .heatMeters-section__secondName {
+    font-size: 22px;
+  }
+
+  .clients-section__h2 {
+    font-size: 26px;
+  }
+
+  .reasons-section__text {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+
+  .areas-of-application-section-carousel__buttons {
+    margin-top: 0;
+    display: none;
+  }
 }
 </style>

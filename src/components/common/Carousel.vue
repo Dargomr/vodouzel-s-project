@@ -156,6 +156,9 @@ const handleResize = () => {
 }
 
 onMounted(() => {
+  setTimeout(() => {
+    updateItemDimensions()
+  }, 100)
   nextTick(() => {
     updateItemDimensions()
   })
@@ -169,7 +172,127 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped>
-@import '@/assets/css/1440px.css';
-@import '@/assets/css/768px.css';
-@import '@/assets/css/375px.css';
+/* ========== ОСНОВНЫЕ СТИЛИ КАРУСЕЛИ ========== */
+.areas-of-application-section__content {
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel {
+  /* стили для обертки карусели */
+}
+
+.carousel__container {
+  overflow: hidden;
+}
+
+.carousel__container-inner {
+  display: flex;
+  position: relative;
+  transition: 1s ease-in-out;
+}
+
+.carousel__item {
+  cursor: pointer;
+  margin-left: 32px;
+}
+
+/* ========== СТИЛИ ДЛЯ certification-item__img-block (передаётся через carousel-class) ========== */
+.certification-item__img-block {
+  width: 496px;
+  height: 496px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f2f8;
+}
+
+/* ========== СТИЛИ ДЛЯ certification-item__img (передаётся через carousel-class-inner) ========== */
+.certification-item__img {
+  width: 200px;
+  height: 282px;
+}
+
+.certification-item__p {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #002d82;
+}
+
+.carousel__text {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #002d82;
+}
+
+.areas-of-application-section-carousel__buttons-768px {
+  display: none;
+}
+
+/* ========== АДАПТИВ ПЛАНШЕТЫ (768px) ========== */
+@media screen and (width <= 769px) {
+  .areas-of-application-section__content {
+    margin-top: 61px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .carousel__item {
+    margin-left: 32px;
+  }
+
+  .carousel__item:first-child {
+    margin-left: 0;
+  }
+
+  .certification-item__img-block {
+    width: 430px;
+    height: 430px;
+  }
+
+  .certification-item__img {
+    width: 200px;
+    height: 282px;
+  }
+
+  .carousel__text {
+    font-size: 20px;
+  }
+
+  .areas-of-application-section-carousel__buttons-768px {
+    margin-top: 42px;
+    display: block;
+  }
+}
+
+/* ========== АДАПТИВ ТЕЛЕФОНЫ (375px) ========== */
+@media screen and (width <= 375px) {
+  .areas-of-application-section__content {
+    margin-top: 55px;
+  }
+
+  .carousel__item {
+    margin-left: 20px;
+  }
+
+  .certification-item__img-block {
+    width: 268px;
+    height: 268px;
+  }
+
+  .certification-item__img {
+    width: 141px;
+    height: 200px;
+  }
+
+  .carousel__text {
+    font-size: 18px;
+  }
+
+  .areas-of-application-section-carousel__buttons-768px {
+    margin-top: 32px;
+  }
+}
 </style>

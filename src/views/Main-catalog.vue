@@ -15,7 +15,7 @@
     </section>
 
     <section class="main-catalog-content">
-      <div class="main-catalog-item">
+      <div class="main-catalog-item" @click="goToPage('/catalog/nodes')">
         <div class="main-catalog-item__content">
           <p class="main-catalog-item__name">
             Водомерные
@@ -47,7 +47,7 @@
         />
       </div>
 
-      <div class="main-catalog-item">
+      <div class="main-catalog-item" @click="goToPage('/catalog/heat-meters')">
         <div class="main-catalog-item__content">
           <p class="main-catalog-item__name">
             Счетчики
@@ -81,7 +81,7 @@
         />
       </div>
 
-      <div class="main-catalog-item">
+      <div class="main-catalog-item" @click="goToPage('/catalog/gates/cast-iron-gates')">
         <div class="main-catalog-item__content">
           <p class="main-catalog-item__name">Задвижки</p>
           <p class="main-catalog-item__number">05</p>
@@ -234,17 +234,202 @@
   </main>
 </template>
 
-<script>
-import { defineComponent } from 'vue'
+<script setup>
+import { useRouter } from 'vue-router'
 import Breadcrumbs from '@/components/common/Breadcrumbs.vue'
 
-export default defineComponent({
-  components: { Breadcrumbs },
-})
+const router = useRouter()
+
+const goToPage = (path) => {
+  router.push(path)
+}
 </script>
 
 <style scoped>
-@import '@/assets/css/1440px.css';
-@import '@/assets/css/768px.css';
-@import '@/assets/css/375px.css';
+.main-catalog__main {
+  background-color: #f3f5f7;
+  padding-bottom: 120px;
+}
+
+/* Feature section */
+.feature-section {
+  margin: 60px 32px 0;
+  height: 160px;
+  background-image: url('@/assets/img/feature-section-back.png');
+  background-position: center 100%;
+  display: flex;
+  padding: 30px;
+}
+
+.feature-text {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+
+.feature-text::before {
+  content: url('@/assets/img/feature-text-before.png');
+  position: relative;
+  left: -10px;
+}
+
+.feature-text:not(:first-of-type) {
+  margin-left: 28px;
+}
+
+/* Catalog grid */
+.main-catalog-content {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.main-catalog-item {
+  display: flex;
+  height: 200px;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 4px;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+.main-catalog-item:hover {
+  transform: scale(1.2);
+  border: 2px solid #e1e4ef;
+}
+
+.main-catalog-item_green {
+  background-color: #090;
+}
+
+.main-catalog-item_green .main-catalog-item__name {
+  color: #fff;
+}
+
+.main-catalog-item_green .main-catalog-item__number {
+  color: #fff;
+  opacity: 0.5;
+}
+
+.main-catalog-item_red {
+  background-color: #b80c0c;
+}
+
+.main-catalog-item_red .main-catalog-item__name {
+  color: #fff;
+}
+
+.main-catalog-item_red .main-catalog-item__number {
+  color: #fff;
+  opacity: 0.5;
+}
+
+.main-catalog-item__content {
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.main-catalog-item__name {
+  font-size: 16px;
+  font-weight: 500;
+  color: #002d82;
+}
+
+.main-catalog-item__number {
+  font-size: 20px;
+  font-weight: 400;
+  color: #7990bd;
+}
+
+.main-catalog-item__img {
+  height: 100%;
+}
+
+/* Адаптив планшеты */
+@media screen and (max-width: 768px) {
+  .main-catalog__main {
+    padding-bottom: 120px;
+  }
+
+  .feature-section {
+    margin: 60px 24px 0;
+    height: 160px;
+    padding: 30px;
+  }
+
+  .feature-text {
+    font-size: 20px;
+  }
+
+  .feature-text:not(:first-of-type) {
+    margin-left: 28px;
+  }
+
+  .main-catalog-content {
+    margin-top: 40px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  .main-catalog-item {
+    height: 200px;
+  }
+
+  .main-catalog-item__name {
+    font-size: 16px;
+  }
+
+  .main-catalog-item__number {
+    font-size: 20px;
+  }
+}
+
+/* Адаптив телефоны */
+@media screen and (max-width: 375px) {
+  .main-catalog__main {
+    padding-bottom: 90px;
+  }
+
+  .feature-section {
+    margin: 40px 16px 0;
+    height: 148px;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .feature-text {
+    font-size: 18px;
+  }
+
+  .feature-text::before {
+    left: -14px;
+  }
+
+  .feature-text:not(:first-of-type) {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .main-catalog-content {
+    margin-top: 32px;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px 0;
+  }
+
+  .main-catalog-item {
+    height: 160px;
+  }
+
+  .main-catalog-item__name {
+    font-size: 14px;
+  }
+
+  .main-catalog-item__number {
+    font-size: 18px;
+  }
+}
 </style>

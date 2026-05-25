@@ -157,7 +157,7 @@ import Rename from '@/components/common/Rename.vue'
 import Breadcrumbs from '@/components/common/Breadcrumbs.vue'
 </script>
 
-<style>
+<style scoped>
 .upToDownBlock {
   grid-column: 1/5;
 }
@@ -237,8 +237,4 @@ import Breadcrumbs from '@/components/common/Breadcrumbs.vue'
     display: block;
   }
 }
-
-@import '@/assets/css/1440px.css';
-@import '@/assets/css/768px.css';
-@import '@/assets/css/375px.css';
 </style>

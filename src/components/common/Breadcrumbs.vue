@@ -1,5 +1,5 @@
 <template>
-  <div class="breadcrumbs">
+  <div :class="['breadcrumbs', bgGray ? 'bg-gray' : '']">
     <template v-for="(crumb, index) in breadcrumbsItems" :key="index">
       <span v-if="index > 0" class="breadcrumb-separator">/</span>
 
@@ -29,6 +29,9 @@ const props = defineProps({
     type: Array,
     required: true,
   },
+  bgGray: {
+    type: Boolean,
+  },
 })
 
 const navigateTo = (path) => {
@@ -39,11 +42,15 @@ const navigateTo = (path) => {
 </script>
 
 <style scoped>
+.bg-gray {
+  background-color: #f2f2f8;
+}
+
 .breadcrumbs {
   display: flex;
   align-items: center;
   gap: 4px;
-  padding-top: 20px;
+  padding: 20px 32px 0 32px;
 }
 
 .breadcrumb-item {
@@ -60,7 +67,7 @@ const navigateTo = (path) => {
 }
 
 .breadcrumb-item_active {
-  color: #002d82;
+  color: #6d6d6d;
   cursor: default;
   font-weight: 500;
 }
@@ -77,7 +84,7 @@ const navigateTo = (path) => {
 
 @media screen and (max-width: 768px) {
   .breadcrumbs {
-    padding-top: 16px;
+    padding-top: 16px 24px 0 24px;
   }
 
   .breadcrumb-item,
@@ -87,6 +94,10 @@ const navigateTo = (path) => {
 }
 
 @media screen and (max-width: 375px) {
+  .breadcrumbs {
+    padding-top: 16px 16px 0 16px;
+  }
+
   .breadcrumb-item,
   .breadcrumb-separator {
     font-size: 12px;

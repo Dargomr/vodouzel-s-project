@@ -82,14 +82,284 @@
 <script setup>
 import Rename from '@/components/common/Rename.vue'
 import Breadcrumbs from '@/components/common/Breadcrumbs.vue'
-const breadcrumbsItems = [
-  { path: '/', name: 'Главная' },
-  { path: '/contacts', name: 'Контакты' },
-]
 </script>
 
 <style scoped>
-@import '@/assets/css/1440px.css';
-@import '@/assets/css/768px.css';
-@import '@/assets/css/375px.css';
+.contacts-main {
+  background-color: #f2f2f8;
+}
+
+.label {
+  font-size: 20px;
+  font-weight: 400;
+  color: #6d6d6d;
+}
+
+.phone-free {
+  font-size: 16px;
+  font-weight: 400;
+  color: #6d6d6d;
+}
+
+.legal-information-section__h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #18182f;
+}
+
+.contacts-section__phone .contacts-phone-number,
+.email-text,
+.contacts-tg,
+.contacts-wa,
+.address-text,
+.inn-text,
+.kpp-text,
+.ogrn-text,
+.okpo-text,
+.oktmo-text,
+.payment-account-text,
+.bank-text,
+.bik-text {
+  margin-top: 10px;
+  font-size: 30px;
+  font-weight: 400;
+  color: #18182f;
+}
+
+.contacts-section {
+  padding-top: 20px;
+}
+
+.contacts-section__contacts {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  column-gap: 33px;
+}
+
+.contacts-section__h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #002d82;
+}
+
+.contacts-section__content {
+  margin-top: 0;
+}
+
+.contacts-section__phone-and-email {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.contacts-section__massagers-and-address {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.map-section {
+  margin-left: 32px;
+  margin-right: 32px;
+  margin-top: 120px;
+  height: 500px;
+  background: url('@/assets/img/catalog-map-1440px.png') center;
+  background-size: cover;
+}
+
+.legal-information-section {
+  margin-top: 120px;
+  padding-bottom: 120px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  column-gap: 33px;
+}
+
+.legal-information-section__content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.legal-information-section__first-page div:not(:first-of-type),
+.legal-information-section__second-page div:not(:first-of-type) {
+  margin-top: 40px;
+}
+
+/* Адаптив планшеты */
+@media screen and (max-width: 768px) {
+  .label {
+    font-size: 20px;
+  }
+
+  .phone-free {
+    font-size: 16px;
+  }
+
+  .legal-information-section__h2 {
+    font-size: 32px;
+  }
+
+  .contacts-section__phone .contacts-phone-number,
+  .email-text,
+  .contacts-tg,
+  .contacts-wa,
+  .address-text,
+  .inn-text,
+  .kpp-text,
+  .ogrn-text,
+  .okpo-text,
+  .oktmo-text,
+  .payment-account-text,
+  .bank-text,
+  .bik-text {
+    margin-top: 10px;
+    font-size: 30px;
+  }
+
+  .contacts-section {
+    padding-top: 20px;
+  }
+
+  .contacts-section__contacts {
+    margin-top: 60px;
+    display: block;
+  }
+
+  .contacts-section__h2 {
+    font-size: 36px;
+  }
+
+  .contacts-section__content {
+    margin-top: 40px;
+  }
+
+  .contacts-section__phone-and-email {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contacts-section__massagers-and-address {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .map-section {
+    margin-top: 60px;
+    height: 500px;
+    background: url('@/assets/img/catalog-map-768px.png') center;
+    background-size: cover;
+  }
+
+  .legal-information-section {
+    margin-top: 60px;
+    padding-bottom: 120px;
+    display: block;
+  }
+
+  .legal-information-section__content {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .legal-information-section__first-page div:not(:first-of-type),
+  .legal-information-section__second-page div:not(:first-of-type) {
+    margin-top: 40px;
+  }
+}
+
+/* Адаптив телефоны */
+@media screen and (max-width: 375px) {
+  .label {
+    font-size: 18px;
+  }
+
+  .phone-free {
+    font-size: 14px;
+  }
+
+  .legal-information-section__h2 {
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  .contacts-section__phone .contacts-phone-number,
+  .email-text,
+  .contacts-tg,
+  .contacts-wa,
+  .address-text,
+  .inn-text,
+  .kpp-text,
+  .ogrn-text,
+  .okpo-text,
+  .oktmo-text,
+  .payment-account-text,
+  .bank-text,
+  .bik-text {
+    margin-top: 10px;
+    font-size: 22px;
+  }
+
+  .contacts-section {
+    padding-top: 16px;
+  }
+
+  .contacts-section__contacts {
+    margin-top: 60px;
+    display: block;
+  }
+
+  .contacts-section__h2 {
+    font-size: 32px;
+  }
+
+  .contacts-section__content {
+    margin-top: 40px;
+  }
+
+  .contacts-section__phone-and-email {
+    display: block;
+  }
+
+  .contacts-section__email {
+    margin-top: 32px;
+  }
+
+  .contacts-section__massagers-and-address {
+    margin-top: 32px;
+    display: block;
+  }
+
+  .contacts-section__address {
+    margin-top: 32px;
+  }
+
+  .map-section {
+    margin-top: 60px;
+    height: 500px;
+    background: url('@/assets/img/catalog-map-768px.png') center;
+    background-size: cover;
+  }
+
+  .legal-information-section {
+    margin-top: 60px;
+    padding-bottom: 90px;
+    display: block;
+  }
+
+  .legal-information-section__content {
+    margin-top: 32px;
+    display: block;
+  }
+
+  .legal-information-section__second-page {
+    margin-top: 32px;
+  }
+
+  .legal-information-section__first-page div:not(:first-of-type),
+  .legal-information-section__second-page div:not(:first-of-type) {
+    margin-top: 32px;
+  }
+}
 </style>

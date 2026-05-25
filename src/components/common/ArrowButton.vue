@@ -21,10 +21,6 @@ defineEmits(['click'])
 </script>
 
 <style scoped>
-@import '@/assets/css/1440px.css';
-@import '@/assets/css/768px.css';
-@import '@/assets/css/375px.css';
-
 .arrow-button {
   width: 60px;
   height: 60px;
@@ -32,6 +28,17 @@ defineEmits(['click'])
   border: none;
   background-color: #002d82;
   color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.arrow-button:active {
+  background-color: #001c50;
+}
+
+.arrow-button:disabled {
+  background-color: #a9a9a9;
+  cursor: not-allowed;
 }
 
 .arrow-button-prev:before {
@@ -56,5 +63,47 @@ defineEmits(['click'])
   border-bottom: 3px solid white;
   border-left: 3px solid white;
   transform: rotate(225deg);
+}
+
+/* ========== АДАПТИВ (768px) ========== */
+@media screen and (max-width: 768px) {
+  .arrow-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .arrow-button-prev:before {
+    left: 16px;
+    width: 9px;
+    height: 9px;
+    border-width: 2px;
+  }
+
+  .arrow-button-next:before {
+    left: 11px;
+    width: 9px;
+    height: 9px;
+    border-width: 2px;
+  }
+}
+
+/* ========== АДАПТИВ (375px) ========== */
+@media screen and (max-width: 375px) {
+  .arrow-button {
+    width: 30px;
+    height: 30px;
+  }
+
+  .arrow-button-prev:before {
+    left: 13px;
+    width: 6px;
+    height: 6px;
+  }
+
+  .arrow-button-next:before {
+    left: 9px;
+    width: 6px;
+    height: 6px;
+  }
 }
 </style>
