@@ -1,7 +1,7 @@
 <template>
   <main class="contacts-main">
     <Breadcrumbs :breadcrumbs-items="[{ path: '/', name: 'Главная' }, { name: 'Контакты' }]" />
-    <Rename :with-h2="false" name="Контакты" :isFirstSection="true" noTopPadding="true">
+    <Rename :with-h2="false" name="Контакты" :isFirstSection="true" :noTopPadding="true">
       <div class="contacts-section__content">
         <div class="contacts-section__phone-and-email">
           <div class="contacts-section__phone">
